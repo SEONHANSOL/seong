@@ -1,0 +1,103 @@
+@font-face {
+	font-family: 'pre';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(../fonts/Pretendard-Bold.woff2) format('woff2'), url(../fonts/Pretendard-Bold.woff) format('woff');}
+    @font-face {
+        font-family: 'pre';
+        font-weight: 400;
+        font-display: swap;
+        src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+    }
+
+    /* 홈페이지 전체에 적용될 기본 글자 스타일 */
+    body {
+        font-family: "pre";
+        font-weight: 400;
+        color: #3d3d3d;
+        letter-spacing: 0;
+        line-height: 1.3; /* 배수 */
+        font-size: 15px;
+        word-break: keep-all; /* 단어별로 줄 바꿈 */
+    }
+/* 홈페이지의 넓이를 결정하고, 가운데 정렬하게 하는 요소 */
+.warpper {
+     width: 1260px;
+     margin: 0 auto;
+}
+/* 모든 태그에 여백 삭제 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* 높이/넓이가 padding때문에 늘어나는 현상을 막는 속성 */
+}
+/* 태그의 기울임 스타일을 삭제 */
+em { 
+    font-style: normal;
+}
+
+.intro {
+    text-align: center;
+    margin: 120px 0 120px 0;
+}
+.biz {
+    text-align: center;
+    background-color: #f7f7f7;
+    padding: 120px 0 120px 0;
+}
+.intro h1,
+.biz h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0091ff;
+}
+.intro p,
+.biz p {
+    font-size: 40px;
+    font-weight: 700;
+    color: #666666;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+.intro p{
+    margin: 10px 0 0 0;
+}
+.intro p em,
+.biz p em {
+    color: #1d1d1d;
+}
+.intro p strong,
+.biz p strong {
+    color: #0091ff
+}
+.company {
+    margin: 120px 0 145px 0;
+}
+.company h1 {
+    font-size: 40px;
+    color: #1d1d1d;
+    font-weight: 700;
+    margin: 0 0 18px 0;
+}
+.company p strong {
+    color: #1d1d1d;
+    font-weight: 700;
+}
+.overeview {
+    /* 배경에 아무리 커다란 이미지를 넣어도 그 영역이 존재하는 만큼만 보임 - 즉 영역이 작으면 이미지 짤림 */
+    background: url(../images/overview_bg.png) no-repeat center center / cover;
+    height: 510px;
+    color: #ffffff;
+    /* 배경때문에 글자의 색상이 변경되었다면, 배경과 글자색상을 동시에 선언하는게 좋음 */
+    text-align: right;
+    padding: 109px 79px 0 0;}
+.overeview h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 38px 0;
+}
+.overeview p strong {
+    font-weight: 700;
+    text-decoration: underline;
+}
