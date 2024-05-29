@@ -29,7 +29,7 @@ html, body {
     font-size: 50px;
     color: #1d1d1d;
     font-weight: 700;
-    margin: 130px 0 33px 0;
+    margin: 130px 0 8px 0;
 }
 .asset ul {
     display: flex;
@@ -79,4 +79,38 @@ html, body {
     font-size: 40px;
     color: #1d1d1d;
     font-weight: 700;
+}
+.reqm h1 {
+    margin: 170px 0 50px 0;
+    font-size: 50px;
+    color: #1d1d1d;
+    font-weight: 700;
+    text-align: center;
+}
+.reqm ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.reqm ul li {
+    width: 511px;
+    height: 350px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 400;
+    padding: 230px 0 0 29px;
+    border-radius: 20px;
+    margin: 0 12px 24px 12px;
+}
+.reqm ul li:nth-child(1) {
+    background-image: url(../images/reqm1.png);
+}
+.reqm ul li:nth-child(2) {
+    background-image: url(../images/reqm2.png);
+}
+.reqm ul li:nth-child(3) {
+    background-image: url(../images/reqm3.png);
+}
+.reqm ul li:nth-child(4) {
+    background-image: url(../images/reqm4.png);
 }
