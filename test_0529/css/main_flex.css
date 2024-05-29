@@ -1,0 +1,82 @@
+@import url(default.css); /* default.css를 불러오기 */
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(../fonts/Pretendard-Bold.woff2) format('woff2'), url(../fonts/Pretendard-Bold.woff) format('woff');}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');}
+
+html, body {
+    /* font-family 사용하는 서체명은 font-face에서 사용한 이름으로 사용, sans-serif는 고딕체라는 의미 */
+    font-family: "Pretendard", sans-serif;
+    font-size: 15px;
+    color: #3d3d3d;
+    line-height: 1.4;
+    font-weight: 400;
+    word-break: keep-all;
+    letter-spacing: -0.02em;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+.asset h1 {
+    font-size: 50px;
+    color: #1d1d1d;
+    font-weight: 700;
+    margin: 130px 0 33px 0;
+}
+.asset ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 69px 0 0 0;
+    /*
+        ul 태그에 flex를 주면 그 자식 (바로 아래에 있는 태그)에만 좌우로 정렬되는 속성이 적용됨
+        <div>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>            
+    */
+}
+.asset ul li {
+    width: 404px;
+    height: 212px;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    padding: 79px 0 0 46px;
+}
+.asset ul li h2 {
+    font-weight: 700;
+}
+.asset ul li p {
+    font-size: 50px;
+    color: #1d1d1d;
+    font-weight: 700;
+}
+.core {
+    margin: 166px 0 100px 0;
+    display: flex;}
+.core .photo img {
+    border-radius: 30px;
+}
+.core .txt  {
+    margin: 177px 0 0 130px;
+}
+.core .txt h1{
+    color: #376fc1;
+    font-size: 20px;
+    font-weight: 700;
+}
+.core .txt p {
+    font-size: 40px;
+    color: #1d1d1d;
+    font-weight: 700;
+}
