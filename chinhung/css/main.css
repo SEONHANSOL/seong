@@ -1,0 +1,81 @@
+@import url(default.css); /* default.css를 불러오기 */
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(../fonts/Pretendard-Bold.woff2) format('woff2'), url(../fonts/Pretendard-Bold.woff) format('woff');}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');}
+
+html, body {
+    /* font-family 사용하는 서체명은 font-face에서 사용한 이름으로 사용, sans-serif는 고딕체라는 의미 */
+    font-family: "Pretendard", sans-serif;
+    font-size: 15px;
+    color: #3d3d3d;
+    line-height: 1.2; /* 행간 */
+    font-weight: 400;
+    word-break: keep-all; /*단어별로 줄바꿈 */
+    letter-spacing: 0; /*자간 */
+}
+.wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+    width: 1260px;
+    margin: 0 auto;
+} 
+header {
+    height: 100px;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    margin: 30px 0 0 0;
+}
+header .gnb ul {
+    display: flex;
+}
+header .gnb ul li a {
+    color: #1d1d1d;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 100px; /* header의 높이와 동일한 값으로 행간을 준다 */
+    /* 행간을 100px을 주면 높이 100px 안에 글자가 위아래 가운데로 정렬된다 (꼼수) */
+    display: block ; /* inline요소인 a를 block요소로 변경 */
+    padding: 0 20px;
+}
+header .gnb ul li a:hover { /* 마우스를 오버했을때 변화시키기*/
+    color: #114294;
+}
+.visual {
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+    height: 700px;
+    color: #fff;
+    text-align: center;
+}
+.visual h2 {
+    font-size: 55px;
+    line-height: 1.1em;
+    font-weight: 700;
+    padding: 245px 0 25px 0;
+}
+.visual p {
+    font-size: 20px; }
+
+.biz .tit {
+    margin: 158px 0 52px 0;
+}
+.biz .tit h2{
+    font-size: 15px;
+    color: #002f87;
+    font-weight: 700;
+}
+.biz .tit p {
+    font-size: 49px;
+    color: #1d1d1d;
+    font-weight: 700;
+    margin: -5px 0 0 0;
+}
