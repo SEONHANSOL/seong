@@ -66,7 +66,7 @@ header .gnb ul li a:hover { /* 마우스를 오버했을때 변화시키기*/
     font-size: 20px; }
 
 .biz .tit {
-    margin: 158px 0 52px 0;
+    margin: 158px 0 48px 0;
 }
 .biz .tit h2{
     font-size: 15px;
@@ -78,4 +78,84 @@ header .gnb ul li a:hover { /* 마우스를 오버했을때 변화시키기*/
     color: #1d1d1d;
     font-weight: 700;
     margin: -5px 0 0 0;
+}
+.biz .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.biz .list ul li {
+    width: 297px;
+    text-align: center;
+}
+.biz .list ul li a {
+    display: block;
+}
+.biz .list ul li a h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 30px 0 10px 0;
+}
+.biz .list ul li a p {
+    margin: 0 50px 22px 50px;
+}
+.biz .list ul li a .more {
+    width: 195px;
+    height: 35px;
+    line-height: 35px;
+    /* 행간을 높이와 동일하게 주면 글자가 위아래 가운데 정렬이 됨 */
+    border: 1px solid #cccccc;
+    display: inline-block;
+}
+.brand {
+    background: url(../images/brand_bg.png) no-repeat center center / cover;
+    height: 1149px;
+    margin: 133px 0 0 0;
+    color: #fff;
+}
+.brand h2 {
+    color: #002f87;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 307px 0 0 0;
+}
+.brand p {
+    font-size: 48px;
+    line-height: 61.55px;
+    font-weight: 700;
+    padding: 0 0 31px 0;
+}
+.brand a {
+    border: 1px solid rgba(255,255,255,0.6);
+    padding: 15px 38px; /* 위아래 15px 좌우 38px */
+    display: inline-block;
+}
+footer{
+    background-color: #2d2d2d;
+    color: rgba(255,255,255,0.8);
+    padding: 56px 0 82px 0;
+}
+footer .f_nav ul{
+    display: flex;
+}
+footer .f_nav ul li {
+    margin: 0 40px 0 0;
+}
+/*li.privacy (여백없음) li중에서 privacy라는 클래스명을 갖은 li
+  li .privacy (여백있음) li안에 privacy라는 클래스명을 갖은 요소*/
+footer .f_nav ul li.privacy {
+    font-weight: 700;
+}
+footer .f_sub {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin: 30px 0 0 0; /*선 밖 여백*/
+    padding: 25px 0 0 0; /*선 내부 여백*/
+}
+footer .f_sub .f_info span {
+    margin: 0 38px 13px 0;
+    display: inline-block;
+}
+footer .f_sub .copyright {
+    margin: 29px 0 0 0;
+    color: rgba(255,255,255,0.6);
 }
