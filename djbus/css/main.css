@@ -12,6 +12,9 @@ html, body{
     word-break: keep-all; /* 단어별로 줄바꿈*/
 } /*기본 상속 스타일 줬음*/
 
+#wrap { /*홈페이지 전~체를 감싸는 요소 - 가로스크롤바가 생겼을때 배경이 짤리는 현상을 막아줌*/
+    min-width: 1260px;
+}
 /*홈페이지 넓이를 제한하고, 가운데로 정렬하는 요소*/
 .wrapper {
     width: 1260px;
@@ -56,10 +59,128 @@ header .gnb ul li a:hover { /* a태그에 마우스를 올렸을때의 스타일
     font-size: 20px;
     padding: 241px 0 0 0;
     display: block; /* 인라인요소는 여백이 적용이 안됨 */
+    text-align: center;
 }
 .visual h2 {
     font-size: 45px;
+    text-align: center;
 }
 .visual h2 em {
     font-weight: 700;
+}
+
+.introduce .art {
+    display: flex;
+    justify-content: center;
+    margin: 158px 0 45px 0;
+}
+.introduce .scholarship {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 163px 0;
+    text-align: right;
+}
+.introduce .art .txt {
+    margin: 0 0 0 107px;
+    width: 618px;
+}
+.introduce .scholarship .txt{
+    margin: 0 107px 0 0 ;
+    width: 618px;
+}
+.introduce h2 {
+    font-size: 45px;
+    font-weight: 700;
+    color: #2d2d2d;
+    margin: 80px 0 0 0;
+}
+.introduce strong {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2d2d2d;
+    margin: 20px 0 16px 0;
+    display: block;
+}
+.introduce .btn {
+    display: flex;
+    /* a태그는 원래 좌우로 배치되지만
+       사이사이에 여백이 발생함
+       이 여백을 없애려면 display flex로 좌우로 배치*/
+    margin: 32px 0 0 0;
+}
+.introduce .scholarship .btn { /* flex로 배치한 버튼을 오른쪽 정렬. text-aline 영향을 받지 않음*/
+    justify-content: flex-end;
+}
+.introduce .btn a { 
+    border: 1px solid #666666;
+    padding: 6px 21px;
+    display: block; /*padding값을 적용하기 위해 준것*/
+    margin: 0 10px 0 0;
+}
+.introduce .btn a:hover{ /*마우스오버 전에 border가 있었다면 border를 주는 것이 사이즈가 유지됨*/
+    border: 1px solid #364B44;
+    background-color: #364B44;
+    color: #fff;
+}
+.introduce .btn a:last-child { /* btn 클래스 안에 있는 a 태그중에 마지막 a */
+    margin-right: 0;
+}
+.introduce .photo img{
+    border-radius: 20px;
+}
+
+.promotion { /*배경보다 promotion 콘텐츠 길이가 더 길다.. 배경의 위치를 정확하게 - 가운데 상단
+            background-size 주면 안됨... 디자인한 사이즈대로 들어가야 하니까..*/
+    background: url(../images/dtc_news.png) no-repeat center top;
+}
+.promotion .news {
+    color: rgba(255,255,255,0.8);
+    padding: 125px 0 130px 0;
+}
+.promotion .news .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.promotion .news .tit h2 {
+    font-size: 45px;
+    font-weight: 700;
+    color: #fff;
+}
+.promotion .news .tit a {
+    border: 1px solid rgba(255,255,255,0.35);
+    padding: 6px 21px;
+    display: inline-block; /*inline요소는 padding이 적용이 안됨*/    
+}
+.promotion .news .tit a:hover {
+    border: 1px solid #CACE91;
+    background-color: #CACE91;
+    color: #fff;
+}
+.promotion .news .list {
+    width: 725px;
+}
+.promotion .news p {
+    padding: 15px 0 20px 0;
+}
+.promotion .list ul li {
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+.promotion .list ul li:last-child {
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+.promotion .list ul li a { /* display: flex는 해당 요소를 block으로 만들어서 넓이를 100%로 만듦*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /*위아래 가운데로 정렬*/
+    padding: 17px 23px;
+}
+.promotion .list ul li a strong{
+    color: #fff;
+    font-size: 20px;
+}
+.promotion .list ul li a:hover strong { /*a태그를 마우스오버했을때 strong 태그는 */
+    color: #CACE91;
+}
+.promotion .news h2 em {
+    color: #CACE91;
 }
