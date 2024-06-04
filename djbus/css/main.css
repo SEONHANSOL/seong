@@ -1,0 +1,65 @@
+@import url(default.css);
+@import url(fonts.css);
+
+/* 글자의 스타일은 상속받음. 기본글자의 스타일은 모든 태그를 감싸는 html body에 선언 */
+html, body{
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #3d3d3d;
+    letter-spacing: 0em; /* 자간 */
+    line-height: 1.3; /* 행간:배수로들어감 */
+    word-break: keep-all; /* 단어별로 줄바꿈*/
+} /*기본 상속 스타일 줬음*/
+
+/*홈페이지 넓이를 제한하고, 가운데로 정렬하는 요소*/
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+header {
+    height: 100px;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    margin: 21px 0 0 0;
+}
+header .gnb ul {
+    display: flex;
+}
+/* 1차 메뉴는 큼직하게 눌려야 함. li말고 여백 및 사이즈는 a한테 줘야함. */
+header .gnb ul li a {
+    font-size: 20px;
+    color: #1d1d1d;
+    padding: 41px 21px 33px 21px; /* 마진말고 패딩: a 여백 근처에 클릭이 다 가능해야함*/
+    display: block; /* padding값이 안들어갈때 block으로 변경 (a는 인라인 태그라 적용이 안되는 부분 */
+}
+header .gnb ul li a:hover { /* a태그에 마우스를 올렸을때의 스타일 */
+    color: #364B44;
+    font-weight: 700;
+}
+
+.visual {
+    height: 750px;
+    background-image: url(../images/visual_bg_test.png);
+    background-position: center center; /*창 사이즈가 줄어들때 중간에 맞춰 줄으듦*/
+    background-repeat: no-repeat; /* 이미지 반복 금지*/
+    background-size: cover; /* 영역에 맞게 딱 채워줌*/
+    background: url(../images/visual_bg.png) no-repeat center center / cover; /*백그라운드 기능 한번에 적용 가능한 태그(세트미뉴)*/
+    color: #fff;
+}
+.visual strong {
+    font-size: 20px;
+    padding: 241px 0 0 0;
+    display: block; /* 인라인요소는 여백이 적용이 안됨 */
+}
+.visual h2 {
+    font-size: 45px;
+}
+.visual h2 em {
+    font-weight: 700;
+}
