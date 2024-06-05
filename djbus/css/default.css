@@ -22,3 +22,14 @@ img { /* img태그를 a로 감싸면 일부 브라우저에서 파란색 테두�
 em, address { /* 글자의 기울임을 삭제 */
     font-style: normal;
 }
+
+button { /* 버튼태그는 글자의 스타일을 상속받지 않음*/
+    background-color: transparent; /* 투명*/
+    border: 0; /*테두리삭제*/
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+}
