@@ -1,0 +1,301 @@
+@import url(default.css);
+@import url(fonts.css);
+
+/* 글자의 스타일은 상속받음. 기본글자의 스타일은 모든 태그를 감싸는 html body에 선언 */
+html, body {
+    font-family: 'S-CoreDream', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #2d2d2d;
+    letter-spacing: 0em; /* 자간 */
+    line-height: 1.4; /* 행간:배수로들어감 */
+    word-break: keep-all; /* 단어별로 줄바꿈*/
+} /*기본 상속 스타일 줬음*/
+
+#wrap { /*홈페이지 전~체를 감싸는 요소 - 가로스크롤바가 생겼을때 배경이 짤리는 현상을 막아줌*/
+    min-width: 1260px;
+}
+/*홈페이지 넓이를 제한하고, 가운데로 정렬하는 요소*/
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+header {
+    height: 100px;
+    /* 감싸는 요소 어떤값에도 position을 안주면 body를 기준으로 정렬
+       header는 원래 block 요소이기 때문에 넓이가 브러우저 넓이만큼 들어감
+       근데, position:absolute값이 적용되면 넓이값은 내부 콘텐츠 요소의
+       넓이값만큼만 적용됨 .. 
+       header에 position:absolute를 주면 넓이 100%를 줘야함*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    /* position 속성이 있는 요소들은 서로 위아래 순서가 존재함.
+       기본적으로 나중에 position이 선언된 요소가 더 위에 존재함
+       <header></header> -- position
+       <section class="visual"></section> --position
+       이렇게 코딩된 경우 visual이 header보다 위에 배치됨
+       이때 header를 더 위에 배치하기 위해 주는 속성
+       (순서를 변경하기 위해 주는 속성을 z-index 라고 함.
+       z-index는 숫자가 높은 요소가 더 위
+       대부분 header는 100 나머지 콘텐츠는 100아래 값을 줌
+       <header></header> -- position  z-index 100
+       <section class=visual"> -- position  z-index 10
+            <div class=tit></div> -- position  z-index 200
+        </section>
+         header가 맨위가 됨..
+         visual tit은 visual보다 위에 배치될 수 없음.
+         (감싸는 요소가 z-index 10이기 때문에 header보다 높은 숫자를 줘도 아래 배치)*/
+         border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+header .wrapper {
+    display:flex;
+    justify-content: space-between;
+}
+header .logo {
+    margin: 24px 0 0 0;
+}
+header .gnb ul {
+    display: flex;
+}
+header .gnb ul li a {
+    display: block;
+    padding: 44px 22px 39px 22px;
+    color: #fff;
+}
+header .gnb ul li a:hover {
+    color: #1A78DA;
+    font-weight: 600;
+}
+.visual {
+    border-radius: 0 0 250px 0;
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+}
+.visual .wrapper {
+    height: 950px;
+    /* .visual .camera absolute의 기준
+    absolute는 감싸는 요소 중에서 position 속성을 가지고 있는
+    가장 가까운 요소를 기준으로 정렬이 됨
+        <div> --position: relative
+            <strong> --position: relative
+                <span></span> --absolute
+            </strong>
+        </div> 
+        이런 구조의 경우 span 태그는 strong을 기준으로 정렬
+        절대 div를 기준으로 정렬 불가
+        
+        만약 해당 요소가 position 속성이 없으면 position:relative를 줌
+        relative는 어떠한 요소에 주더라도 스타일에 영향을 미치지 않음*/
+    position: relative;
+}
+.visual h2 {
+    padding: 320px 0 0 0;
+    text-align: center; /* 이미지도 가운데 정렬 가능*/
+}
+.visual .camera {
+    /* .visual .wrapprer 를 기준으로 정렬 */
+    position: absolute;
+    right: -80px;
+    bottom: -60px;
+}
+.visual .camera a {
+    display:flex; /* 넓이와 높이를 적용하기 위해*/
+    width: 171px;
+    height: 171px;
+    border-radius: 50%; /* 정사각형에 boder-radius 50%가 동그라미 */
+    background-color: #0C4E92;
+    color: #fff;
+    text-align: center;
+    box-shadow: 1px 1px 14px rgba(0,0,0,0.50);
+    flex-direction: column;
+    justify-content: center;
+}
+.visual .camera a span {
+    margin: 10px 0 0 0;
+}
+
+
+.culture .tit h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #1d1d1d;
+}
+.culture .tit {
+    margin: 150px 0 19px 0;
+}
+
+.culture .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.culture .list ul li {
+    width: 297px;
+}
+.culture .list ul li a h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 11px 0 7px 0;
+}
+.culture .list ul li a .photo {
+    overflow: hidden;
+    /* 이미지가 photo의 크기보다 커지면 넘치는 부분 숨김*/
+    font-size: 0;
+    line-height: 0;
+    /* 이미지 하단에는 글자의 행간(여백)값이 들어감. 그래서 하단에 여백이 조금 발생
+    이 여백을 없애고 싶다면 이미지만 감싸는 요소가 글자크기 0 행간 0 값을 줘야함.*/
+}
+.culture .list ul li a .photo img {
+    transition: 0.5s;
+}
+.culture .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+.culture .wrapper {
+    position: relative;
+    /*.culture .more a 정렬의 중심*/
+}
+.culture .more {
+    /* .culture .warpper를 기준으로 정렬 */
+    position: absolute;
+    right: 0;
+    top: 41px;
+}
+.culture .more a {
+    border-radius: 20px;
+    color: #fff;
+    display: block;
+    padding: 10px 31px 10px 17px;
+    background: url(../images/more.svg) #0C4E92 no-repeat right 18px top 18px;
+    transition: 0.0s;
+    /* 나중에 a에 class가 추가되거나 또는 오버를 해서 스타일이 변경된다면
+       0.5초의 시간동안 천천히 변하기 */
+}
+.culture .more a:hover {
+    /* background가 선언된 상태에서
+    오버했을때 색상만 변한다면 반드시 background-color라고 정확하게
+    해당 속성명을 써줘야함; background라고 색상만 선언하면 모든게 취소됨. */
+    background-color: #206D50;
+}
+
+.tour .tit {
+    margin: 131px 0 19px 0;
+}
+.tour .tit h2 {
+font-size: 40px;
+font-weight: 600;
+color: #1d1d1d;
+}
+.tour .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.tour .list ul li {
+    width: 190px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgba(255,255,255,0.8);
+}
+/* li중에서 active 클래스를 갖고 있는 li(띄워쓰기 중요)*/
+.tour .list ul li.active {
+    width: 613px;
+}
+.tour .list ul li.tour1 {
+    background-image: url(../images/tour1.png);
+}
+.tour .list ul li.tour2 {
+    background-image: url(../images/tour2.png);
+}
+.tour .list ul li.tour3 {
+    background-image: url(../images/tour3.png);
+}
+.tour .list ul li.tour4 {
+    background-image: url(../images/tour4.png);
+}
+.tour .list ul li a {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 56px 77px 57px;
+    text-align: center;
+}
+.tour .list ul li.active a {
+    padding: 0 40px 39px 40px;
+    text-align: left;
+}
+.tour .list ul li a p {
+    display: none; /* 숨김 (공간차지x) */
+}
+.tour .list ul li.active a p {
+    display: block; /* 나타남; display:none; 으로 숨기는 경우
+                        display:inline; inline-block; block; flex 줘도 모두 나타남 */
+}
+.tour .list ul li a h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+.tour .wrapper {
+    position: relative; /* .tour .more 정렬의 기준*/
+}
+.tour .more {
+    position: absolute; /* .tour .wrapper를 기준으로 */
+    right: 0;
+    top: 40px;
+}
+.tour .more a {
+    padding: 10px 32px 10px 17px;
+    border-radius: 20px;
+    color: #fff;
+    display: inline-block;
+    background: url(../images/more.svg) no-repeat right 22px top 18px #0C4E92;
+}
+.tour .more a:hover {
+    background-color: #206D50;
+}
+.community {
+    margin: 225px 0 0 0;
+    height: 805px;
+    background: url(../images/community_bg.png) no-repeat center center / cover;
+    color: rgba(255,255,255,0.8);
+}
+.community .wrapper {
+    display: flex;
+}
+.community .tit {
+    width: 428px;
+    padding: 271px 0 0 0;
+}
+.community .tit h2 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    color: #fff;
+    margin: 0 0 16px 0;
+}
+.community .news {
+    background-color: rgba(61,61,61,0.36);
+    border-radius: 10px;
+    backdrop-filter: blur(3px); /* 박스의 뒷배경을 흐리게 하는 효과 */
+    width: 466px;
+    height: 434px;
+    margin: 134px 24px 0 0;
+    padding: 0 31px 0 37px;
+}
+.community .news h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    padding: 50px 0 12px 0;
+}
+.community .link {
+    padding: 226px 0 0 0;
+}
+
+footer {
+    margin-top: 500px;
+}
