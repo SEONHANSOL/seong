@@ -312,7 +312,7 @@ color: #1d1d1d;
 }
 .community .link {
     width: 342px;
-    padding: 226px 0 0 24px;
+    margin: 226px 0 0 24px;
 }
 .community .link ul {
     display: flex;
@@ -320,17 +320,64 @@ color: #1d1d1d;
     gap: 24px;
 }
 .community .link ul li {
-    width: 145px;
+    width: 159px;
     background-color: rgba(61,61,61,0.36);
     border-radius: 10px;
     backdrop-filter: blur(3px);
 }
 .community .link ul li a {
     display: block;
-    height: 145px;
+    height: 159px;
     padding: 26px 30px 27px 28px;
     font-weight: 600;
+    background-position: right 30px bottom 29px;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+}
+.community .link ul li.link1 a {
+    background-image: url(../images/community_ico1.svg);
+}
+.community .link ul li.link2 a {
+    background-image: url(../images/community_ico2.svg);
+}
+.community .link ul li.link3 a {
+    background-image: url(../images/community_ico3.svg);
+}
+.community .link ul li.link4 a {
+    background-image: url(../images/community_ico4.svg);
+}
+.community .link ul li a:hover {
+    color:#1A78DA;
 }
 footer {
-    margin-top: 500px;
+    padding: 50px 0 90px 0;
+}
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+footer .f_nav ul {
+    display: flex;
+    gap: 46px; /* li 사이의 여백*/
+}
+footer .f_info {
+    margin: 15px 0 16px 0;
+    display: flex;
+    gap: 46px;
+}
+footer .copyright {
+    color: #666;
+}
+footer .f_nav .bold {
+    font-weight: 600;
+}
+footer .family button {
+    width: 183px;
+    height: 35px;
+    border: 1px solid #707070;
+    border-radius: 10px;
+    padding: 0 0 0 22px;
+    text-align: left; /* 버튼의 기본은 가운데로 설정되어있음 */
+    background: url(../images/more_f.svg);
+
 }

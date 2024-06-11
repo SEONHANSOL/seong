@@ -33,4 +33,5 @@ button { /* 버튼태그는 글자의 스타일을 상속받지 않음*/
     color: inherit;
     letter-spacing: inherit;
     line-height: inherit;
+    cursor: pointer; /* 버튼에 오버 시 마우스포인터를 손바닥 모양으로 변경 */
 }
