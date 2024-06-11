@@ -49,7 +49,7 @@ header {
          header가 맨위가 됨..
          visual tit은 visual보다 위에 배치될 수 없음.
          (감싸는 요소가 z-index 10이기 때문에 header보다 높은 숫자를 줘도 아래 배치)*/
-         border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 header .wrapper {
     display:flex;
@@ -275,7 +275,6 @@ color: #1d1d1d;
     font-weight: 600;
     line-height: 48px;
     color: #fff;
-    margin: 0 0 16px 0;
 }
 .community .news {
     background-color: rgba(61,61,61,0.36);
@@ -283,7 +282,7 @@ color: #1d1d1d;
     backdrop-filter: blur(3px); /* 박스의 뒷배경을 흐리게 하는 효과 */
     width: 466px;
     height: 434px;
-    margin: 134px 24px 0 0;
+    margin: 134px 0 0 0;
     padding: 0 31px 0 37px;
 }
 .community .news h3 {
@@ -292,10 +291,46 @@ color: #1d1d1d;
     color: #fff;
     padding: 50px 0 12px 0;
 }
-.community .link {
-    padding: 226px 0 0 0;
+.community .news ul li {
+    border-top: 1px solid rgba(255,255,255,0.1);
 }
-
+.community .news ul li:first-child {
+    border-top: 0;
+}
+.community .news ul li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 0 17px 0;
+}
+.community .news ul li a strong {
+    color: #fff;
+    transition: 0.2s;
+}
+.community .news ul li a:hover strong {
+    color: #1A78DA;
+    font-weight: 600;
+}
+.community .link {
+    width: 342px;
+    padding: 226px 0 0 24px;
+}
+.community .link ul {
+    display: flex;
+    flex-wrap: wrap; /* 두줄허용*/
+    gap: 24px;
+}
+.community .link ul li {
+    width: 145px;
+    background-color: rgba(61,61,61,0.36);
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+}
+.community .link ul li a {
+    display: block;
+    height: 145px;
+    padding: 26px 30px 27px 28px;
+    font-weight: 600;
+}
 footer {
     margin-top: 500px;
 }
