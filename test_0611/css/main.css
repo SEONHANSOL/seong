@@ -1,0 +1,176 @@
+@import url(default.css);
+@import url(fonts.css);
+
+/* 글자의 스타일은 상속받음. 기본글자의 스타일은 모든 태그를 감싸는 html body에 선언 */
+html, body {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #2d2d2d;
+    letter-spacing: 0em; /* 자간 */
+    line-height: 1.2; /* 행간:배수로들어감 */
+    word-break: keep-all; /* 단어별로 줄바꿈*/
+} /*기본 상속 스타일 줬음*/
+
+#wrap { /*홈페이지 전~체를 감싸는 요소 - 가로스크롤바가 생겼을때 배경이 짤리는 현상을 막아줌*/
+    min-width: 1260px;
+}
+/*홈페이지 넓이를 제한하고, 가운데로 정렬하는 요소*/
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width:640px){ 
+    /*640px이하에서 만 우선 적용
+      선택자가 동일해야함..
+      pc버전 스타일과 mobile버전 스타일이 동시에 적용되는 ㄴ것이라
+      변경되는 요소만 스타일을 입력하면 됨*/
+    html, body {
+        font-size: 13px;
+    }
+    #wrap {
+            min-width: 100%; /*최소넓이 꽉차게*/
+        }
+    .wrapper {
+        width: auto; /* block요소의 속성대로 알아서 주기
+                        100%를 주면 마진이 좌우로 20px씩 들어가서
+                        실제의 넓이가 100% +40px로 사이즈가 넘치게 됨.. */
+        margin: 0 20px; /* 좌우에 여백 20px */
+    }
+} /* media */
+
+.eco h2 {
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.2;
+    margin: 70px 0 33px 0;
+}
+.eco ul {
+    display: flex;
+    justify-content: space-between;
+}
+.eco ul li {
+    width: 404px;
+}
+.eco ul li a h3 {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 13px 0 6px 0;
+}
+
+
+@media screen and (max-width:640px){ 
+    .eco h2 {
+        font-size: 28px;
+        margin: 35px 0 15px 0;
+    }
+    .eco ul li {
+        width: calc(50% - 8px);
+        /* 두개의 li가 반반들어가는데 사이에 여백이 16px이 고정으로 들어감 
+           (100% / li갯수) - (사이 여백의 총합 / li갯수)
+           (100% /2 ) - (16px / 2)
+           50% - 8px
+           퍼센트와 px 두 단위를 동시에 계산하는 계산식*/
+    }
+    .eco ul li:last-child { /* 3개가 나오다가 2개만 나오게 - 마지막꺼 숨김*/
+        display: none;
+    }
+    /* 글자는 넓이가 부족하면 줄이 바뀌지만, 이미지는 넓이는 주지 않으면 넓이가 바뀌지 않음
+       이미지를 감싸는 넓이가 아무지 줄어도 이미지는 삐져나옴
+       감싸는곳 말고 이미지에 넓이 지정해주기 */
+    .eco ul li a .photo img {
+        width: 100%; /*넓이만 지정해 줌 - 높이는 비율에 맞게 알아서 들어감 (둘다주면 찌그러짐)
+                       100%라는건, 이미지를 감싸는 요소의 넓이의 100%임
+                       ==> 만약 이미지의 사이즈가 더 작다면 이미지가 늘어나게됨 */
+    }
+    .eco ul li a h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 7px 0 3px 0;
+    }
+} /*media*/
+
+.pure {
+    background: url(../imges/pure_bg.png) no-repeat center center / cover;
+    color: #fff;
+    margin: 127px 0 0 0;
+    height: 784px;
+    text-align: center;
+}
+.pure h2 {
+    font-size: 50px;
+    font-weight: 700;
+    padding: 149px 0 13px 0;
+}
+.pure ul {
+    margin: 129px 0 82px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.pure ul li {
+    width: 297px;
+    height: 297px;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+@media screen and (max-width:640px){ 
+    .pure {
+        margin: 54px 0 0 0;
+        padding: 0 0 52px 0;
+        height: auto; /* 기존에 선언된 높이값을 해제하는 방법
+                         auto로 주면 내부 콘텐츠의 길이대로 늘어남 (원래대로) */
+    }
+    .pure h2 {
+        font-size: 30px;
+        padding: 75px 0 3px 0;
+    }
+    .pure ul {
+        flex-wrap: wrap; /* 여러줄 허용*/
+        gap: 16px;
+        margin: 44px 0 0 0;
+    }
+    .pure ul li {
+        width: calc(50% - 8px);
+        height: 152px;
+    }
+} /*media*/
+
+.tech {
+    margin: 133px 0 0 0;
+}
+.tech .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.tech strong {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 42px 0 9px 0;
+    display: block;
+}
+.tech h2 {
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.1;
+}
+.tech p {
+    width: 514px;
+    /* 영역을 제한해서 글자의 줄바꿈을 구현 */
+    margin: 6px 0 16px 0;
+}
+
+@media screen and (max-width:640px){ 
+    .tech .wrapper {
+        display: block; /* flex를 해지하기 위해서는 display의 다른 속성을 선언
+                           inline, inline-block, none 제일 만만한게 block*/
+    }
+    .tech p {
+        width: auto;
+        /* 넓이 해제 */
+    }
+    .tech .photo imag {
+        width: 100%;
+    }
+} /*media*/
