@@ -360,6 +360,23 @@ footer .f_nav ul {
     display: flex;
     gap: 46px; /* li 사이의 여백*/
 }
+footer .f_nav ul li {
+    position: relative; /* ::after 정렬의 기준*/
+}
+footer .f_nav ul li::after {
+    content: ""; /* 가상요소 before와 after 사용하실때에는 반드시 content가 필요
+                    지우면 나타나지 않음 */
+    width: 1px;
+    height: 11px;
+    background-color: #ccc;
+    display: block;
+    position: absolute; /* 각각의 li를 기준으로 정렬 */
+    right: -25px;
+    top: 5px;
+} /* li중에서 마지막 li의 after */
+footer .f_nav ul li:last-child::after {
+    display: none; /*숨김*/
+}
 footer .f_info {
     margin: 15px 0 16px 0;
     display: flex;
@@ -378,6 +395,5 @@ footer .family button {
     border-radius: 10px;
     padding: 0 0 0 22px;
     text-align: left; /* 버튼의 기본은 가운데로 설정되어있음 */
-    background: url(../images/more_f.svg);
-
+    background: url(../images/f_more.svg) no-repeat right 20px center;
 }
