@@ -33,3 +33,166 @@
             margin: 0; /* pc버전에서 준 여백을 삭제하려면 0을 줌 */
         }
 } /*media*/
+
+.health {
+    background: url(../images/sound_bg.png) no-repeat center center / cover;
+    color: #fff;
+    text-align: center;
+    padding: 174px 0 301px 0;
+}
+.health h2 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 0 18px 0;
+}
+@media screen and (max-width:640px){
+        .health {
+        padding: 84px 0 128px 0;}
+        .health h2 {
+            font-size: 30px;
+            margin: 0 0 10px 0;}
+        .health p br { /* 줄바꿈을 주던 태그를 삭제해줌 */
+            display: none;
+        }
+} /*media*/
+
+
+.solution {
+    background: url(../images/sound_bg.png) no-repeat center center / cover;
+    color: #fff;
+    text-align: center;
+    padding: 174px 0 301px 0;
+}
+.solution h2 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 0 18px 0;
+}
+.solution p span {
+    display: block;
+}
+
+@media screen and (max-width:640px){
+        .solution {
+        padding: 84px 0 128px 0;}
+        .solution h2 {
+            font-size: 30px;
+            margin: 0 0 10px 0;}
+        .solution p span {
+            display: inline;
+        }
+} /*media*/
+
+.Story {
+    margin: 237px 0 0 0;
+}
+.Story .group1,
+.Story .group2 {
+    display: flex;
+    align-items: center /* txt와 photo를 위아래 가운데 정렬 (세로정렬) */
+}
+.Story .group2 {
+    flex-direction: row-reverse; /* 좌우 순서 역전*/
+}
+.Story .txt {
+    width: 630px;
+    padding: 0 0 0 48px;
+}
+.Story .txt strong {
+    font-weight: 700;
+    color: #2d2d2d;
+}
+.Story .txt h2 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 0 26px 0;
+}
+.Story .txt .more {
+    margin: 30px 0 0 0;
+}
+.Story .txt .more a {
+    padding: 13px 97px 12px 17px;
+    background-color: #00AC4F;
+    color: #fff;
+    display: inline-block;
+    position: relative; /* after 정렬의 기준 */
+}
+.Story .txt .more a::after {
+    position: absolute; /* a태그 기준으로 정렬 */
+    right: 17px;
+    top: 12px;
+    /* 아이콘 같이 전체가 보여야 하는 경우는 contain - 이미지 안짤림
+       배경에 이미지를 넣는 경우에는 cover - 이미지 짤림. 
+       둘다 영역에 크기에 맞춰서 배경이미지가 리사이즈 됨.*/
+    background: url(../images/more.svg) no-repeat center center / contain ;
+    content: ""; 
+    width: 20px;
+    height: 20px;
+    /* after, before 가상선택자는 반드시 content 속성을 줘야 나타남. 
+       넓이와 높이가 존재하지 않아서 이미지를 배경으로 넣으려면 이미지 사이즈를 넓이와 높이로 지정해줘야함. 
+       위치가 태그의 시작위치, 종류위치가 마음데로 배치됨.
+       내가 원하는 위치에 배치하려면 absolute로 꼭 배치하기 
+       그냥 before, after 가상선택자는 반드시 absolute를 준다고 생각하면 됨.*/
+}
+.Story .photo {
+    font-size: 0;
+    line-height: 0;
+    /* 이미지태그 하단에는 행간이 적용됨.
+       이걸 없애려면 이미지를 감싸는 태그에 글자 크기와 행간을 0으로 줘야함. */
+}
+
+@media screen and (max-width:640px){
+            .Story {
+                margin: 0 0 0 0;
+            }
+            .Story .group1,
+            .Story .group2 {
+                display: block; /*display:frex를 해제하기 위해서
+                                  display 속성 중에서 주기 적합한 값으로 대체 */
+                /* align-items: center;  -- frex 일때만 적용되는 속성, 해제가 필요x*/
+            }
+            .Story .group2 {
+                /* flex-direction: row-reverse; flex 일때만 적용되는 속성. 해제가 필요x*/
+            }
+            .Story .txt {
+                width: auto; /* 넓이를 제한 한것 해제 */
+                padding: 0;
+                margin: 49px 0 22px 0;
+            }
+            .Story .txt strong {
+                font-size: 13px;
+                margin: 0 31% 0 0 ;
+                display: block;
+            }
+            .Story .txt strong br {
+                display: none;
+            }
+            .Story .txt h2 {
+                font-size: 40px;
+                margin: 3px 0 19px 0;
+            }
+            .Story .txt .more {
+                margin: 26px 0 0 0;
+            }
+            .Story .txt .more a {
+                padding: 8px 43px 9px 12px;
+            }
+            .Story .txt .more a::after {
+                position: absolute; /* a태그 기준으로 정렬 */
+                right: 13px;
+                top: 6px;
+                width: 13px;
+                height: 19px;
+                /* after, before 가상선택자는 반드시 content 속성을 줘야 나타남. 
+                넓이와 높이가 존재하지 않아서 이미지를 배경으로 넣으려면 이미지 사이즈를 넓이와 높이로 지정해줘야함. 
+                위치가 태그의 시작위치, 종류위치가 마음데로  배치됨.
+                내가 원하는 위치에 배치하려면 absolute로 꼭 배치하기 
+                그냥 before, after 가상선택자는 반드시 absolute를 준다고 생각하면 됨.*/
+            }
+            .Story .photo img {
+                width: 100%; /* 감싸는 photo의 넓이에 100%를 주는 것 */
+            }
+}
