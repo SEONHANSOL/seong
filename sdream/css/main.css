@@ -1,0 +1,177 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+/* 폰트 2개 사용.. 제목에는 gmarket / 본문ㅇ[는 pretendard 
+   body에는 본문 서체 적용.
+   제목 서체를 적용하는 방법
+   1. css에서 해당 요소를 모두 선택해서 .biz h2 이렇게 각각 불러서
+      gmarket 서체를 사용하는 것 (font-family를 계속 선언해야함)
+   2. css를 하나 만들어둠
+      예를 들어 .tit 이라고.. 그리고
+      html에서 gmarket 서체를 써야하는 html 요소에
+      <section class="biz>
+             <h2 class="tit"></h2> <!-- 필요한 곳에 class명을 주는 방식)
+      </section>
+*/
+.tit {
+    font-family: 'GmarketSans', sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.tit_b {
+    font-family: 'GmarketSans', sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+
+header {
+    position: absolute; /*body를 기준으로 정렬*/
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    padding: 19px 0 19px 0;
+}
+header .gnb .gnb_open {
+    display: none;
+}
+header .gnb .gnb_wrap ul {
+    display: flex;
+}
+header .gnb .gnb_wrap ul a {
+    padding: 44px 53px 32px 53px;
+    display: block;
+    position: relative;
+}
+header .gnb .gnb_wrap ul a::after {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 3%;
+    height: 3px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.5);
+    content: "";
+}
+header .gnb .gnb_wrap ul li:last-child a::after{
+    display: none;
+}
+@media screen and (max-width:640px){
+    header {
+        height: 50px;
+        border-bottom: 0;
+    }
+    header .logo {
+        padding: 11px 0 0 0;
+    }
+    header .logo img {
+        width: 75px;
+    }
+    header .gnb .gnb_open {
+        /* 모바일에서 나타남
+           이미 header에 position값이 존재함 - header를 기준으로 정렬 */
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50px;
+        height: 50px;
+        font-size: 0;
+        line-height: 0;
+        background: url(../images/gnb_open.svg) no-repeat center center;
+    }
+    header .gnb .gnb_wrap {
+        display: none;
+    }
+}
+
+
+
+.visual {
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+    color: rgba(255,255,255,0.8);
+    height: 900px;
+    text-align: center;
+}
+.visual strong {
+    display: block;
+    padding: 362px 0 0 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+.visual h2 {
+    font-size: 59px;
+    margin: 5px 0 5px 0;
+    color: #fff;
+}
+.visual p {
+    font-style: 'Pretendard'sans-serif;
+}
+
+@media screen and (max-width:640px){
+    .visual {
+        height: auto;
+        text-align: center;
+        padding: 0 0 120px 0;
+    }
+    .visual strong {
+        display: block;
+        padding: 99px 0 0 0;
+        font-size: 8px;
+        font-weight: 700;
+    }
+    .visual h2 {
+        font-size: 33px;
+        margin: 5px 0 2px 0;
+        color: #fff;
+    }
+    .visual p {
+        font-style: 'Pretendard'sans-serif;
+    }
+} /*media*/
+
+.biz .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.biz .subject {
+    position: sticky;
+    top: 100px;
+}
+.biz .subject strong {
+    color: #043D2C;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 0 2px;
+}
+.biz .subject h2 {
+    font-size: 45px;
+    font-weight: 700;
+    margin: 1px 0 6px 0;
+}
+.biz .subject p {
+    font-size: 16px;
+    font-weight: 700;
+}
+.biz .list {
+    width: 500px;
+    height: 1500px;
+    background-color: #043D2C;
+}
+
+footer {
+    margin: 2000px;
+}
