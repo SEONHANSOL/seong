@@ -142,14 +142,28 @@ header .gnb .gnb_wrap ul li:last-child a::after{
     }
 } /*media*/
 
+.biz {
+    margin: 142px 0 0 0;
+}
 .biz .wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-start
+    /* flex로 정렬하면 좌우 요소의 길이가 같아짐.
+       하지만 구현을 위해서 존재하는 만큼만 길이가 잡여야함
+       align-item을 주면 flex로 정렬된 요소들의 길이가 같아지는 현상이 사라짐. */
 }
 .biz .subject {
     position: sticky;
     top: 100px;
+    /* 나를 감싸는 요소의 길이 내부에서 스크롤되는 동안
+       상단에 고정으로 존재하는 것. 감싸는 요소가 모두 스크롤 되면 따라서 스크롤됨.
+       대부분 left를 잘 안주고 top만 줌.
+       고정될 때 상단의 여백이 됨.. 
+       단점: 감싸는 요소중에서 절대로 속성에 overflow:hidden; 이 존재하면 안됨.
+       -- wrap한테 무조건 overflow:hidden; 줘야함
+       -- 그래서 플러그인으로 대체해서 잘 사용함. */
+       margin: 186px 0 0 0;
 }
 .biz .subject strong {
     color: #043D2C;
@@ -167,10 +181,180 @@ header .gnb .gnb_wrap ul li:last-child a::after{
     font-weight: 700;
 }
 .biz .list {
-    width: 500px;
-    height: 1500px;
-    background-color: #043D2C;
+    width: 832px;
 }
+.biz .list ul {
+    display: flex;
+    flex-wrap: wrap; /* 2줄 허용 */
+    gap: 24px;
+}
+.biz .list ul li {
+    width: 404px;
+    color: #fff;
+    border-radius: 20px;
+    overflow: hidden; /* 넘치는 요소 삭제 */
+}
+.biz .list ul li:nth-child(odd) { /* odd = 홀수 */
+    transform: translate(0,186px);
+    /* transform은 현재의 위치에서부터 요소를 움직이는데
+       살짝 absolute처럼 다른요소와 부딪히더라도 배치할 수 있음
+       margin은 다른 요소와 중복되면 밀리는 현상이 발생하는데
+       transform: translatefh 움직이는 것은 공간을 차지하지 않음
+       기본적으로 모든 여백은 margin이고 margin으로 안되는 경우 transform: translatefh 를 사용 */
+}
+.biz .list ul li a {
+    height: 363px;
+    display: block;
+    position: relative;
+}
+.biz .list ul li a .photo::before {
+    position: absolute; /* a를 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,64,43,0.70);
+    content: ""; /*before를 존재하게 하는 값*/
+    display: none;
+}
+
+.biz .list ul li a:hover .photo::before {
+    display: block;
+}
+.biz .list ul li a h3 {
+    position: absolute;
+    left: 32px;
+    bottom: 97px;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+}
+.biz .list ul li a p {
+    position: absolute;
+    font-size: 16px;
+    left: 0;
+    bottom: 50px;
+    margin: 0 32px;
+    /* 마우스 오버때에만 보이게 한다면 
+     - 미리 오버 스타일을 모두 가지고 있고, display로 보이는 상태만 조절하는게 좋음*/
+}
+.biz .list ul li a .more {
+    display: none; 
+    position: absolute; /* a를 기준으로 */
+    left: 32px;
+    bottom: 24px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    padding-right: 20px; /* 오른쪽에 아이콘 들어갈 여백 만들어주기 */
+}
+.biz .list ul li a:hover .more {
+    display: block;
+}
+.biz .list ul li .more::after {
+    position: absolute; /* moder를 기준으로 정렬 */
+    right: 0;
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    background: url(../images/biz_more.svg)  no-repeat center center / contain;
+    content: ""; /*after를 보이게 하는 값 */
+}
+@media screen and (max-width:640px){
+                .biz {
+                    margin: 38px 0 0 0;
+                }
+                .biz .wrapper {
+                    display: block
+                }
+                .biz .subject {
+                    position: relative; /*sticky를 해제하기 위해서
+                                          position중에서 줘도 변화가 없는 값으로 대체*/
+                    top: auto; /* relative도 top이 적용됨. 해제는 auto*/
+                    margin: 0;
+                }
+                .biz .subject strong {
+                    font-size: 13px;
+                    font-weight: 700;
+                    margin: 0px;
+                }
+                .biz .subject h2 {
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin: 0 0 12px 0;
+                }
+                .biz .subject h2 br {
+                    display: none;
+                }
+                .biz .subject p {
+                    display: none; /* 모바일 숨김 */
+                }
+                .biz .list {
+                    width: auto; /* 넓이 고정값 해제 (원래 있던데로 나타나기) */
+                }
+                .biz .list ul {
+                    gap: 16px;
+                }
+                .biz .list ul li {
+                    width: calc(50% - 8px);
+                    color: #2d2d2d;
+                    border-radius: 10px;
+                    overflow: visible; /* overflow해제 - 길이만큼 늘어나게
+                                          모바일에서 사이즈가 줄어들면 제목이 2줄이 될 수도 있음*/
+                }
+                .biz .list ul li:nth-child(odd) { /* odd = 홀수 */
+                    transform: translate(0,0px);
+                    /* transform은 현재의 위치에서부터 요소를 움직이는데
+                    살짝 absolute처럼 다른요소와 부딪히더라도 배치할 수 있음
+                    margin은 다른 요소와 중복되면 밀리는 현상이 발생하는데
+                    transform: translatefh 움직이는 것은 공간을 차지하지 않음
+                    기본적으로 모든 여백은 margin이고 margin으로 안되는 경우 transform: translatefh 를 사용 */
+                }
+                .biz .list ul li a {
+                    height: auto; /* 제목이 여러줄이 될 수도 있음  */
+                }
+                .biz .list ul li a .photo::before {
+                    display: none;
+                }
+                
+                .biz .list ul li a:hover .photo::before {
+                    display: none;
+                }
+                .biz .list ul li a .photo {
+                    height: 122px;
+                    overflow: hidden;
+                    border-radius: 10px;
+                }
+                .biz .list ul li a .photo img {
+                    /* pc와 mobile에서 이미지의 비율이 다르게 보일 때
+                       img태그로 코딩한 이미지를 정해진 영역에 맞게 사이즈를 리사이즈 해주는 코딩= object-fit: cover; */
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .biz .list ul li a h3 {
+                    position: relative; /* absolute 해제*/
+                    left: auto;
+                    bottom: auto;
+                    font-size: 13px;
+                    font-weight: 700;
+                    text-align: center;
+                    margin: 5px 0 15px 0;
+                }
+                .biz .list ul li a:hover h3 {
+                    bottom: auto;
+                }
+                .biz .list ul li a p {
+                    display: none;
+                }
+                .biz .list ul li a .more {
+                    display: none;
+                }
+                .biz .list ul li a:hover .more {
+                    display: none;
+                }
+} /*media*/
+
+
 
 footer {
     margin: 2000px;
