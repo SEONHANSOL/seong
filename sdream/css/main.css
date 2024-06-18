@@ -117,7 +117,7 @@ header .gnb .gnb_wrap ul li:last-child a::after{
     color: #fff;
 }
 .visual p {
-    font-style: 'Pretendard'sans-serif;
+    font-family: 'Pretendard'sans-serif;
 }
 
 @media screen and (max-width:640px){
@@ -138,7 +138,7 @@ header .gnb .gnb_wrap ul li:last-child a::after{
         color: #fff;
     }
     .visual p {
-        font-style: 'Pretendard'sans-serif;
+        font-family: 'Pretendard'sans-serif;
     }
 } /*media*/
 
@@ -916,7 +916,7 @@ footer .f_info {
     }
     footer .f_nav ul li::after {
         position: absolute;
-        right: -17x;
+        left: 0;
         top: 2px;
         width: 1px;
         height: 10px;
