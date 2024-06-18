@@ -1,0 +1,194 @@
+@import url(fonts.css);
+@import url(defualt.css);
+
+body, html {
+    font-family: "Pretendard", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #2d2d2d;
+    word-break: keep-all;
+}
+
+#wrap{
+    min-width: 1260px;}
+
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+header {
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    margin: 24px 0 0 0;
+}
+header .gnb ul {
+    display: flex;
+}
+header .gnb ul a {
+    padding: 45px 23px 46px 23px;
+    display: block;
+    color: #fff;
+    transition: 0.3s;
+}
+header .gnb ul a:hover {
+    color: #0C4E92;
+}
+.visual {
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+    border-radius: 0 0 250px 0;
+}
+.visual .wrapper {
+    height: 950px;
+    position: relative;
+}
+.visual h2 {
+    text-align: center;
+    padding: 320px 0 0 0;
+}
+.visual .camera {
+    position: absolute;
+    right: -77px;
+    bottom: -99px;
+}
+.visual .camera a {
+    width: 171px;
+    height: 171px;
+    border-radius: 50%;
+    background-color: #0C4E92;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    box-shadow: 1px 1px 14px rgba(28,28,28,100);
+}
+.visual .camera a span {
+    margin: 12px 0 0 0;
+}
+.gnb .ul .li {
+    display: flex;
+}
+.culture .tit {
+    margin: 209px 0 19px 0;
+}
+.culture .tit h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+.culture .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.culture .list ul li {
+    width: 297px;
+}
+.culture .list ul li h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 2px 0;
+}
+.culture .list ul li a .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+.culture .list ul li a .photo img {
+    transition: 0.4s;
+}
+.culture .list ul li a:hover .photo img {
+    transform:scale3d(1.2,1.2,1);
+}
+.culture .wrapper {
+    position: relative;
+}
+.culture .more {
+    position: absolute;
+    right: 0;
+    top: 44px;
+}
+.culture .more a {
+    color: #fff;
+    display: block;
+    border-radius: 50px;
+    padding: 6px 31px 6px 17px;
+    background: url(../images/more_ico.png) #0C4E92 no-repeat right 18px top 11px;
+}
+.culture .more a:hover {
+    background-color: #314232;
+}
+
+.tour .tit {
+    margin: 125px 0 225px 0;
+}
+.tour .tit h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+.tour .tit p {
+    margin: 0 0 13px 0;
+}
+.tour .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.tour .list ul li {
+    width: 190px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgba(255,255,255,0.8);
+}
+.tour .list ul li.active{
+    width: 618px;
+}
+.tour .list ul li.tour1 {
+    background-image: url(../images/tour1.png);
+}
+.tour .list ul li.tour2 {
+    background-image: url(../images/tour2.png);
+}
+.tour .list ul li.tour3 {
+    background-image: url(../images/tour3.png);
+}
+.tour .list ul li.tour4 {
+    background-image: url(../images/tour4.png);
+}
+.tour .list ul li a {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 15px 50px 15px;
+    text-align: center;
+}
+.tour .list ul li.active a {
+    padding: 0 301px 50px 39px;
+    text-align: left
+}
+.tour .list h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 2px 0;
+}
+.tour .list ul li a p {
+    display: none;
+}
+.tour .list ul li.active a p {
+    display: block;
+}
+
+footer {
+    margin: 500px 0 0 0;
+}

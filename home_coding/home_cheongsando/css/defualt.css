@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+em, address {font-style: normal;}
+li {list-style: none;}
+h1, h2, h3, h4, h5, h6, strong {font-size: inherit; font-weight: inherit;}
+img {border: 0;}
+a {color: inherit;
+    text-decoration: none;}
+
+botton {
+    background-color: transparent;
+    border: 0;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+}
