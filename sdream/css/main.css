@@ -526,16 +526,16 @@ header .gnb .gnb_wrap ul li:last-child a::after{
 
 
 .webzine .subject strong {
-color: #043D2C;
-font-weight: 700;
-margin: 145px 0 2px 0;
-display: block;
+    color: #043D2C;
+    font-weight: 700;
+    margin: 145px 0 2px 0;
+    display: block;
 }
 .webzine .subject h2 {
-font-size: 45px;
-font-weight: 700;
-color: #2d2d2d;
-margin: 0 0 35px 0;
+    font-size: 45px;
+    font-weight: 700;
+    color: #2d2d2d;
+    margin: 0 0 35px 0;
 }
 .webzine .list ul {
     display: flex;
@@ -563,7 +563,134 @@ margin: 0 0 35px 0;
     height: 100%;
     object-fit: cover;
     /* cover = 감싸는 요소에 꽉 맞춰서 리사이즈 - 위아래/좌우에 가운데 이미지  */
+    transition: 0.5s;
+    /* 앞으로 img에 어떤 변화가 있으면 그걸 부드럽게 처리
+       1. 마우스오버
+       2. 클래스추가
+       3. 브라우저 사이즈가 바뀌어서 반응형 코드 적용 */
 }
+.webzine .list ul li a strong {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 15px 0 2px 0;
+    display: block;
+}
+.webzine .list ul li a:hover .photo img {
+    transform: scale3d(1.2,1.2, 1);
+}
+.webzine .list ul li a:hover {
+    color: #4C9A66;
+    border: 1px solid #4C9A66;
+}
+
+
+.webzine .wrapper {
+    position: relative;
+}
+.webzine .more {
+    position: absolute;
+    right: 0;
+    top: 54px;
+}
+.webzine .more a {
+    border: 1px solid rgba(61,61,61,0.8);
+    border-radius: 16px;
+    width: 102px;
+    height: 32px;
+    display: block;
+    padding: 5px 46px 7px 16px;
+    font-size: 14px;
+    position: relative;
+    
+}
+.webzine .more a::after {
+    position: absolute;
+    right: 13px;
+    top: 6px;
+    width: 17px;
+    height: 17px;
+    background: url(../images/new_more.svg) no-repeat center center / contain;
+    content: "";
+}
+.webzine .more a:hover {
+    border: 1px solid #4C9A66;
+    background-color: #4C9A66;
+    color: #fff;
+}
+.webzine .more a:hover:after {
+    background-image: url(../images/new_more_hover.svg);
+}
+
+
+@media screen and (max-width:640px){ 
+            .webzine .subject strong {
+                margin: 37px 0 1px 0;
+                font-size: 13px;
+            }
+            .webzine .subject h2 {
+                font-size: 20px;
+                margin: 0 0 12px 0;
+            }
+            .webzine .list ul li {
+                width: 100%;
+            }
+            .webzine .list ul li:nth-child(2),
+            .webzine .list ul li:nth-child(3) {
+                display: none;
+            }
+            .webzine .list ul li a {
+                height: 227px;
+            }
+            .webzine .list ul li a .photo {
+                height: 227px;
+            }
+            .webzine .list ul li a strong {
+                font-size: 13px;
+                margin: 7px 0 3px 0;
+            }
+            .webzine .list ul li a h3 {
+                font-size: 12px;
+            }
+            .webzine .list ul li a:hover .photo img {
+                transform: scale3d(1.2,1.2, 1);
+            }
+            .webzine .list ul li a:hover {
+                color: #4C9A66;
+                border: 1px solid #4C9A66;
+            }
+            
+            .webzine .more {
+                position: relative;
+                right: -180px;
+                top: auto;
+                margin: 80px 0 0 0;
+            }
+            .webzine .more a {
+                border-radius: 16px;
+                width: 64px;
+                height: 18px;
+                padding: 3px 13px 4px 12px;
+                font-size: 10px;
+                
+            }
+            .webzine .more a::after {
+                right: 13px;
+                top: 6px;
+                width: 9px;
+                height: 9px;
+                background: url(../images/new_more_mobile.svg) no-repeat center center / contain;
+                content: "";
+            }
+            .webzine .more a:hover {
+                border: 1px solid #4C9A66;
+                background-color: #4C9A66;
+                color: #fff;
+            }
+            .webzine .more a:hover:after {
+                background-image: url(../images/new_more_hover.svg);
+            }
+} /*media*/
+
 
 footer {
     margin: 1000px;
