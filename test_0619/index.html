@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- swiper 라이브러리 불러오기 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- 구글아이콘 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>반응형, swiper 테스트</title>
+</head>
+<body>
+    <div id="wrap">
+        <main class="container">
+            <section class="biz">
+                <div class="wrapper">
+                    <ul>
+                        <li>
+                            <a href="#n"> <!-- pc에서는 사진위에 글자가 들어가지만 mobile에서는 사진 아래 글자 -->
+                                <div class="photo"><img src="images/biz1.png" alt=""></div>
+                                <h2>멘토링 꿈장학사업</h2>
+                                <p>자신의 꿈을 찾고 재능을 개발할 수 있도록 장학금을 지원하는 사업</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="images/biz2.png" alt=""></div>
+                                <h2>희망장학생 선발</h2>
+                                <p>도전 정신과 긍정적인 자세로 자신의 꿈을 적극적으로 실현</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="images/biz3.png" alt=""></div>
+                                <h2>배움터 교육지원사업</h2>
+                                <p>교육소외 아동·청소년의 흥미와 필요에 기반한 자유주제의 교육프로그램</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="images/biz4.png" alt=""></div>
+                                <h2>글로벌 희망장학사업</h2>
+                                <p>사회에 긍정적으로 기여할 수 있는 글로벌 리더를 양성</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="business">
+                <div class="wrapper">
+                    <ul><!-- pc버전하고 mobile 모두에서 글자 하단에 이미지가 나타남
+                        그럼 background 처리. 
+                        각각의 li를 구분해서 배경이미지를 주기 위해 li한테 class를 줌-->
+                        <li class="biz1">
+                            <a href="#n"> 
+                                <h2>멘토링 꿈장학사업</h2>
+                                <p>자신의 꿈을 찾고 재능을 개발할 수 있도록 장학금을 지원하는 사업</p>
+                            </a>
+                        </li>
+                        <li class="biz2">
+                            <a href="#n"> 
+                                <h2>희망장학생 선발</h2>
+                                <p>도전 정신과 긍정적인 자세로 자신의 꿈을 적극적으로 실현</p>
+                            </a>
+                        </li>
+                        <li class="biz3">
+                            <a href="#n">
+                                <h2>배움터 교육지원사업</h2>
+                                <p>교육소외 아동·청소년의 흥미와 필요에 기반한 자유주제의 교육프로그램</p>
+                            </a>
+                        </li>
+                        <li class="biz4">
+                            <a href="#n">
+                                <h2>글로벌 희망장학사업</h2>
+                                <p>사회에 긍정적으로 기여할 수 있는 글로벌 리더를 양성</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="gallery">
+                <div class="wrapper">
+                    <ul>
+                        <li>
+                            <a href="#n"></a>
+                                <div class="photo">
+                                    <img src="images/gallery1.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n"></a>
+                                <div class="photo">
+                                    <img src="images/gallery2.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n"></a>
+                                <div class="photo">
+                                    <img src="images/gallery3.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="news">
+                <div class="wrapper">
+                    <ul>
+                        <li>
+                            <a href="#n"></a>
+                                <div class="photo">
+                                    <img src="images/gallery1.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n"></a>
+                                <div class="photo">
+                                    <img src="images/gallery2.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n"></a>
+                                <div class="photo">
+                                    <img src="images/gallery3.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="popup">
+                <div class="wrapper">
+                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                            <li class="swiper-slide"><img src="images/popup1.png" alt=""></li>
+                            <li class="swiper-slide"><img src="images/popup2.png" alt=""></li>
+                            <li class="swiper-slide"><img src="images/popup3.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="swiper-pagination"></div>  <!-- 컨트롤 요소는 swiper 안에 배치-->
+                    <button class="swiper-button-prev"></button>
+                    <button class="swiper-button-next"></button>
+                </div>
+            </section>
+            <section class="visual">
+                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                        <li class="swiper-slide bg1">
+                            <div class="wrapper">
+                                <h2>PROGRAM</h2>
+                                <p>자신의 꿈을 찾고 재능을 개발할 수 있도록 장학금을 지원하는 사업</p>
+                            </div>
+                        </li>
+                        <li class="swiper-slide bg2">
+                            <div class="wrapper">
+                                <h2>Combining Science & Technology</h2>
+                                <p>도전 정신과 긍정적인 자세로 자신의 꿈을 적극적으로 실현</p>
+                            </div>
+                        </li>
+                        <li class="swiper-slide bg3">
+                            <div class="wrapper">
+                                <h2>Carbon Neutrality</h2>
+                                <p>교육소외 아동·청소년의 흥미와 필요에 기반한 자유주제의 교육프로그램</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="btn_wrap">
+                        <div class="paging"></div>
+                        <button class="play" title="실행">
+                            <i class="material-symbols-outlined">play_arrow</i>
+                        </button>
+                        <button class="stop" title="일시정지">
+                            <i class="material-symbols-outlined">pause</i>
+                        </button>
+                    </div>
+                    <button class="btn_prev" title="이전팝업">
+                        <i class="material-symbols-outlined">arrow_back_ios</i>
+                    </button>
+                    <button class="btn_next" title="다음팝업">
+                        <i class="material-symbols-outlined">arrow_forward_ios</i>
+                    </button>
+                </div>
+            </section>
+            <section class="book">
+                <div class="wrapper">
+                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book1.png" alt=""></div>
+                                    <h2>동경</h2>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book2.png" alt=""></div>
+                                    <h2>넥스트 커머스</h2>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book3.png" alt=""></div>
+                                    <h2>기후변화 충격</h2>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book4.png" alt=""></div>
+                                    <h2>어쩌다 학부모</h2>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="sns">
+                <div class="wrapper">
+                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book1.png" alt=""></div>
+                                    <h2>동경</h2>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book2.png" alt=""></div>
+                                    <h2>넥스트 커머스</h2>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book3.png" alt=""></div>
+                                    <h2>기후변화 충격</h2>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book4.png" alt=""></div>
+                                    <h2>어쩌다 학부모</h2>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
