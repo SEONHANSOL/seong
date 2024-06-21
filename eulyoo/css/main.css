@@ -258,8 +258,8 @@ header {
     }
     .book .more a {
         padding: 0;
-        border: none;
-        border-radius: none;
+        border: 0;
+        border-radius: 0;
         display: block;
         position: relative;
         
@@ -283,8 +283,95 @@ header {
     }
 }
 
-
-
+.interview {
+    background-color: rgba(226,221,208,0.3);
+    margin: 209px 0 0 0;
+    padding: 69px 0 156px 0;
+}
+.interview .wrapper {
+    position: relative;
+}
+.interview .tit {
+    text-align: center;
+    margin: 0 0 90px 0;
+}
+.interview .tit h2 {
+    font-size: 40px;
+    color: #1d1d1d;
+    margin: 69px 0 6px 0;
+}
+.interview .tit p {
+    color: #3d3d3d;
+    font-size: 16px;
+}
+.interview .more {
+    position: absolute;
+    top: 101px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.interview .more a {
+    padding: 5px 42px 4px 12px;
+    border: 1px solid #4d4d4d;
+    border-radius: 50px;
+    display: inline-block;
+    position: relative;
+}
+.interview .more a::after{
+    position: absolute;
+    content: "";
+    right: 8px;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_8_459' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_8_459)'%3E%3Cpath d='M5.90723 15.4166L9.78535 9.99998L5.90723 4.58331H6.92327L10.8014 9.99998L6.92327 15.4166H5.90723ZM10.7372 15.4166L14.6156 9.99998L10.7372 4.58331H11.7533L15.6316 9.99998L11.7533 15.4166H10.7372Z' fill='%233D3D3D'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.interview .more a:hover {
+    border-color: #878073;
+    background-color: #878073;
+    color: #fff;
+}
+.interview .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_11_61' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_11_61)'%3E%3Cpath d='M5.9082 15.4166L9.78633 9.99998L5.9082 4.58331H6.92424L10.8024 9.99998L6.92424 15.4166H5.9082ZM10.7382 15.4166L14.6165 9.99998L10.7382 4.58331H11.7542L15.6326 9.99998L11.7542 15.4166H10.7382Z' fill='white'/%3E%3C/g%3E%3C/svg%3E ");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.interview .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.interview .list ul li {
+    width: 404px;
+}
+.interview .list ul li:nth-child(2) {
+    margin-top: 65px;
+}
+.interview .list ul li .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    border-radius: 70px 0 70px 0;
+}
+.interview .list ul li:nth-child(2) a .photo {
+    border-radius: 0 70px 0 70px; 
+}
+.interview .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    filter: grayscale(100%);
+}
+.interview .list ul li a:hover .photo img {
+    transform: scale3d(1.1, 1.1, 1);
+    filter: grayscale(0%);
+}
+ 
 footer {
     margin: 200px;
 }
