@@ -15,9 +15,29 @@
 </head>
 <body>
     <div id="wrap">
-        <header>
+        <!-- 스크롤이 되면 jquery에서 fixed 클래스를 header에게 줌 -->
+        <header >
             <div class="wrapper">
-                
+                <!-- 로고 이미지가 검, 흰색으로 교체됨
+                     이미지태그로 코딩하지 말고 background로 해서
+                     css에서 상황에 따라 교체하게 해야함 -->
+                <h1 class="logo"><a href="index.html">을유문화사</a></h1>
+                <nav class="gnb">
+                    <button class="gnb_opne">메뉴열기</button>
+                    <div class="gnb_wrap">
+                        <ul>
+                            <li><a href="#n">을유문화사</a></li>
+                            <li><a href="#n">콘텐츠</a></li>
+                            <li><a href="#n">을유소식</a></li>
+                            <li><a href="#n">독자참여</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- top navigation bar - 메뉴말고 상단에 있는 다른 요소들 -->
+                <div class="tnb">
+                    <a href="#n" class="mapage">마이페이지</a>
+                    <a href="#n" class="search">검색</a>
+                </div>
             </div>
         </header>
         <main class="container">
@@ -129,7 +149,7 @@
                     </div>
                     <div class="list">
                         <ul>
-                            <li>
+                            <li class="on">
                                 <a href="#n">
                                     <div class="photo"><img src="images/interview1.png" alt="인터뷰사진"></div>
                                     <div class="txt">
@@ -153,8 +173,8 @@
                                 <a href="#n">
                                     <div class="photo"><img src="images/interview3.png" alt="인터뷰사진"></div>
                                     <div class="txt">
-                                        <h3>대중음악 평론가<br>김학선</h3>
-                                        <p>책을 출간한다는 건 앨범을 내는 음악가들의 활동과 같다고 생각했어요.</p>
+                                        <h3>대중음악 평론가 김학선</h3>
+                                        <p>책을 출간한다는 건 앨범을 내는 음악가들의 활동과 같다고 생각했어요. 책을 출간한다는 건 앨범을 내는 음악가들의 활동과 같다고 생각했어요.</p>
                                         <span>자세히보기</span>
                                     </div>
                                 </a>
@@ -166,7 +186,66 @@
                     </div>
                 </div>
             </section>
-            <section class="story"></section>
+            <section class="story">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>을유 시리즈</h2>
+                    </div>
+                    <div class="list swiper">
+                        <ul  class="swiper-wrapper">
+                            <li class="long swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/story1.png" alt="시리즈 썸네일"></div>
+                                    <strong>[연애편지] 미리보기</strong>
+                                    <h3>#5. 보부아르가 보낸 마지막 편지</h3>
+                                    <p>매우 소중한 당신. 어떤 편지도 부치지 않고, 어떤 편지도 오지 않는 영원 같은 시간이 흘렀어요. 당신에 관한 몇 가지 소식이 새어 들어왔어요.마지막으로 제 책의 저작권에 대한 계약을 맺은 사람은 빌 타그였고, 저는 봄쯤에 나타날 거예요. 소중한 늙은 바보, 멋 내느라 너무 바쁘지 않다면 소식 좀 보내 줘요. 언제나 그렇듯 큰 사랑을 보내요.</p>
+                                </a>
+                            </li>
+                            <li class="short swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/story2.png" alt="시리즈 썸네일"></div>
+                                    <strong>[연애편지] 미리보기</strong>
+                                    <h3>#4. 앙드레 지드, 알베르 카뮈, 찰리 채플린</h3>
+                                    <p>작은 사건이 있었어요. 비서가 사르트르에게 장난쳐서 골탕 먹인 거예요. 그 자리에 저는 없었지요. 비서는 사르트르에게 찰리 채플린이 초대한다고 하고 채플린에게는 사르트르가 초대한다고 말했어요.지금은 매우 연로하고, 안경과 펠트 모자를 쓰고서 저를 웃게 하지요. 왜냐하면 무척 다정한 모습을 보이는 동시에 우리의 만남이 3분을 넘길까 노심초사하기 때문이에요. 그는 쉬 피곤해져요. 노년이에요.</p>
+                                </a>
+                            </li>
+                            <li class="long swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/story3.png" alt="시리즈 썸네일"></div>
+                                    <strong>[컬트] 미리보기</strong>
+                                    <h3>#4. 〈심슨 가족〉에 등장한 유일한 건축가</h3>
+                                    <p>이제껏 〈심슨 가족〉이 건축가를 중점적으로 다룬 적은 한 번도 없었다. 게리는 자신의 유명세에 대가가 따른다는 것을 느끼기 시작했다. 좋은 의도였음에도 불구하고, 〈심슨 가족〉은 게리에 대한 편견을 강화했다. 게리가 진지하고 사려 깊은 설계자가 아니며, 그의 건물은 제멋대로고 비이성적인 창작물로, 구겨진 종잇조각보다 나을 것이 없다는 편견 말이다. “그런 비난은 저를 계속해서 따라다녔어요. 〈심슨 가족〉을 본 사람은 모두 그렇게 생각했죠.”</p>
+                                </a>
+                            </li>
+                            <li class="short swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/story4.png" alt="시리즈 썸네일"></div>
+                                    <strong>[마음편지] 미리보기</strong>
+                                    <h3>#3. "여행 중에 삶을 바꾼 질문을 만나 본 적 있나요?"</h3>
+                                    <p>종종 뜻깊은 여행은 소중한 질문을 품고 정신적 목적지를 탐색하는 여정입니다. 이때 여행은 낯선 공간과 새로운 풍경을 벗 삼아 질문과 해답 사이를 걷는 길입니다.나는 이제 압니다. 삶 자체가 여행입니다. 그래서인가 봅니다. 여행을 하다 보면 자연스레 자기 존재를 들여다보게 됩니다. 생명이 시작할 때 죽음도 같이 시작됩니다. 인생이 중반에 이르면 생명의 양과 죽음의 양은 절반씩 인생을 양분합니다. 마치 낮과 밤처럼. 하루가 빛과 어둠으로 만들어지고, 삶이 생명과 죽음으로 짜여 있다는 게 재밌습니다. </p>
+                                </a>
+                            </li>
+                            <li class="long swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/story5.png" alt="시리즈 썸네일"></div>
+                                    <strong>[고통을 말하지 않는 법] 미리보기</strong>
+                                    <h3>#2. 남을 구하려 할 때의 마음가짐</h3>
+                                    <p>혹은 당신의 시야 가장자리에 그런 모습이 포착되었다면 어떻게 할 것인가? 당신이 인생을 충분히 살아봤다면, 특히 몇 가지 ‘도움’을 시도해 봤고 그러는 와중에 내복까지 다 젖어 본 적이 있다면 아마 알고 있을 것이다. 이 질문에는 당연해 보이는 대답들이 손쉽게 적용되지 않으며, 당신이 무슨 행동을 하든 상황이 더 나빠질 가능성이 압도적으로 높다는 사실을.</p>
+                                </a>
+                            </li>
+                            <li class="short swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/story6.png" alt="시리즈 썸네일"></div>
+                                    <strong>[프랭크 게리] 미리보기</strong>
+                                    <h3>#1. 건축의 거장을 사로잡았던 잉어 한 마리</h3>
+                                    <p>리아는 게리와 함께 나무 조각을 갖고 놀았던 것뿐만 아니라, 다른 부분에서도 그만큼 중요한 영향력을 미쳤다. 오래된 마을의 여느 유대인 여성과 같이 리아도 금요일 저녁마다 안식일 만찬으로 해저 생선을 조린 전통요리인 ‘게필테 피시’를 만들었다. 리아는 매주 목요일이면 켄싱턴 시장에 들러 살아 있는 잉엇과 생선을 산 뒤 집으로 돌아와 손질하기 전까지 물을 받아 둔 목욕통에 넣어 두었다. 게리는 종종 리아와 함께 시장에 가곤 했고, 집에 돌아와서는 목욕통 안에서 헤엄치고 있는 잉어를 반짝이는 눈으로 관찰했다.</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="more"><a href="#n">더보기</a></div>
+                </div>
+            </section>
         </main>
         <footer></footer>
     </div>
