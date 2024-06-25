@@ -28,7 +28,7 @@ header {
        근데, position:absolute값이 적용되면 넓이값은 내부 콘텐츠 요소의
        넓이값만큼만 적용됨 .. 
        header에 position:absolute를 주면 넓이 100%를 줘야함*/
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
@@ -49,7 +49,12 @@ header {
          header가 맨위가 됨..
          visual tit은 visual보다 위에 배치될 수 없음.
          (감싸는 요소가 z-index 10이기 때문에 header보다 높은 숫자를 줘도 아래 배치)*/
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 0px solid rgba(255,255,255,0.2);
+}
+header.fixed {
+    backdrop-filter: blur(5px) brightness(0.9);
+    position: fixed;
+    box-shadow: 0 3px 215px rgba(0, 0, 0, 0)
 }
 header .wrapper {
     display:flex;
@@ -194,13 +199,24 @@ color: #1d1d1d;
 }
 .tour .list ul li {
     width: 190px;
+    overflow: hidden;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     color: rgba(255,255,255,0.8);
+    transition: 0.7s;
 }
 /* li중에서 active 클래스를 갖고 있는 li(띄워쓰기 중요)*/
 .tour .list ul li.active {
+    width: 613px;
+    /* transition 영향으로 넓이가 0.7초동안
+       190 -> 613px 점점 변함
+       하지만 li a에는 transition이 없기 때문에
+       즉시 넓이가 613px로 고정되기때문에
+       내부 콘텐츠 넓이가 고정된 p 태그의 글이 여러줄로 바뀌는 현상이 사라짐
+    */
+}
+.tour .list ul li.active a {
     width: 613px;
 }
 .tour .list ul li.tour1 {
@@ -355,6 +371,7 @@ footer {
 footer .wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 footer .f_nav ul {
     display: flex;
@@ -395,5 +412,50 @@ footer .family button {
     border-radius: 10px;
     padding: 0 0 0 22px;
     text-align: left; /* 버튼의 기본은 가운데로 설정되어있음 */
-    background: url(../images/f_more.svg) no-repeat right 20px center;
+    position: relative;
+}
+footer .family {
+    position: relative;
+}
+footer .family button::after {
+    position: absolute;
+    right: 17px;
+    top: 9px;
+    width: 12px;
+    height: 12px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+footer .family button.btn_open::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath id='f_more' d='M245.5-713.5h-5a.483.483,0,0,1-.356-.144A.485.485,0,0,1,240-714a.483.483,0,0,1,.144-.356.485.485,0,0,1,.356-.143h5v-5a.483.483,0,0,1,.144-.356A.485.485,0,0,1,246-720a.483.483,0,0,1,.356.144.485.485,0,0,1,.143.356v5h5a.483.483,0,0,1,.356.144A.485.485,0,0,1,252-714a.482.482,0,0,1-.144.356.484.484,0,0,1-.356.143h-5v5a.483.483,0,0,1-.144.356A.485.485,0,0,1,246-708a.482.482,0,0,1-.356-.144.485.485,0,0,1-.143-.356Z' transform='translate(-240 720)' fill='%233d3d3d' opacity='0.8'/%3E%3C/svg%3E%0A");
+}
+footer .family button.btn_close::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='1' viewBox='0 0 12 1'%3E%3Cpath id='remove_24dp_FILL0_wght200_GRAD0_opsz24' d='M240-499v-1h12v1Z' transform='translate(-240 500)' fill='%233d3d3d'/%3E%3C/svg%3E%0A");
+}
+footer .family button.btn_close {
+    display: none;
+}
+footer .family .list {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 35px;
+    border-radius: 10px;
+    border: 1px solid #707070;
+    background-color: #fff;
+    width: 100%;
+    padding: 16px 20px 15px 20px;
+}
+footer .family .list ul li a {
+    display: block;
+    line-height: 30px;
+}
+/* family가 열렸을때*/
+footer .family.open button.btn_open {
+    display: none;
+}
+footer .family.open button.btn_close {
+    display: block;
 }
