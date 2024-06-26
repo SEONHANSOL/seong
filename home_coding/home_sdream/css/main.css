@@ -144,6 +144,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
     width: 404px;
     color: #fff;
     overflow: hidden;
+    border-radius: 20px;
 }
 .biz .list ul li:nth-child(odd) {
     transform: translate(0,126px);
@@ -176,6 +177,11 @@ header .gnb .gnb_wrap ul li:last-child a::after {
 }
 .biz .list ul li a .more {
     /* display: none; */
+    position: absolute;
+    left: 30px;
+    bottom: 19px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
 }
 
 footer {
