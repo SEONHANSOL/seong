@@ -27,11 +27,23 @@ em, address { /* 글자의 기울임을 삭제 */
 button { /* 버튼태그는 글자의 스타일을 상속받지 않음*/
     background-color: transparent; /* 투명*/
     border: 0; /*테두리삭제*/
+    cursor: pointer;
+}
+
+
+/* form 태그가 문자스타일을 상속 받지 않아서 받으라고 해주기 */
+input, select, textarea, button {
     font-family: inherit;
     font-weight: inherit;
     font-size: inherit;
     color: inherit;
     letter-spacing: inherit;
     line-height: inherit;
-    cursor: pointer;
+}
+
+legend {
+    display: none;
+}
+fieldset {
+    border: 0;
 }
