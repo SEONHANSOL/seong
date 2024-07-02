@@ -365,9 +365,184 @@ header.menu_over {
     background-color: #E84F4B;
     border-radius: 30px;
 }
+.find .tab .tab_detail ul li {
+    width: 297px;
+}
+.find .tab .tab_detail .btn_wrap {
+    margin: 90px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+.find .tab .tab_detail .btn_wrap button {
+    width: 31px;
+    height: 31px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    font-size: 0;
+    line-height: 0;
+    margin-right: 7px;
+    position: relative;
+}
+.find .tab .tab_detail .btn_wrap button::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 13px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+}
+.find .tab .tab_detail .btn_wrap button.prev::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.969' height='13.434' viewBox='0 0 7.969 13.434'%3E%3Cpath id='chevron_right_24dp_FILL0_wght300_GRAD0_opsz24_2_' data-name='chevron_right_24dp_FILL0_wght300_GRAD0_opsz24 (2)' d='M336.354-699.433l5.465-5.465-1.252-1.252-6.717,6.717,6.717,6.717,1.252-1.252Z' transform='translate(-333.85 706.15)' fill='%23fff'/%3E%3C/svg%3E%0A");
+}
+.find .tab .tab_detail .btn_wrap button.next::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.969' height='13.434' viewBox='0 0 7.969 13.434'%3E%3Cpath id='chevron_right_24dp_FILL0_wght300_GRAD0_opsz24_2_' data-name='chevron_right_24dp_FILL0_wght300_GRAD0_opsz24 (2)' d='M339.315-699.433,333.85-704.9l1.252-1.252,6.717,6.717-6.717,6.717-1.252-1.252Z' transform='translate(-333.85 706.15)' fill='%23fff'/%3E%3C/svg%3E%0A");
+}
+.find .tab .tab_detail .btn_wrap .more {
+    width: 99px;
+    height: 31px;
+    line-height: 31px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 0 0 0 14px;
+    position: relative;
+}
+.find .tab .tab_detail .btn_wrap .more::after {
+    position: absolute;
+    left: 74px;
+    top: 9px;
+    width: 11px;
+    height: 11px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath id='add_24dp_FILL0_wght300_GRAD0_opsz24' d='M224.423-734.423H220v-1.154h4.423V-740h1.154v4.423H230v1.154h-4.423V-730h-1.154Z' transform='translate(-220 740)' fill='%23fff'/%3E%3C/svg%3E%0A");
+}
+/* 탭메뉴 구현 = 하나의 li에만 on 클래스가 들어가 있음*/
+.find .tab {
+    position: relative;
+}
+.find .tab > ul > li .tab_menu {
+    position: absolute;
+    top: 0;
+}
+.find .tab > ul > li.find01 .tab_menu {
+    right: 50%;
+}
+.find .tab > ul > li.find02 .tab_menu {
+    left: 50%;
+}
+.find .tab > ul > li .tab_detail {
+    display: none;
+    padding: 105px 0 0 0;
+}
+.find .tab > ul > li.on .tab_detail {
+    display: block;
+}
+@media screen and (max-width:768px){ 
+    .find .tab > ul > li .tab_detail {
+        padding: 46px 0 0 0;
+    }
+}
+
+@media screen and (max-width:768px){ 
+    .find .tab .tab_detail ul li {
+        width: 208px;
+    }
+    .find {
+        padding: 44px 0 45px 0;
+    }
+    .find .tab .tab_detail .btn_wrap {
+        margin: 59px 0 0 0;
+    }
+    .find .tab .tab_detail .btn_wrap button {
+        display: none;
+    }
+    .find .tab .tab_detail .btn_wrap .more {
+        width: 87px;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 0 0 13px;
+    }
+    .find .tab .tab_detail .btn_wrap .more::after {
+        left: 66px;
+        top: 6px;
+    }
+}
+
 .find .tab .tab_detail ul li a {
     display: block;
 }
+.find .tab .tab_detail ul li a .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    border-radius: 20px;
+}
+.find .tab .tab_detail ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.find .tab .tab_detail ul li a .tit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0 15px 0;
+    font-family: 'hoho';
+    font-size: 20px;
+}
+.find .tab .tab_detail ul li a .tit strong {
+    width: 4.3em;
+    height: 1.6em;
+    line-height: 1.6em;
+    text-align: center;
+    border-radius: 1em;
+    white-space: nowrap;
+}
+.find .tab .tab_detail ul li a .tit strong.cate01 {
+    background-color: #237D26;
+}
+.find .tab .tab_detail ul li a .tit strong.cate02 {
+    background-color: #AAAAAA;
+}
+.find .tab .tab_detail ul li a .tit strong.cate03 {
+    background-color: #E84F4B;
+}
+.find .tab .tab_detail ul li a .tit strong.cate04 {
+    background-color: #DB70AB;
+}
+.find .tab .tab_detail ul li a .tit h3 {
+    width: calc(100% - 4.8em);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;  /*한줄제한*/
+}
+.find .tab .tab_detail ul li a h3 {
+    font-family: 'Pretendard';
+}
+.find .tab .tab_detail ul li a p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;  /*한줄제한*/
+}
+@media screen and (max-width:768px){ 
+    .find .tab .tab_detail ul li a .tit {
+        font-size: 15px;
+        margin: 17px 0 12px 0;
+    }
+    .find h2 {
+        font-size: 20px;
+    }
+    .find .tab > ul > li .tab_menu {
+        font-size: 15px;
+        padding: 5px 14px;
+    }
+} 
 
 
 footer {
