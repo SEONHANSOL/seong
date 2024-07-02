@@ -341,6 +341,33 @@ header.menu_over {
     }
 }
 
+.find {
+    background-color: #345997;
+    color: #fff;
+    padding: 163px 0 151px 0;
+}
+.find h2 {
+    font-size: 70px;
+    font-family: 'hoho';
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+.find .tab > ul > li .tab_menu {
+    font-size: 25px;
+    font-family: 'hoho';
+    padding: 6px 24px 6px 24px;
+}
+.find .tab > ul > li.find01.on .tab_menu {
+    background-color: #237D26;
+    border-radius: 30px;
+}
+.find .tab > ul > li.find02.on .tab_menu {
+    background-color: #E84F4B;
+    border-radius: 30px;
+}
+.find .tab .tab_detail ul li a {
+    display: block;
+}
 
 
 footer {
