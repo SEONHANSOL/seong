@@ -17,14 +17,14 @@
         <!-- 스크롤을 내려서 header가 고정됐을때 (fixed) 
              pc버전 메뉴에 마우스를 오버했을때 (menu_over)
              모바일 버전에서 메뉴 열기를 클릭했을때 (mobile_open) -->
-        <header class="">
+        <header class="menu_over">
             <div class="wrapper">
                 <h1 class="logo"><a href="index.html">동물보호센터</a></h1>
                 <nav class="gnb">
                     <button class="gnb_open">메뉴열기</button>
                     <div class="gnb_wrap">
                         <ul class="depth1">
-                            <!-- 메뉴가 열리면 on 클래스를 추가해주기 (pc/mobile 모두 적용)-->
+                            <!-- 메뉴가 열리면 li에 on 클래스를 추가해주기 (pc/mobile 모두 적용)-->
                             <li class="on">
                                 <a href="#n">찾습니다</a>
                                 <ul class="depth2">
@@ -35,7 +35,7 @@
                             <li><a href="#n">구조분양</a></li>
                             <li><a href="#n">네트워크</a></li>
                             <li><a href="#n">재회성공담</a></li>
-                            <li>
+                            <li class="on">
                                 <a href="#n">대처방법</a>
                                 <ul class="depth2">
                                     <li><a href="#n">실종시 대처방법</a></li>

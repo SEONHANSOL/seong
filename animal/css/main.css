@@ -46,16 +46,66 @@ header .logo a::before {
         header .gnb .gnb_wrap ul.depth1 {
             display: flex;
         }
+        header .gnb .gnb_wrap ul.depth1 > li {
+            position: relative;
+        }
         header .gnb .gnb_wrap ul.depth1 > li > a {
-            padding: 36px 21px 36px 21px;
+            padding: 0 21px;
+            line-height: 100px;
             display: block;
             font-size: 20px;
             font-family: 'hoho';
+            position: relative;
+        }
+        header .gnb .gnb_wrap ul.depth1 > li:has(.depth2) > a::after {
+            position: absolute;
+            right: 7px;
+            top: 43px;
+            width: 10px;
+            height: 10px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.072' height='4.195' viewBox='0 0 7.072 4.195'%3E%3Cpath id='keyboard_arrow_down_24dp_FILL0_wght300_GRAD0_opsz24' d='M257.386-621.955l3.536-3.536-.659-.659-2.877,2.877-2.877-2.877-.659.659Z' transform='translate(-253.85 626.15)' fill='%23fff'/%3E%3C/svg%3E%0A");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            content: "";
         }
         header .gnb .gnb_wrap ul.depth2 {
             display: none;
+            position: absolute;
+            left: 50%;
+            top: 100px;
+            padding: 10px 0 0 0;
+            text-align: center;
+            transform: translate(-50%, 0); /* li를 기준으로 해서 가운데 (left:50%)에서 오른쪽으로 늘어남
+                                              그 ul의 길이만큼 왼쪽으로 절반만 이동 */
         }
-}
+        header .gnb .gnb_wrap ul.depth2::before {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 100%;
+            height: calc(100% - 10px);
+        }
+        header .gnb .gnb_wrap ul.depth2 > li > a {
+            display: block;
+            color: #fff;
+            white-space: nowrap;
+            line-height: 2;
+            padding: 0 17px;
+        }
+        header .gnb .gnb_wrap ul.depth1 > li.on > a { /* 1차 메뉴에 오버해서 하위메뉴가 나타나는 스타일*/
+            color: #E84F4B;
+        }
+        header .gnb .gnb_wrap ul.depth1 > li.on:has(.depth2) > a::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.072' height='4.195' viewBox='0 0 7.072 4.195'%3E%3Cpath id='keyboard_arrow_down_24dp_FILL0_wght300_GRAD0_opsz24' d='M257.386-621.955l3.536-3.536-.659-.659-2.877,2.877-2.877-2.877-.659.659Z' transform='translate(260.922 -621.955) rotate(180)' fill='%23e84f4b'/%3E%3C/svg%3E%0A");
+            width: 10px;
+            height: 10px;
+        }
+        header .gnb .gnb_wrap ul.depth1 > li.on > ul.depth2 {
+            display: block;
+        }
+}   
+    
 header .tnb {
     display: flex;
     gap: 10px;
@@ -130,7 +180,17 @@ header .tnb .link a:hover {
 header.fixed,
 header.menu_over {
     position: fixed;
+}
+header.fixed::before,
+header.menu_over::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
     backdrop-filter: blur(3px) brightness(0.9);
+    z-index: -1;
 }
 
 @media screen and (max-width:1300px){
@@ -274,7 +334,7 @@ header.menu_over {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%; /* 감싸는 요소 vutton 사이즈를 기준으로 100%*/
+    width: 100%; /* 감싸는 요소 button 사이즈를 기준으로 100%*/
     height: 100%;
     background-repeat: no-repeat;
     background-position: center center;
