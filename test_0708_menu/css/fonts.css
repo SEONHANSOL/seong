@@ -1,0 +1,13 @@
+
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    font-weight: 400;
+    font-display: swap;
+    src: local('S-CoreDream-3Lightr'), url(../fonts/SCoreDreamRegular.woff2) format('woff2'), url(../fonts/SCoreDreamRegular.woff) format('woff');
+}
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    font-weight: 700;
+    font-display: swap;
+    src: local('S-CoreDream-Bold'), url(../fonts/SCoreDreamBold.woff2) format('woff2'), url(../fonts/SCoreDreamBold.woff) format('woff');
+}
