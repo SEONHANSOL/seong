@@ -3,6 +3,7 @@
 @import url(common.css);
 
 
+
 header {
     position: absolute;
     left: 0;
@@ -182,7 +183,9 @@ header .logo a::before {
         color: #2d2d2d;
     }
     header .gnb .gnb_wrap ul.depth1 {
-        margin-top: 100px;
+        margin-top: 100px; /* header의 높이 */
+        height: calc(100vh - 100px); /* 브라우저의 높이에 상단 여백값을 뺀 값의 높이 */
+        overflow-y: auto; /* ul 내부의 li의 길이가 지정한 높이보다 짧을때 스크롤바를 생성 */
     }
     header .gnb .gnb_wrap ul.depth1 > li {
         border-bottom: 1px solid #2d2d2d;
@@ -254,6 +257,7 @@ header .logo a::before {
     }
     header .gnb .gnb_wrap ul.depth1 {
         margin-top: 50px;
+        height: calc(100vh - 50px);
     }
 
 } /*media*/
