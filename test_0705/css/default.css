@@ -1,0 +1,49 @@
+/* 브라우저가 태그에게 준 스타일을 모두 삭제하고
+   내가 준 스타일만 적용하는것*/
+
+*{ /*와이드카드 - 모든 태그를 지칭함 (상속이 안되는 속성을 줄때 조커카드처럼 사용)*/
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+li { /* li 앞에 동그라미 삭제*/
+    list-style: none;
+}
+h1, h2, h3, h4, h5, h6, strong { /* 글자의 크기와 두께를 변화시키는 태그*/
+    font-size: inherit; /* html, body에 선언된 스타일로 상속 받으라는 태그*/
+    font-weight: inherit; /* 브라우저에서 자체에서 주는 스타일은 무시하라는 태그*/
+}
+a {
+    color: inherit; /* html, body에 선언된 스타일로 상속 받으라는 태그*/
+    text-decoration: none; /* 밑줄 삭제 */
+}
+img { /* img태그를 a로 감싸면 일부 브라우저에서 파란색 테두리가 생기는걸 막는 태그*/
+    border: 0;
+}
+em, address { /* 글자의 기울임을 삭제 */
+    font-style: normal;
+}
+
+button { /* 버튼태그는 글자의 스타일을 상속받지 않음*/
+    background-color: transparent; /* 투명*/
+    border: 0; /*테두리삭제*/
+    cursor: pointer;
+}
+
+
+/* form 태그가 문자스타일을 상속 받지 않아서 받으라고 해주기 */
+input, select, textarea, button {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+}
+
+legend {
+    display: none;
+}
+fieldset {
+    border: 0;
+}

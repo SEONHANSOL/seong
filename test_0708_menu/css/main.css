@@ -1,0 +1,273 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+
+
+header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+header .inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 0 20px;
+}
+header .logo {
+    margin: 32px 0 0 0;
+}
+header .logo a {
+    width: 250px;
+    height: 40px;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+}
+header .logo a::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='249.473' height='39.937' viewBox='0 0 249.473 39.937'%3E%3Cg id='그룹_3' data-name='그룹 3' transform='translate(-330 -35.743)'%3E%3Cg id='logo_w' transform='translate(319.85 24.373)'%3E%3Cg id='그룹_1' data-name='그룹 1' transform='translate(10.15 11.37)'%3E%3Cpath id='패스_1' data-name='패스 1' d='M86.141,51.289H10.15V49.969a47.286,47.286,0,0,1,4.807-19.238C19.377,21.9,28.833,11.37,48.766,11.37h.044c36.926.026,37.331,38.211,37.331,38.6v1.321ZM12.835,48.648h70.62c-.37-6.577-3.742-34.61-34.654-34.637h-.044c-32.031,0-35.543,28.051-35.931,34.637Z' transform='translate(-10.15 -11.37)' fill='%23fff'/%3E%3Cpath id='패스_2' data-name='패스 2' d='M58.9,53.525a1.324,1.324,0,0,1-.625-2.492,17.005,17.005,0,0,0,4.869-3.557,2.511,2.511,0,0,0-.352-.106,57.829,57.829,0,0,1-11.208-4.578l-.519-.282-.132-.581a10.72,10.72,0,0,0-4.992-7.105c-6.683-3.971-17.3-1.118-17.406-1.083a1.32,1.32,0,0,1-.7-2.544c.475-.132,11.789-3.187,19.449,1.356a13.115,13.115,0,0,1,6.075,8.188,53.785,53.785,0,0,0,10.09,4.076c1.858.467,2.36,1.462,2.456,2.219.3,2.421-3.865,5.019-6.366,6.348a1.311,1.311,0,0,1-.616.158Z' transform='translate(-12.148 -13.606)' fill='%23fff'/%3E%3Cpath id='패스_3' data-name='패스 3' d='M31.637,55.3a1.317,1.317,0,0,1-1.277-.986c-.775-2.994-2.192-5.019-4.217-6.022-3.5-1.734-7.827.035-7.871.053a1.32,1.32,0,0,1-1.03-2.43c.22-.1,5.45-2.263,10.055,0,2.747,1.356,4.64,3.962,5.617,7.739a1.319,1.319,0,0,1-.951,1.611,1.454,1.454,0,0,1-.335.044Z' transform='translate(-10.902 -15.377)' fill='%23fff'/%3E%3Cpath id='패스_4' data-name='패스 4' d='M35.624,48.644a2.514,2.514,0,0,1-.44-.026c-5.107-.634-4.235-10.266-4.12-11.358a1.324,1.324,0,0,1,2.633.282c-.352,3.407.079,8.25,1.823,8.461,1.858.229,4.385-5.063,5.5-8.963a1.318,1.318,0,1,1,2.536.722c-.528,1.858-3.346,10.882-7.933,10.891Z' transform='translate(-12.635 -14.324)' fill='%23fff'/%3E%3Cpath id='패스_5' data-name='패스 5' d='M45.483,47.371A9.051,9.051,0,0,1,43.3,47.09a1.32,1.32,0,0,1,.7-2.544h0c.528.141,2.21.414,3-.185.123-.088.493-.37.493-1.338a1.323,1.323,0,0,1,1.321-1.312h.009a1.319,1.319,0,0,1,1.312,1.329,4.114,4.114,0,0,1-1.55,3.434,5.154,5.154,0,0,1-3.108.9Z' transform='translate(-13.998 -14.997)' fill='%23fff'/%3E%3Cpath id='패스_6' data-name='패스 6' d='M62.941,46.117a1.159,1.159,0,0,1-.3-.035,1.319,1.319,0,0,1-.986-1.585C63.284,37.533,66,33.254,69.738,31.775a8.82,8.82,0,0,1,7.686.828,1.321,1.321,0,0,1-1.462,2.2,6.124,6.124,0,0,0-5.283-.555c-2.826,1.136-5.063,4.886-6.454,10.856a1.324,1.324,0,0,1-1.285,1.021Z' transform='translate(-16.304 -13.743)' fill='%23fff'/%3E%3C/g%3E%3Cg id='그룹_2' data-name='그룹 2' transform='translate(95.879 21.574)'%3E%3Cpath id='패스_7' data-name='패스 7' d='M107.529,23.389h10.953a11.525,11.525,0,0,1,5.406,1.189,8.1,8.1,0,0,1,3.451,3.337,10.107,10.107,0,0,1,1.18,4.93,9.821,9.821,0,0,1-1.2,4.922,8.28,8.28,0,0,1-3.5,3.31,11.8,11.8,0,0,1-5.476,1.189H111.3V37.582h6.137a6.14,6.14,0,0,0,2.835-.59,3.839,3.839,0,0,0,1.708-1.655,5.333,5.333,0,0,0,.563-2.492,5.168,5.168,0,0,0-.563-2.483,3.785,3.785,0,0,0-1.726-1.629,6.445,6.445,0,0,0-2.844-.572h-4.085V51.4h-5.8V23.38Z' transform='translate(-107.52 -23.01)' fill='%23fff'/%3E%3Cpath id='패스_8' data-name='패스 8' d='M135.57,23.39h18.806v4.8h-13v6.806H153.39v4.781H141.372v6.832h13.039v4.8H135.57V23.39Z' transform='translate(-110.874 -23.011)' fill='%23fff'/%3E%3Cpath id='패스_9' data-name='패스 9' d='M160.769,23.39h22.944v4.8H175.12V51.406h-5.749V28.188H160.76v-4.8Z' transform='translate(-113.885 -23.011)' fill='%23fff'/%3E%3Cpath id='패스_10' data-name='패스 10' d='M201.38,23.39h5.8v11.6h12.15V23.39h5.8V51.406h-5.8V39.775h-12.15V51.406h-5.8Z' transform='translate(-118.742 -23.011)' fill='%23fff'/%3E%3Cpath id='패스_11' data-name='패스 11' d='M256.9,23.39V41.6a9.923,9.923,0,0,1-1.444,5.353,9.482,9.482,0,0,1-4.085,3.575,15.168,15.168,0,0,1-12.141,0,9.545,9.545,0,0,1-4.05-3.575A9.923,9.923,0,0,1,233.74,41.6V23.39h5.8V41.113a5.68,5.68,0,0,0,.713,2.861,5.157,5.157,0,0,0,2.025,1.981,6.714,6.714,0,0,0,6.057,0,5.044,5.044,0,0,0,2.025-1.981,5.891,5.891,0,0,0,.713-2.861V23.39h5.82Z' transform='translate(-122.611 -23.011)' fill='%23fff'/%3E%3Cpath id='패스_12' data-name='패스 12' d='M282.7,30.083a5.492,5.492,0,0,0-2.025-1.47,6.859,6.859,0,0,0-2.729-.511,6.736,6.736,0,0,0-3.8,1.083,7.149,7.149,0,0,0-2.553,3.161,12.2,12.2,0,0,0-.916,4.983,12.4,12.4,0,0,0,.907,4.992,7.09,7.09,0,0,0,2.553,3.161A6.9,6.9,0,0,0,278,46.591a7.71,7.71,0,0,0,3.46-.731,5.082,5.082,0,0,0,2.228-2.069,6.5,6.5,0,0,0,.775-3.152l1.2.176h-7.272V36.387h11.683v3.522a12.464,12.464,0,0,1-1.532,6.3,10.324,10.324,0,0,1-4.288,4.112A14.479,14.479,0,0,1,271.058,50a11.849,11.849,0,0,1-4.631-5,16.747,16.747,0,0,1-1.646-7.625,16.45,16.45,0,0,1,1.7-7.677,12.1,12.1,0,0,1,4.666-5,13.047,13.047,0,0,1,6.691-1.734,13.578,13.578,0,0,1,5.714,1.189,10.9,10.9,0,0,1,4.235,3.337,10.382,10.382,0,0,1,2.025,4.9h-5.917a6,6,0,0,0-1.206-2.289Z' transform='translate(-126.322 -22.96)' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/*
+    1025이상 - pc메뉴 유지
+    1024 ~ 769까지 - 모바일메뉴 header 높이는 100px
+    768이하 - 모바일메뉴에 header의 높이가 50px 
+*/
+@media screen and (min-width:1025px){ /* 1025이상에서만 적용 */
+    header .gnb button {
+        display: none;  /* 모바일에서 보일것임 */
+    }
+    header .gnb .gnb_wrap ul.depth1 {
+        display: flex;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li {
+        width: 185px;
+        text-align: center;
+        position: relative;
+    }
+     
+    header .gnb .gnb_wrap ul.depth1 > li > a {
+        display: block;
+        line-height: 100px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.on > a span {
+        color: #C92626;
+        position: relative;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.on > a span::after{
+        position: absolute;
+        left: 0;
+        bottom: -38px;
+        width: 100%;
+        height: 2px;
+        content: "";
+        background-color: #C92626;
+        z-index: 10;
+    }
+    header .gnb .gnb_wrap ul.depth2 {
+        position: absolute;
+        left: 0;
+        top: 100px;
+        width: 100%;
+        display: none; /* 오버했을때만 나타남 */
+        padding-top: 15px;
+    }
+    header .gnb .gnb_wrap ul.depth2 > li > a {
+        display: block;
+        line-height: 2.4;
+    }
+    header .gnb .gnb_wrap ul.depth2 > li > a:hover,
+    header .gnb .gnb_wrap ul.depth2 > li > a:focus {
+        color: #C92626;
+        font-weight: 700;
+    }    
+    /* 메뉴에 오버했을때*/
+    header.menu_over {
+        color: #3d3d3d;
+    }
+    header.menu_over::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 347px;
+        background-color: #fff;
+        content: "";
+    }
+    header.menu_over::after {
+        position: absolute;
+        left: 0;
+        top: 100px;
+        width: 100%;
+        height: 1px;
+        background-color: #e4e4e4;
+        content: "";
+    }
+    header.menu_over .logo a::before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='249.513' height='39.943' viewBox='0 0 249.513 39.943'%3E%3Cg id='그룹_4' data-name='그룹 4' transform='translate(-330 -27.737)'%3E%3Cg id='logo_w' transform='translate(319.85 16.367)'%3E%3Cg id='그룹_1' data-name='그룹 1' transform='translate(10.15 11.37)'%3E%3Cpath id='패스_1' data-name='패스 1' d='M86.153,51.3h-76V49.975a47.293,47.293,0,0,1,4.808-19.241C19.378,21.9,28.836,11.37,48.772,11.37h.044c36.932.026,37.337,38.217,37.337,38.6V51.3ZM12.836,48.654H83.467c-.37-6.578-3.742-34.616-34.66-34.642h-.044c-32.036,0-35.549,28.055-35.937,34.642Z' transform='translate(-10.15 -11.37)' fill='%232d2d2d'/%3E%3Cpath id='패스_2' data-name='패스 2' d='M58.905,53.529a1.324,1.324,0,0,1-.625-2.492,17.008,17.008,0,0,0,4.87-3.558,2.511,2.511,0,0,0-.352-.106,57.838,57.838,0,0,1-11.21-4.579l-.52-.282-.132-.581a10.722,10.722,0,0,0-4.993-7.106c-6.684-3.971-17.3-1.118-17.409-1.083a1.32,1.32,0,0,1-.7-2.545c.476-.132,11.791-3.188,19.452,1.356a13.117,13.117,0,0,1,6.076,8.189A53.793,53.793,0,0,0,63.449,44.82c1.858.467,2.36,1.462,2.457,2.219.3,2.422-3.866,5.019-6.367,6.349a1.311,1.311,0,0,1-.616.159Z' transform='translate(-12.146 -13.603)' fill='%232d2d2d'/%3E%3Cpath id='패스_3' data-name='패스 3' d='M31.639,55.3a1.317,1.317,0,0,1-1.277-.986c-.775-2.994-2.193-5.019-4.218-6.023-3.5-1.735-7.828.035-7.872.053a1.32,1.32,0,0,1-1.03-2.43c.22-.1,5.451-2.263,10.056,0,2.747,1.356,4.641,3.963,5.618,7.74a1.319,1.319,0,0,1-.951,1.611,1.455,1.455,0,0,1-.335.044Z' transform='translate(-10.901 -15.372)' fill='%232d2d2d'/%3E%3Cpath id='패스_4' data-name='패스 4' d='M35.624,48.646a2.514,2.514,0,0,1-.44-.026c-5.107-.634-4.236-10.268-4.121-11.36a1.324,1.324,0,0,1,2.633.282c-.352,3.408.079,8.251,1.823,8.462,1.858.229,4.385-5.063,5.5-8.964a1.318,1.318,0,1,1,2.536.722c-.528,1.858-3.346,10.884-7.934,10.893Z' transform='translate(-12.632 -14.321)' fill='%232d2d2d'/%3E%3Cpath id='패스_5' data-name='패스 5' d='M45.483,47.372A9.053,9.053,0,0,1,43.3,47.09a1.32,1.32,0,0,1,.7-2.545h0c.528.141,2.21.414,3-.185.123-.088.493-.37.493-1.338A1.323,1.323,0,0,1,48.82,41.71h.009a1.319,1.319,0,0,1,1.312,1.33,4.114,4.114,0,0,1-1.55,3.434,5.155,5.155,0,0,1-3.108.9Z' transform='translate(-13.993 -14.993)' fill='%232d2d2d'/%3E%3Cpath id='패스_6' data-name='패스 6' d='M62.941,46.119a1.16,1.16,0,0,1-.3-.035,1.32,1.32,0,0,1-.986-1.585C63.284,37.534,66,33.254,69.739,31.775a8.821,8.821,0,0,1,7.687.828,1.321,1.321,0,1,1-1.462,2.2,6.125,6.125,0,0,0-5.283-.555c-2.827,1.136-5.063,4.887-6.455,10.858a1.324,1.324,0,0,1-1.286,1.021Z' transform='translate(-16.296 -13.741)' fill='%232d2d2d'/%3E%3C/g%3E%3Cg id='그룹_2' data-name='그룹 2' transform='translate(95.892 21.576)'%3E%3Cpath id='패스_7' data-name='패스 7' d='M107.529,23.389h10.954a11.527,11.527,0,0,1,5.407,1.189,8.1,8.1,0,0,1,3.452,3.337,10.109,10.109,0,0,1,1.18,4.931,9.822,9.822,0,0,1-1.2,4.922,8.282,8.282,0,0,1-3.5,3.311,11.8,11.8,0,0,1-5.477,1.189H111.3V37.584h6.138a6.141,6.141,0,0,0,2.835-.59,3.84,3.84,0,0,0,1.708-1.655,5.334,5.334,0,0,0,.564-2.492,5.169,5.169,0,0,0-.564-2.483,3.785,3.785,0,0,0-1.726-1.629,6.446,6.446,0,0,0-2.844-.572h-4.086V51.4h-5.8V23.38Z' transform='translate(-107.52 -23.01)' fill='%232d2d2d'/%3E%3Cpath id='패스_8' data-name='패스 8' d='M135.57,23.39h18.809v4.8H141.373V35h12.02v4.782h-12.02v6.833h13.041v4.8H135.57V23.39Z' transform='translate(-110.87 -23.011)' fill='%232d2d2d'/%3E%3Cpath id='패스_9' data-name='패스 9' d='M160.769,23.39h22.948v4.8h-8.594V51.41h-5.75V28.189H160.76v-4.8Z' transform='translate(-113.878 -23.011)' fill='%232d2d2d'/%3E%3Cpath id='패스_10' data-name='패스 10' d='M201.38,23.39h5.8V35h12.152V23.39h5.8V51.41h-5.8V39.778H207.183V51.41h-5.8Z' transform='translate(-118.729 -23.011)' fill='%232d2d2d'/%3E%3Cpath id='패스_11' data-name='패스 11' d='M256.908,23.39V41.6a9.925,9.925,0,0,1-1.444,5.354,9.483,9.483,0,0,1-4.086,3.575,15.17,15.17,0,0,1-12.143,0,9.546,9.546,0,0,1-4.051-3.575A9.925,9.925,0,0,1,233.74,41.6V23.39h5.8V41.116a5.681,5.681,0,0,0,.713,2.862,5.158,5.158,0,0,0,2.025,1.981,6.715,6.715,0,0,0,6.058,0,5.045,5.045,0,0,0,2.025-1.981,5.892,5.892,0,0,0,.713-2.862V23.39H256.9Z' transform='translate(-122.593 -23.011)' fill='%232d2d2d'/%3E%3Cpath id='패스_12' data-name='패스 12' d='M282.7,30.084a5.493,5.493,0,0,0-2.025-1.471,6.86,6.86,0,0,0-2.73-.511,6.737,6.737,0,0,0-3.8,1.083,7.15,7.15,0,0,0-2.554,3.161,12.2,12.2,0,0,0-.916,4.984,12.4,12.4,0,0,0,.907,4.993,7.091,7.091,0,0,0,2.554,3.161A6.9,6.9,0,0,0,278,46.595a7.711,7.711,0,0,0,3.461-.731,5.083,5.083,0,0,0,2.228-2.069,6.5,6.5,0,0,0,.775-3.152l1.2.176h-7.274V36.389H290.07v3.522a12.466,12.466,0,0,1-1.532,6.3,10.325,10.325,0,0,1-4.288,4.112A14.481,14.481,0,0,1,271.059,50a11.85,11.85,0,0,1-4.632-5,16.75,16.75,0,0,1-1.647-7.626,16.453,16.453,0,0,1,1.7-7.679,12.106,12.106,0,0,1,4.667-5,13.049,13.049,0,0,1,6.692-1.735,13.58,13.58,0,0,1,5.715,1.189,10.9,10.9,0,0,1,4.236,3.337,10.383,10.383,0,0,1,2.025,4.9H283.9a6,6,0,0,0-1.206-2.29Z' transform='translate(-126.3 -22.96)' fill='%232d2d2d'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+
+    }
+    header.menu_over .gnb .gnb_wrap ul.depth2 {
+        display: block;
+    }
+}/*media*/
+
+@media screen and (max-width:1300px) and (min-width:1025px) {
+    /* 1300 ~ 1025까지 */
+    header .gnb .gnb_wrap ul.depth1 > li {
+        width: 140px;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > a {
+        font-size: 17px;
+    }
+    header.menu_over .gnb .gnb_wrap ul.depth2 > li > a {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width:1024px){ /*1024이하*/
+    header .gnb button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50px;
+        height: 100%;
+        font-size: 0;
+        line-height: 0;
+    }
+    header .gnb button::before {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+    }
+    header .gnb button.gnb_open::before {
+        width: 22px;
+        height: 15px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='14.667' viewBox='0 0 22 14.667'%3E%3Cpath id='menu_24dp_5F6368_FILL0_wght400_GRAD0_opsz24' d='M120-705.333v-2.444h22v2.444Zm0-6.111v-2.444h22v2.444Zm0-6.111V-720h22v2.444Z' transform='translate(-120 720)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    }
+    header .gnb button.gnb_close::before {
+        width: 22px;
+        height: 22px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpath id='close_24dp_5F6368_FILL0_wght400_GRAD0_opsz24' d='M202.2-738l-2.2-2.2,8.8-8.8-8.8-8.8,2.2-2.2,8.8,8.8,8.8-8.8,2.2,2.2-8.8,8.8,8.8,8.8-2.2,2.2-8.8-8.8Z' transform='translate(-200 760)' fill='%232d2d2d'/%3E%3C/svg%3E%0A");
+    }
+    header .gnb button.gnb_close {
+        display: none;
+    }
+    header .gnb .gnb_wrap {
+        display: none;
+        position: absolute; /* header의 기준으로 정렬 */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh; /* header높이보다 더 크고 브라우저의 높이만하게 100vh로 주면 header의 높이와 동일해짐 */
+        background-color: #fff;
+        color: #2d2d2d;
+    }
+    header .gnb .gnb_wrap ul.depth1 {
+        margin-top: 100px; /* header의 높이 */
+        height: calc(100vh - 100px); /* 브라우저의 높이에 상단 여백값을 뺀 값의 높이 */
+        overflow-y: auto; /* ul 내부의 li의 길이가 지정한 높이보다 짧을때 스크롤바를 생성 */
+    }
+    header .gnb .gnb_wrap ul.depth1 > li {
+        border-bottom: 1px solid #2d2d2d;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li:first-child {
+        border-top: 1px solid #2d2d2d;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > a {
+        font-size: 20px;
+        font-weight: 700;
+        display: block;
+        line-height: 63px;
+        color: #2d2d2d;
+        padding: 0 20px;
+        position: relative;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > a::after {
+        position: absolute;
+        right: 16px;
+        top: 26px;
+        width: 19px;
+        height: 12.5px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='10.483' viewBox='0 0 17 10.483'%3E%3Cpath id='keyboard_arrow_down_24dp_5F6368_FILL0_wght400_GRAD0_opsz24' d='M248.5-629.517l-8.5-8.5L241.983-640l6.517,6.517L255.017-640,257-638.017Z' transform='translate(-240 640)' fill='%232d2d2d'/%3E%3C/svg%3E%0A");
+        content: "";
+    }
+    header .gnb .gnb_wrap ul.depth2 {
+        background-color: #ececec;
+        padding: 22px 37px;
+        font-size: 15p x;
+        display: none; /* 2차 메뉴는 숭김 */
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.open ul.depth2 {
+        display: block;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.open > a {
+        color: #C92626;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.open > a::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='10.483' viewBox='0 0 17 10.483'%3E%3Cpath id='keyboard_arrow_up_24dp_5F6368_FILL0_wght400_GRAD0_opsz24' d='M248.5-636.033l-6.517,6.517L240-631.5l8.5-8.5,8.5,8.5-1.983,1.983Z' transform='translate(-240 640)' fill='%23c92626'/%3E%3C/svg%3E%0A");
+    }
+    header .gnb .gnb_wrap ul.depth2 > li > a {
+        display: block;
+        line-height: 2;
+    }
+    /* 메뉴가 열렸을때 */
+    header.memu_open .gnb button.gnb_open {
+        display: none;
+    }
+    header.memu_open .gnb button.gnb_close {
+        display: block;
+    }
+    header.memu_open .gnb .gnb_wrap {
+        display: block;
+    }
+} /*media*/
+@media screen and (max-width:768px){ /* 768이하에서는 */
+    header {
+        height: 50px;
+    }
+    header .logo {
+        margin: 14px 0 0 0;
+    }
+    header .logo a {
+        width: 125px;
+        height: 20px;
+    }
+    header .gnb .gnb_wrap ul.depth1 {
+        margin-top: 50px;
+        height: calc(100vh - 50px);
+    }
+
+} /*media*/
+
+.visual {
+    height: 100vh; /* 브라우저의 높이와 동일 */
+    margin-bottom: 100vh;
+    background: url(../images/joseph-corl-QxJJ9E86T9Q-unsplash.png) no-repeat center center / cover;
+}
+
+.visual h2 {
+    display: none;
+}
