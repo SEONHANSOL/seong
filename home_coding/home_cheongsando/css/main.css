@@ -129,7 +129,7 @@ header .gnb ul a:hover {
 }
 
 .tour .tit {
-    margin: 125px 0 225px 0;
+    padding: 125px 0 0 0;
 }
 .tour .tit h2 {
     font-size: 40px;
@@ -187,7 +187,68 @@ header .gnb ul a:hover {
 }
 .tour .list ul li.active a p {
     display: block;
+
 }
+.tour .list ul li a h3 {
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+.tour .wrapper {
+    position: relative;
+}
+.tour .more {
+    position: absolute;
+    right: 0;
+    top: 152px;
+}
+.tour .more a {
+    color: #fff;
+    display: block;
+    border-radius: 50px;
+    padding: 6px 31px 6px 17px;
+    background: url(../images/more_ico.png) #0C4E92 no-repeat right 18px top 11px;
+}
+.tour .more a:hover {
+    background-color: #314232;
+}
+.community {
+    height: 805px;
+    background: url(../images/community_bg.png) no-repeat center center / cover;
+    margin: 218px 0 0 0;
+    color: #fff;
+}
+.community .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.community .tit {
+    width: 417px;
+    margin: 271px 0 0 0;
+}
+.community .tit h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+.community .tit p {
+    color: rgba(255,255,255,0.8);
+    font-weight: 700;
+}
+.community .news {
+    background-color: rgba(61,61,61,0.36);
+    backdrop-filter: blur(5px) ;
+    width: 466px;
+    height: 434px;
+    margin-top: 134px;
+    padding: 0 37px 0 32px;
+    border-radius: 10px;
+}
+.community .news h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 50px 0 12px 0;
+}
+
 
 footer {
     margin: 500px 0 0 0;
