@@ -17,13 +17,13 @@
     text-align: center;
 }
 .visual ul li.bg1 {
-    background-image: url(../images/visual_bg1.png);
+    background-image: url(../images/main/visual_bg1.png);
 }
 .visual ul li.bg2 {
-    background-image: url(../images/visual_bg2.png);
+    background-image: url(../images/main/visual_bg2.png);
 }
 .visual ul li.bg3 {
-    background-image: url(../images/visual_bg3.png);
+    background-image: url(../images/main/visual_bg3.png);
 }
 .visual ul li h3 {
     font-size: 70px;
@@ -119,10 +119,20 @@
     height: 23px;
 }
 @media screen and (max-width:1300px){
-
+    .visual ul li h3 {
+        font-size: 50px;
+    }
+    .visual ul li p {
+        font-size: 18px;
+    }
 }
 @media screen and (max-width:1024px){
-
+    .visual ul li h3 {
+        font-size: 45px;
+    }
+    .visual ul li p {
+        font-size: 15px;
+    }
 }
 @media screen and (max-width:768px){ /* 모바일 디자인 적용 시작 */
     .visual ul li {
@@ -146,6 +156,9 @@
     .visual .btn_wrap {
         bottom: 115px;
     }
+    .visual .btn_wrap button {
+        margin-left: -10px;
+    }
     .visual .btn_wrap .paging .swiper-pagination-bullet {
         /* 현재 선택되지 않은 블릿*/
         width: 80px;
@@ -153,5 +166,197 @@
     }
 }
 @media screen and (max-width:500px){
+    .visual ul li h3 {
+        font-size: 25px;
+    }
+}
 
+.biz .tit h2 {
+    color: #ED1C24;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 159px 0 0 0;
+}
+.biz .tit h2 span {
+    position: relative;
+}
+.biz .tit h2 span::after {
+    position: absolute;
+    right: -21px;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 7.94872C0 8.22524 0.0402151 8.51182 0.150823 8.78331C0.638506 9.98995 1.88034 10.734 3.45902 10.1056C3.83609 9.95475 14.2785 5.74661 14.2785 5.74661C14.2785 5.74661 10.1659 16.174 10.01 16.5611C9.41176 18.0543 10.1307 19.4067 11.3524 19.8592C11.6239 19.9598 11.9055 20.0101 12.182 20.005C13.1825 20 14.0623 19.4118 14.4947 18.2353C14.5601 18.0593 19.7034 3.93665 19.814 3.5998C19.8793 3.39869 20 2.92609 20 2.5993C20 1.90045 19.7436 1.24183 19.2459 0.744093C18.7582 0.251383 18.1046 0 17.4158 0C17.0789 0 16.8074 0.0603318 16.3952 0.191051C16.1488 0.271493 2.8909 5.20362 1.75968 5.62594C0.628457 6.04827 -2.76166e-06 6.95324 0.00502489 7.94872' fill='%23ED1C24'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.biz .tit p {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1;
+    color: #1d1d1d;
+    margin-bottom: 46px;
+}
+.biz .list ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+}
+.biz .list ul li {
+    width: 25%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    transition: 0.5s;
+}
+.biz .list ul li.biz1 {
+    background-image: url(../images/main/biz01.png);
+}
+.biz .list ul li.biz2 {
+    background-image: url(../images/main/biz02.png);
+}
+.biz .list ul li.biz3 {
+    background-image: url(../images/main/biz03.png);
+}
+.biz .list ul li.biz4 {
+    background-image: url(../images/main/biz04.png);
+}
+.biz .list ul li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.2;
+    content: "";
+}
+.biz .list ul li a {
+    display: block;
+    height: 800px;
+    position: relative;
+    z-index: 10;
+}
+.biz .list ul li a .inner {
+    margin: 0 5%;
+    position: absolute; /* absolute로 준 이유: 마우스를 오버했을때 효과를 부드럽기 주기 위해 */
+    top: 590px;
+    width: 90%;
+    transition: 0.5s;
+}
+.biz .list ul li a .inner strong {
+    font-size: 16px;
+    display: block;
+    line-height: 1.2;
+}
+.biz .list ul li a .inner h3 {
+    font-size: 40px;
+    line-height: 1;
+    margin: 10px 0 10px 0;
+}
+.biz .list ul li a .inner p {
+    opacity: 0;
+    transition: 0.5s;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+@media screen and (min-width:768px){ 
+    /* 하나의 li에 over했을때  -- 768px 이상일때만 적용  */
+    .biz .list ul li.on {
+        width: 75%;
+    }
+    /* .biz .list ul li.off {
+        width: 17%;
+    } */
+    .biz .list ul li.on::before {
+        opacity: 0;
+    }
+    .biz .list ul li.off::before {
+        opacity: 0.4;
+    }
+    .biz .list ul li.off a {
+        opacity: 0.8;
+    }
+    .biz .list ul li.on a .inner {
+        transition: 0.5s;
+    }
+    .biz .list ul li.on a .inner strong {
+        font-weight: 700;
+    }
+    .biz .list ul li.on a .inner h3 {
+        font-size: 50px;
+        font-weight: 700;
+    }
+    .biz .list ul li.on a .inner p {
+        opacity: 1;
+    } 
+}
+@media screen and (max-width:1300px){ 
+    .biz .tit h2 {
+        font-size: 20px;
+    }
+    .biz .tit p {
+        font-size: 37px;
+    }
+    .biz .tit h2 span::after {
+        right: -14px;
+        top: 3px;
+        width: 13px;
+        height: 13px;
+    }
+}
+@media screen and (max-width:1024px){ 
+    
+}
+@media screen and (max-width:768px){ 
+    .biz .tit h2 {
+        font-size: 14px;
+        margin: 85px 0 0 0;
+    }
+    .biz .tit h2 span::after {
+        right: -11px;
+        top: 2px;
+        width: 10px;
+        height: 10px;
+    }
+    .biz .tit p {
+        font-size: 22px;
+        margin-bottom: 23px;
+    }
+    .biz .list ul {
+        display: block;
+    }
+    .biz .list ul li {
+        width: auto;
+        margin-bottom: 1px;
+    }
+    .biz .list ul li a {
+        height: 130px;
+    }
+    .biz .list ul li a .inner {
+        margin: 0 5%;
+        left: 0;
+        top: 55px;
+        width: calc(100% 42px);
+    }
+    .biz .list ul li a .inner strong {
+        font-size: 14px;
+    }
+    .biz .list ul li a .inner h3 {
+        font-size: 25px;
+        line-height: 1;
+        margin: 5px 0 10px 0;
+        font-weight: 700;
+    }
+    .biz .list ul li a .inner p {
+        display: none;
+    }
+}
+@media screen and (max-width:500px){ 
+   
 }
