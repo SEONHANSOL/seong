@@ -27,12 +27,12 @@ html, body {
         margin: 0 20px; /* 좌우에 20px */
     }
 } /*media*/
-@media screen and (max-width:1024px){ /* 테블릿사이즈*/
+
+@media screen and (max-width:1024px){
     html, body {
         font-size: 14px;
     }
 }
-
 @media screen and (max-width:640px){ /* 모바일 반응형 시작 */
     html, body {
         font-size: 13px;
