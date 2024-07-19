@@ -342,7 +342,7 @@ section .tit p {
         margin: 0 5%;
         left: 0;
         top: 55px;
-        width: calc(100% 42px);
+        width: calc(100% - 42px);
     }
     .biz .list ul li a .inner strong {
         font-size: 14px;
