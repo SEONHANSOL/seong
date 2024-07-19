@@ -555,7 +555,7 @@ footer .f_nav ul li {
 footer .f_nav ul li::after {
     position: absolute;
     right: -19px;
-    top: 3;
+    top: 3px;
     width: 1px;
     height: 10px;
     background-color: rgba(255,255,255,0.2);
