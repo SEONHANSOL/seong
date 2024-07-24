@@ -728,6 +728,7 @@ footer .copyright {
     display: block;
     line-height: 50px;
     padding: 0 15px;
+    white-space: nowrap; /* 줄바꿈 금지 */
 }
 .sub_memu .lnb ul li:first-child a {
     padding-left: 0;

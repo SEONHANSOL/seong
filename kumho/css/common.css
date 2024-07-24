@@ -46,7 +46,7 @@ html, body {
 
 
 /* 클릭하는 요소 a button - focus가 되었을때 스타일 변경 */
-a:focus,
+/* a:focus,
 button:focus {
     outline: 2px dashed #3d3d3d;
-}
+} */
