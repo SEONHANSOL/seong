@@ -425,7 +425,7 @@ header.fixed .logo a::before{
     header .tnb .lang::before {
         position: absolute;
         left: 2px;
-        top: 1px;
+        top: -2px;
         width: 15px;
         height: 15px;
         background-position: center center;
