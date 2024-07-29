@@ -795,7 +795,7 @@ footer .copyright {
     /* 콘텐츠에 최소높이 - 아직 콘텐츠를 코딩하지 않았을때 페이지만 생성되어 있어서 */
 }
 .sub_contents .sub_title h2 {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
     color: #ED1C24;
     margin: 111px 0 7px 0;
