@@ -15,26 +15,73 @@ header {
 header .wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+header .logo a {
+    display: block;
+    width: 283px;
+    height: 65px;
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+}
+header .logo a::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../images/logo_w.svg);
+    content: "";
+}
+header .gnb .gnb_open,
+header .gnb .gnb_close {
+    display: none;
+}
+header .gnb .gnb_wrap ul.depth1 {
+    display: flex;
+}
+header .gnb .gnb_wrap ul.depth1 > li > a {
+    padding: 36px 37px;
+    display: block;
+    font-family: 'hoho';
+    font-size: 20px;
+}
+header .gnb .gnb_wrap ul.depth2 {
+    display: none;
+}
+header .tnb {
+    display: flex;
+    gap: 7px;
 }
 header .tnb .search {
-    width: 92px;
+    width: 104px;
     height: 29px;
     border: 1px solid #fff;
     border-radius: 15px;
 }
 header .tnb .search .search_bpx {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6px 10px 6px 9px;
 }
 header .tnb .search .search_bpx label {
     display: none;
 }
 header .tnb .search .search_bpx input[type="text"] {
-    width: 69px;
+    width: calc(100% - 27px);
     height: 18px;
     border: 0;
     background-color: transparent;
     outline: 0; /*focus되었을때 테두리*/
 }
+header .tnb .search .search_bpx input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+} 
 header .tnb .search .search_bpx input[type="submit"] {
     width: 17px;
     height: 17px;
@@ -47,6 +94,41 @@ header .tnb .search .search_bpx input[type="submit"] {
     background-size: contain;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17'%3E%3Cpath id='search_24dp_FILL0_wght400_GRAD0_opsz24' d='M126.287-827.425a6.069,6.069,0,0,1-4.462-1.825A6.074,6.074,0,0,1,120-833.712a6.068,6.068,0,0,1,1.826-4.462A6.07,6.07,0,0,1,126.287-840a6.07,6.07,0,0,1,4.462,1.826,6.068,6.068,0,0,1,1.826,4.462,5.89,5.89,0,0,1-.339,2.006,5.764,5.764,0,0,1-.919,1.669l5.417,5.417a.916.916,0,0,1,.266.676.92.92,0,0,1-.266.678.917.917,0,0,1-.677.266.916.916,0,0,1-.677-.266l-5.417-5.417a5.775,5.775,0,0,1-1.669.92A5.919,5.919,0,0,1,126.287-827.425Zm0-1.935a4.2,4.2,0,0,0,3.083-1.269,4.2,4.2,0,0,0,1.269-3.083,4.2,4.2,0,0,0-1.269-3.084,4.2,4.2,0,0,0-3.083-1.269A4.2,4.2,0,0,0,123.2-836.8a4.2,4.2,0,0,0-1.27,3.084,4.2,4.2,0,0,0,1.27,3.083A4.2,4.2,0,0,0,126.287-829.36Z' transform='translate(-120 840)' fill='%23fff'/%3E%3C/svg%3E%0A");
 }
+header .tnb .link a {
+    display: block;
+    width: 92px;
+    height: 29px;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    padding: 5px 0 0 17px;
+    position: relative;
+}
+header .tnb .link a::after {
+    position: absolute;
+    right: 14px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath id='arrow_outward_24dp_FILL0_wght400_GRAD0_opsz24' d='M225.41-757.3l-7.078,7.078a.755.755,0,0,1-.557.219.755.755,0,0,1-.557-.219.756.756,0,0,1-.219-.557.757.757,0,0,1,.219-.558l7.078-7.077h-6.044a.769.769,0,0,1-.567-.228.77.77,0,0,1-.229-.566.774.774,0,0,1,.229-.568.774.774,0,0,1,.567-.227H226.2a.774.774,0,0,1,.567.227.772.772,0,0,1,.229.568v7.952a.768.768,0,0,1-.229.566.771.771,0,0,1-.567.228.772.772,0,0,1-.567-.228.769.769,0,0,1-.228-.566Z' transform='translate(-217 760)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+header .tnb .link a:hover {
+    background-color: #E84F4B;
+    border-color: #E84F4B;
+    color: #fff;
+}
+@media screen and (max-width:1300px){ 
+    header .tnb .search {
+        width: 91px;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > a {
+        padding: 36px 23px;
+    }
+}
+
 
 .visual h2 {
     display: none;
