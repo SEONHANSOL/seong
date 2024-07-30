@@ -2,6 +2,52 @@
 @import url(fonts.css);
 @import url(common.css);
 
+
+header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header .tnb .search {
+    width: 92px;
+    height: 29px;
+    border: 1px solid #fff;
+    border-radius: 15px;
+}
+header .tnb .search .search_bpx {
+    display: flex;
+}
+header .tnb .search .search_bpx label {
+    display: none;
+}
+header .tnb .search .search_bpx input[type="text"] {
+    width: 69px;
+    height: 18px;
+    border: 0;
+    background-color: transparent;
+    outline: 0; /*focus되었을때 테두리*/
+}
+header .tnb .search .search_bpx input[type="submit"] {
+    width: 17px;
+    height: 17px;
+    font-size: 0;
+    line-height: 0;
+    background-color: transparent;
+    border: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17'%3E%3Cpath id='search_24dp_FILL0_wght400_GRAD0_opsz24' d='M126.287-827.425a6.069,6.069,0,0,1-4.462-1.825A6.074,6.074,0,0,1,120-833.712a6.068,6.068,0,0,1,1.826-4.462A6.07,6.07,0,0,1,126.287-840a6.07,6.07,0,0,1,4.462,1.826,6.068,6.068,0,0,1,1.826,4.462,5.89,5.89,0,0,1-.339,2.006,5.764,5.764,0,0,1-.919,1.669l5.417,5.417a.916.916,0,0,1,.266.676.92.92,0,0,1-.266.678.917.917,0,0,1-.677.266.916.916,0,0,1-.677-.266l-5.417-5.417a5.775,5.775,0,0,1-1.669.92A5.919,5.919,0,0,1,126.287-827.425Zm0-1.935a4.2,4.2,0,0,0,3.083-1.269,4.2,4.2,0,0,0,1.269-3.083,4.2,4.2,0,0,0-1.269-3.084,4.2,4.2,0,0,0-3.083-1.269A4.2,4.2,0,0,0,123.2-836.8a4.2,4.2,0,0,0-1.27,3.084,4.2,4.2,0,0,0,1.27,3.083A4.2,4.2,0,0,0,126.287-829.36Z' transform='translate(-120 840)' fill='%23fff'/%3E%3C/svg%3E%0A");
+}
+
 .visual h2 {
     display: none;
 }
