@@ -11,4 +11,39 @@ $(document).ready(function(){
         //infinite: false, //무한반복
     });
 
+    $('.memu .list .popup').slick({
+        dots: false, //하단 페이지 버튼 (true, false)
+	    arrows: false,  //다음, 이전팝업 (true, false)
+        variableWidth: true,
+        // slidesToShow: 6,
+        // swipeToSlide: true, 
+        // centerMode: true,
+        // responsive: [
+        //     {
+        //       breakpoint: 1300, //1300px 이하
+        //       settings: {
+        //         slidesToShow: 5
+        //       }
+        //     },
+        //     {
+        //       breakpoint: 1024,
+        //       settings: {
+        //         slidesToShow: 4
+        //       }
+        //     },
+        //     {
+        //       breakpoint: 768,
+        //       settings: {
+        //         slidesToShow: 3
+        //       }
+        //     },
+        //     {
+        //       breakpoint: 375,
+        //       settings: {
+        //         slidesToShow: 2
+        //       }
+        //     },
+        // ]
+    })
+
 }) //$(document).ready

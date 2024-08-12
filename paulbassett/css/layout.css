@@ -211,7 +211,65 @@ header .header_sub .logo a::before {
     }
     header .header_sub .gnb .gnb_wrap {
         display: none;
+        position: absolute; /* header를 기준으로 정렬 */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh; /* 브라우저의 높이만큼 */
+        background-color: #fff;
     }
+    header .header_sub .gnb .gnb_wrap .depth1 {
+        margin-top: 50px;
+        height: calc(100% - 50px);
+        overflow-y: auto; /* 만약 콘텐츠가 길어지면 그때 스크롤바 생성되게 */
+    }
+    header .header_sub .gnb .gnb_wrap .depth1 > li > a {
+        display: block;
+        padding: 0 20px;
+        white-space: nowrap; /* 메뉴 한줄로 표시 */
+        line-height: 2.5;
+        font-size: 1.538rem;
+        color: var(--txt-color-tit);
+        position: relative;
+    }
+    header .header_sub .gnb .gnb_wrap .depth1 > li > a::before {
+        position: absolute;
+        content: "";
+        right: 9px;
+        top: 17px;
+        width: 35px;
+        height: 20px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23705d48'%3E%3Cpath d='M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z'/%3E%3C/svg%3E");
+        transform: rotate(90deg);
+    }
+    header .header_sub .gnb .gnb_wrap .depth1 > li.open > a {
+        color: var(--color-main2);
+        font-weight: 700;
+    }
+    header .header_sub .gnb .gnb_wrap .depth1 > li.open > a::before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23c0a789'%3E%3Cpath d='M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z'/%3E%3C/svg%3E");
+        transform: rotate(270deg);
+        
+    }
+    header .header_sub .gnb .gnb_wrap .depth2 {
+        display: none;
+        margin: 0 20px;
+        background-color: var(--color-main1);
+        color: #fff;   
+        padding: 20px;
+    }
+    header .header_sub .gnb .gnb_wrap .depth1 > li.open .depth2 {
+        display: block;
+    }
+    header .header_sub .gnb .gnb_wrap .depth2 > li > a {
+        display: block;
+        line-height: 2;
+        font-size: 1.154rem;
+    }
+
     header .header_sub .gnb .gnb_open,
     header .header_sub .gnb .gnb_close {
         position: absolute;
@@ -257,6 +315,17 @@ header .header_sub .logo a::before {
     }
     header.fixed + .container { /* 인접형제 선택자 */
         margin-top: 55px;
+    }
+
+    /* 메뉴가 열렸을 때 */
+    header.menu_open .header_sub .gnb .gnb_wrap {
+        display: block;
+    }
+    header.menu_open .header_sub .gnb .gnb_open {
+        display: none;
+    }
+    header.menu_open .header_sub .gnb .gnb_close {
+        display: block;
     }
 }
 

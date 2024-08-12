@@ -61,6 +61,21 @@ html, body {
     --color-main2 : #c0a789;
     --txt-size-tit : 5rem;
 }
+@media screen and (max-width:1300px){ 
+    :root {
+        --txt-size-tit : 5rem;
+    }
+}
+@media screen and (max-width:1300px){ 
+    :root {
+        --txt-size-tit : 4rem;
+    }
+}
+@media screen and (max-width:768px){ 
+    :root {
+        --txt-size-tit : 2.308rem;
+    }
+}
 
 
 /*
