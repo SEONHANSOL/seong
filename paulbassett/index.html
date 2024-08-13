@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+    <!-- slick을 돌아가게 하는 값 -->
+    <script src="js/slick.min.js"></script>
+    <link rel="stylesheet" href="css/slick.css">
+    <title>Paul Bassett</title>
+</head>
+<body>
+    <div class="skip_nav">
+        <a href="#skip_contents">본문 바로가기</a>
+        <a href="#skip_menu">대메뉴 바로가기</a>
+    </div>
+    <div id="wrap">
+        <!-- 
+            pc버전에서 메뉴에 마우스를 오버했을때 menu_over
+            모바일버전에서 메뉴를 클릭해서 열었을때 menu_open
+            상단에 메뉴가 고정될때 fixed
+        -->
+        <header class="">
+            <div class="wrapper">
+                <div class="header_top">
+                    <div class="tnb">
+                        <ul>
+                            <li><a href="#n">신규입점제의</a></li>
+                            <li><a href="#n">납품문의</a></li>
+                        </ul>
+                    </div><!--tnb1-->
+                    <div class="tnb">
+                        <ul>
+                            <li><a href="#n">로그인</a></li>
+                            <li><a href="#n">문의하기</a></li>
+                            <li><a href="#n">고객센터</a></li>
+                        </ul>
+                    </div><!--tnb2-->
+                </div>
+                <div class="header_sub">
+                    <h1 class="logo"><a href="index.html">폴바셋</a></h1>
+                    <nav class="gnb" id="skip_menu">
+                        <button class="gnb_open">메뉴열기</button>
+                        <div class="gnb_wrap">
+                            <ul class="depth1">
+                                <!--
+                                    pc버전에서 메뉴에 마우스를 오버하면 over
+                                    모바일버전에서 메뉴가 열리면 open
+                                -->
+                                <li class="">
+                                    <a href="https://www.naver.com/"><span>ABOUT US</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>Brand</span></a></li>
+                                        <li><a href="#n"><span>회사소개</span></a></li>
+                                        <li><a href="#n"><span>CSR</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>MENU</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>NEW</span></a></li>
+                                        <li><a href="#n"><span>COFFEE</span></a></li>
+                                        <li><a href="#n"><span>BEVERAGE</span></a></li>
+                                        <li><a href="#n"><span>ICE-CREAM</span></a></li>
+                                        <li><a href="#n"><span>FOOD</span></a></li>
+                                        <li><a href="#n"><span>PRODUCT</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>STORE</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>매장찾기</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>SOCIETY</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>Paul Bassett Society</span></a></li>
+                                        <li><a href="#n"><span>회원 등급 혜택</span></a></li>
+                                        <li><a href="#n"><span>e-Card 선물</span></a></li>
+                                        <li><a href="#n"><span>모바일 App 안내</span></a></li>
+                                        <li><a href="#n"><span>제휴혜택 안내</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>WHAT'S NEW</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>Event / News</span></a></li>
+                                        <li><a href="#n"><span>Notice</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>E-SHOP</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>E-SHOP 소개</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="gnb_close">메뉴닫기</button>
+                    </nav>
+                </div>
+            </div><!--wrapper-->
+        </header>
+        <main class="container" id="skip_contents">
+            <section class="visual_popup">
+                <div class="popup">
+                    <div class="popup_item">
+                        <img src="images/main/popup01.png" class="pc" alt="내 여름아 힘내">
+                        <img src="images/main/m_popup01.png" class="mo" alt="내 여름아 힘내">
+                    </div>
+                    <div class="popup_item">
+                        <img src="images/main/popup02.png" class="pc" alt="수신동의 혜택">
+                        <img src="images/main/m_popup02.png" class="mo" alt="수신동의 혜택">
+                    </div>
+                    <div class="popup_item">
+                        <img src="images/main/popup03.png" class="pc" alt="배달데이 이벤트">
+                        <img src="images/main/m_popup03.png" class="mo" alt="배달데이 이벤트">
+                    </div>
+                </div>
+            </section>
+            <section class="memu">
+                <div class="tit">
+                    <div class="wrapper">
+                        <h2>menu story</h2>
+                        <p>스페셜티 전문 브랜드 폴 바셋은 성장하고 있습니다.</p>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="popup">
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/memu01.png" alt="메뉴사진"></div>
+                                <h3>에티오피아 G1 내추럴 콜드브루</h3>
+                                <strong>Ethiopia G1 Natural Cold Brew</strong>
+                                <p>칼로리(12kcal) 카페인(104mg)</p>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/memu02.png" alt="메뉴사진"></div>
+                                <h3>ICED 바닐라 오트 콜드브루</h3>
+                                <strong>ICED Vanilla Oat Cold Brew</strong>
+                                <p>칼로리(206kcal) 카페인(78mg)</p>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/memu03.png" alt="메뉴사진"></div>
+                                <h3>아포카토 오리지널</h3>
+                                <strong>Affogato original</strong>
+                                <p>칼로리(176kcal) 카페인(79mg)</p>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/memu04.png" alt="메뉴사진"></div>
+                                <h3>크랜베리 월넛 베이글</h3>
+                                <strong>Cranberry Walnut Bagle</strong>
+                                <p>칼로리(295kcal) 나트륨(470mg)</p>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/memu05.png" alt="메뉴사진"></div>
+                                <h3>ICED 콜드브루 라떼</h3>
+                                <strong>ICED Coldbrew Latte</strong>
+                                <p>칼로리(134kcal) 카페인(104mg)</p>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/memu06.png" alt="메뉴사진"></div>
+                                <h3>크루아상</h3>
+                                <strong>Croissant</strong>
+                                <p>칼로리(260kcal) 나트륨(190mg)</p>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/memu07.png" alt="메뉴사진"></div>
+                                <h3>골드키위주스</h3>
+                                <strong>Gold Kiwi Juice</strong>
+                                <p>칼로리(265kcal) 나트륨(44mg)</p>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/memu02.png" alt="메뉴사진"></div>
+                                <h3>ICED 바닐라 오트 콜드브루</h3>
+                                <strong>ICED Vanilla Oat Cold Brew</strong>
+                                <p>칼로리(206kcal) 카페인(78mg)</p>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/memu05.png" alt="메뉴사진"></div>
+                                <h3>ICED 콜드브루 라떼</h3>
+                                <strong>ICED Coldbrew Latte</strong>
+                                <p>칼로리(134kcal) 카페인(104mg)</p>
+                            </a>
+                        </div>
+                    </div><!--popup-->
+                </div><!--list-->
+            </section>
+            <section class="brand">
+                <div class="inner">
+                    <h2>Machine and Grinder Story</h2>
+                    <strong>머신과 그라인더 이야기</strong>
+                    <p><span class="mo_skip">Paul Bassett에서 사용하는 에스프레소 머신과 그라인더는 좋은 원두, 전문 바리스타의 기술,<br>
+                        그리고 폴 바셋의 노하우가 담긴 레시피를 잘 구현하고 커피의 좋은 맛과 향의 퀄리티를 일관성있게 유지하는데 중요한 역할을 합니다.<br>
+                        Paul Bassett이 선택한 머신 ‘La Marzocco’는 듀얼 보일러 시스템 및 프리히팅 시스템 등으로 일정한 압력을 유지하고<br>
+                        추출 영향 변수를 최소화 하는데 우수하며, </span>그라인더 Mazzer Robur는 발열이 낮아 커피 원두 본연의 향미 보존이 우수한 장비입니다.</p>
+                </div>
+                <div class="loop">
+                    <span>Machine and Grinder Story     Machine and Grinder Story     Machine and Grinder Story     Machine and Grinder Story     Machine and Grinder Story     Machine and Grinder Story    Machine and Grinder Story      Machine and Grinder Story     </span>
+                </div>
+            </section>
+            <section class="md">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>MD Pick</h2>
+                        <p>폴 바셋의 클래식 MD 상품들을 만나보세요</p>
+                    </div>
+                    <div class="list">
+                        <div class="popup">
+                            <div class="popup_item">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/main/md01.png" alt="MD상품 사진"></div>
+                                    <h3>드로잉 글라스</h3>
+                                    <strong>Drawing Glass</strong>
+                                </a>
+                            </div>
+                            <div class="popup_item">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/main/md02.png" alt="MD상품 사진"></div>
+                                    <h3>네스프레소 호환 캡슐 브라질</h3>
+                                    <strong>Barista Capsule Brazil</strong>
+                                </a>
+                            </div>
+                            <div class="popup_item">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/main/md03.png" alt="MD상품 사진"></div>
+                                    <h3>컬러 체인지 유리 글라스</h3>
+                                    <strong>Color Change Glass Mug</strong>
+                                </a>
+                            </div>
+                            <div class="popup_item">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/main/md04.png" alt="MD상품 사진"></div>
+                                    <h3>네스프레소 호환 캡슐 콜롬비아</h3>
+                                    <strong>Barista Capsule Colombia</strong>
+                                </a>
+                            </div>
+                            <div class="popup_item">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/main/md05.png" alt="MD상품 사진"></div>
+                                    <h3>에티오피아 레켐티</h3>
+                                    <strong>ETHIOPIA LEKEMPTI</strong>
+                                </a>
+                            </div>
+                            <div class="popup_item">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/main/md06.png" alt="MD상품 사진"></div>
+                                    <h3>샤인히비스커스</h3>
+                                    <strong>Shine Hibiscus</strong>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="event">
+                <div class="tit">
+                    <div class="wrapper">
+                        <h2>sns</h2>
+                        <ul>
+                            <li class="facebook"><a href="#n">페이스북</a></li>
+                            <li class="youtube"><a href="#n">유튜브</a></li>
+                            <li class="instargram"><a href="#n">인스타그램</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="popup">
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/sns01.png" alt="카페사진"></div>
+                                <strong>#세계 바리스타 챔피언십</strong>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/sns02.png" alt="카페사진"></div>
+                                <strong>#고품격 인테리어</strong>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/sns03.png" alt="카페사진"></div>
+                                <strong>#바른 커피 문화 전파</strong>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/sns04.png" alt="카페사진"></div>
+                                <strong>#끊임없는 가맹점 </strong>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/sns05.png" alt="카페사진"></div>
+                                <strong>#커피와 함께 즐기는 브런치</strong>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <aside class="quick">
+            <button title="퀵메뉴 열기" class="open">Quick</button>
+            <div class="quick_cont">
+                <h2 class="name">Quick<br>Menu</h2>
+                <ul>
+                    <!-- 다른페이지 이동은 a이고, jquery 작동시키는 버튼은 button(이동x)-->
+                    <li><a href="#n"><span>Mobile<br>App</span></a></li>
+                    <li><a href="#n"><span>Special<br>Benefit</span></a></li>
+                    <li><a href="#n"><span>e-shop</span></a></li>
+                    <li><button class="top"><span>top</span></button></li>
+                </ul>
+            </div>
+            <button title="퀵메뉴 닫기" class="close">닫기</button>
+        </aside>
+        <footer>
+            <div class="wrapper">
+                <div class="f_sns">
+                    <ul>
+                        <li class="facebook"><a href="#n">페이스북</a></li>
+                        <li class="youtube"><a href="#n">유튜브</a></li>
+                        <li class="instargram"><a href="#n">인스타그램</a></li>
+                    </ul>
+                </div>
+                <div class="f_nav">
+                    <ul>
+                        <li><a href="#n">개인정보처리방침</a></li>
+                        <li><a href="#n">신규입점안내</a></li>
+                        <li><a href="#n">이용약관</a></li>
+                        <li><a href="#n">위치정보서비스 이용약관</a></li>
+                        <li><a href="#n">소사이어티카드 이용약관</a></li>
+                        <li><a href="#n">기프트카드 이용약관</a></li>
+                        <li><a href="#n">고객센터사이트맵</a></li>
+                        <li><a href="#n">윤리 HOT-LINE</a></li>
+                    </ul>
+                </div>
+                <div class="f_info">
+                    <span>엠즈씨드(주) 대표이사 : 권익범 </span>
+                    <address>주소 : 서울특별시 강남구 도산대로 75길 22 (청담동)</address><br>
+                    <span>사업자등록번호 211-88-95935</span>
+                    <span>대표번호 1899-8829</span>
+                    <span>개인정보관리책임자 : 정보문</span>
+                </div>
+                <div class="copy">© 2024 m’s seed Co., Ltd. All rights reserved.</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
