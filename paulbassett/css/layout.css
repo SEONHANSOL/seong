@@ -328,7 +328,3 @@ header .header_sub .logo a::before {
         display: block;
     }
 }
-
-footer {
-    margin-top: 1000px;
-}

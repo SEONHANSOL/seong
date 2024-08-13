@@ -60,20 +60,24 @@ html, body {
     --color-main1 : #705d48;
     --color-main2 : #c0a789;
     --txt-size-tit : 5rem;
+    --margin-tit : 129px 0 37px 0;
 }
 @media screen and (max-width:1300px){ 
     :root {
         --txt-size-tit : 5rem;
+        --margin-tit : 100px 0 30px 0;
     }
 }
-@media screen and (max-width:1300px){ 
+@media screen and (max-width:1024px){ 
     :root {
         --txt-size-tit : 4rem;
+        margin: 80px 0 29px 0;
     }
 }
 @media screen and (max-width:768px){ 
     :root {
         --txt-size-tit : 2.308rem;
+        --margin-tit : 70px 0 25px 0;
     }
 }
 
