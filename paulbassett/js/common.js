@@ -97,4 +97,19 @@ $(document).ready(function(){
         $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
         $('header').removeClass('menu_open')
     })
+
+
+    $('.quick .open').on('click', function(){
+        $('.quick').addClass('open')
+    })
+    $('.quick .close').on('click', function(){
+        $('.quick').removeClass('open')
+    })
+
+    //top버튼 스크롤 되는 방법
+    $('.quick .top').on('click', function(){ 
+        $('html, body').animate({
+            scrollTop : 0
+        }, 300)
+    })
 })

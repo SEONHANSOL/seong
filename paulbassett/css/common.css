@@ -71,7 +71,7 @@ html, body {
 @media screen and (max-width:1024px){ 
     :root {
         --txt-size-tit : 4rem;
-        margin: 80px 0 29px 0;
+        --margin-tit: 80px 0 29px 0;
     }
 }
 @media screen and (max-width:768px){ 

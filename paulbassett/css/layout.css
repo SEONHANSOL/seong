@@ -328,3 +328,253 @@ header .header_sub .logo a::before {
         display: block;
     }
 }
+.quick {
+    position: fixed;
+    right: 10px;
+    bottom: 100px;
+    z-index: 90;
+    /* header가 100 - 메뉴가 위에 나와야 하므로 그보다 작은 수 .. */
+}
+.quick .open,
+.quick .close {
+    display: none;
+}
+.quick .quick_cont {
+    background-color: var(--color-main2);
+    color: #fff;
+    font-size: 0.938rem;
+    text-align: center;
+    overflow: hidden;
+}
+.quick .quick_cont  ul li {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.quick .quick_cont  ul li:last-child {
+    border-bottom: 0;
+}
+.quick .quick_cont ul li a {
+    display: block;
+    padding: 25px 9px;
+}
+.quick .quick_cont ul li a:hover {
+    color: #705d48;
+}
+.quick .quick_cont ul li button {
+    padding: 32px 9px 18px 9px;
+    width: 100%;
+    position: relative;
+}
+.quick .quick_cont ul li button:hover {
+    color: #705d48;
+}
+.quick .quick_cont ul li button::before {
+    position: absolute;
+    left: 25px;
+    top: 14px;
+    width: 18px;
+    height: 16px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23ffffff'%3E%3Cpath d='M245-400q-51-64-78-141t-27-159q0-27 3-54t9-54l-70 70-42-42 140-140 140 140-42 42-65-64q-7 25-10 50.5t-3 51.5q0 70 22.5 135.5T288-443l-43 43Zm413 273q-23 8-46.5 7.5T566-131L304-253l18-40q10-20 28-32.5t40-14.5l68-5-112-307q-6-16 1-30.5t23-20.5q16-6 30.5 1t20.5 23l148 407-100 7 131 61q7 3 15 3.5t15-1.5l157-57q31-11 45-41.5t3-61.5l-55-150q-6-16 1-30.5t23-20.5q16-6 30.5 1t20.5 23l55 150q23 63-4.5 122.5T815-184l-157 57Zm-90-265-54-151q-6-16 1-30.5t23-20.5q16-6 30.5 1t20.5 23l55 150-76 28Zm113-41-41-113q-6-16 1-30.5t23-20.5q16-6 30.5 1t20.5 23l41 112-75 28Zm8 78Z'/%3E%3C/svg%3E");
+    content: "";
+}
+.quick .quick_cont ul li button:hover::before{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23705d48'%3E%3Cpath d='M245-400q-51-64-78-141t-27-159q0-27 3-54t9-54l-70 70-42-42 140-140 140 140-42 42-65-64q-7 25-10 50.5t-3 51.5q0 70 22.5 135.5T288-443l-43 43Zm413 273q-23 8-46.5 7.5T566-131L304-253l18-40q10-20 28-32.5t40-14.5l68-5-112-307q-6-16 1-30.5t23-20.5q16-6 30.5 1t20.5 23l148 407-100 7 131 61q7 3 15 3.5t15-1.5l157-57q31-11 45-41.5t3-61.5l-55-150q-6-16 1-30.5t23-20.5q16-6 30.5 1t20.5 23l55 150q23 63-4.5 122.5T815-184l-157 57Zm-90-265-54-151q-6-16 1-30.5t23-20.5q16-6 30.5 1t20.5 23l55 150-76 28Zm113-41-41-113q-6-16 1-30.5t23-20.5q16-6 30.5 1t20.5 23l41 112-75 28Zm8 78Z'/%3E%3C/svg%3E");
+}
+.quick .quick_cont h2  {
+    color: #705d48;
+    font-family: 'ghana';
+    padding: 17px 9px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+@media screen and (max-width:1024px){ 
+    .quick .open {
+        display: block;
+        width: 66px;
+        height: 66px;
+        background-color: #4d433a;
+        color: #fff;
+        font-family: 'ghana';
+        font-size: 1.063rem;
+        padding-top: 19px;
+        position: relative;
+    }
+    .quick .open::before {
+        position: absolute;
+        left: 50%;
+        top: 23px;
+        transform: translate(-50%, 0);
+        width: 32px;
+        height: 5px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='30px' height='5px'%3E%3Cpath fill-rule='evenodd' fill='rgb(255, 255, 255)' d='M2.143,0.000 C3.326,0.000 4.286,0.959 4.286,2.143 C4.286,3.326 3.326,4.286 2.143,4.286 C0.959,4.286 0.000,3.326 0.000,2.143 C0.000,0.959 0.959,0.000 2.143,0.000 Z'/%3E%3Cpath fill-rule='evenodd' fill='rgb(255, 255, 255)' d='M15.000,0.000 C16.183,0.000 17.143,0.959 17.143,2.143 C17.143,3.326 16.183,4.286 15.000,4.286 C13.816,4.286 12.857,3.326 12.857,2.143 C12.857,0.959 13.816,0.000 15.000,0.000 Z'/%3E%3Cpath fill-rule='evenodd' fill='rgb(255, 255, 255)' d='M27.857,0.000 C29.041,0.000 30.000,0.959 30.000,2.143 C30.000,3.326 29.041,4.286 27.857,4.286 C26.674,4.286 25.714,3.326 25.714,2.143 C25.714,0.959 26.674,0.000 27.857,0.000 Z'/%3E%3C/svg%3E");
+        content: "";
+    }
+    .quick .close {
+        width: 66px;
+        height: 66px;
+        background-color: #4d433a;
+        color: #fff;
+        font-family: 'ghana';
+        font-size: 1.063rem;
+        padding-top: 19px;
+        font-size: 0;
+        line-height: 0;
+        position: relative;
+    }
+    .quick .close::before {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 23px;
+        height: 23px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23ffffff'%3E%3Cpath d='m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z'/%3E%3C/svg%3E");
+        content: "";
+    }
+    .quick .quick_cont {
+        display: none;
+    }
+    /* 퀵이 오픈되면 */
+    .quick.open .open {
+        display: none;
+    }
+    .quick.open .close {
+
+        display: block;
+    }
+    .quick.open .quick_cont {
+        display: block;
+    }
+}
+
+
+footer {
+    background-color: var(--color-main1);
+    color: rgba(255,255,255,0.8);
+    padding: 50px 0 70px;
+    text-align: center;
+}
+footer .f_sns ul {
+    display: flex;
+    justify-content: center
+}
+footer .f_sns ul li a {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    margin: 0 15px;
+}
+footer .f_sns ul li a::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+footer .f_sns ul li.facebook a::before {
+    background-image: url(../images/main/facebook.png);
+}
+footer .f_sns ul li.youtube a::before {
+    background-image: url(../images/main/youtube.png);
+}
+footer .f_sns ul li.instargram a::before {
+    background-image: url(../images/main/instar.png);
+}
+footer .f_nav {
+    margin: 34px 0;
+}
+footer .f_nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+footer .f_nav ul li {
+    margin: 0 20px;
+    position: relative;
+}
+footer .f_nav ul li::after {
+    position: absolute;
+    right: -24px;
+    top: 1px;
+    width: 1px;
+    height: 13px;
+    background-color: rgba(255,255,255,0.3);
+    content: "";
+}
+footer .f_nav ul li:last-child::after {
+    display: none;
+}
+footer .f_info {
+    margin: 10px 0;
+    line-height: 1.9;
+}
+footer .f_info span,
+footer .f_info address {
+    display: inline-block;
+    margin: 0 11px;
+}
+footer .copy {
+    padding-top: 30px;
+    color: rgba(255,255,255,0.6);
+}
+
+@media screen and (max-width:1024px){ 
+    footer {
+        padding: 38px 0 58px;
+    }
+    footer .f_sns ul li a {
+        width: 22px;
+        height: 22px;
+        margin: 0 9px;
+    }
+    footer .f_sns ul li a::before {
+        width: 22px;
+        height: 22px;
+    }
+    footer .f_nav {
+        margin: 18px 0 29px 0;
+    }
+    footer .f_nav ul {
+        justify-content: center;
+        flex-wrap: wrap; /* 두줄 허용 */
+        border-width: 1px 0 0 1px;
+        border-color: rgba(255,255,255,0.8);
+        border-style: solid;
+    }
+    footer .f_nav ul li {
+        margin: 0;
+        width: 50%;
+        border-width: 0 1px 1px 0;
+        border-color: rgba(255,255,255,0.8);
+        border-style: solid;
+    }
+    footer .f_nav ul li::after {
+        display: none;
+    }
+    footer .f_nav ul li a {
+        display: block;
+        padding: 10px 0;
+    }
+    footer .copy {
+        padding-top: 10px;
+    }
+}
