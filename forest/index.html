@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/fullpage.min.js"></script><!--fullpage js-->
+    <link rel="stylesheet" href="css/fullpage.css"><!--fullpage css-->
+    <script src="js/swiper-bundle.min.js"></script><!--swiper-->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"><!--swiper-->
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>생명의숲</title>
+</head>
+<body>
+    <div class="skip_nav">
+        <a href="#skip_contents">본문 바로가기</a>
+        <a href="#skip_menu">대메뉴 바로가기</a>
+    </div>
+    <!-- header는 기본 흰색, dark 클래스가 추가되면 검은색변경 -->
+    <header>
+        <h1 class="logo"><a href="index.html">생명의숲</a></h1>
+        <nav class="gnb">
+            <button class="gnb_open">메뉴열기</button>
+            <div class="gnb_wrap">
+                <ul class="depth1">
+                    <li><a href="#n"><span>소개</span></a></li>
+                    <li><a href="#n"><span>활동</span></a></li>
+                    <li><a href="#n"><span>참여와후원</span></a></li>
+                    <li><a href="#n"><span>자료실</span></a></li>
+                    <li><a href="#n"><span>나의후원</span></a></li>
+                </ul>
+            </div>
+            <button class="gnb_close">메뉴닫기</button>
+        </nav>
+        <div class="tnb">
+            <a href="#n" class="global">EN</a>
+            <a href="#n" class="search">검색페이지 이동</a>
+        </div>
+    </header>
+    <aside class="fp_nav">
+        <ul>
+            <!-- 현재 선택된 section은 li에 active 클래스 -->
+            <li class="active"><a href="#visual">Main</a></li>
+            <li><a href="#tree">나무심기</a></li>
+            <li><a href="#forest">숲 활동</a></li>
+            <li><a href="#story">활동이야기</a></li>
+        </ul>
+    </aside>
+    <aside class="quick_manu">
+        <ul>
+            <li class="quick1"><a href="#n"><span>마이트리</span></a></li>
+            <li class="quick2"><a href="#n"><span>해피빈</span></a></li>
+            <li class="quick3"><a href="#n"><span>같이가치</span></a></li>
+            <li class="quick4"><a href="#n"><span>나무세상</span></a></li>
+            <li class="top"><button><span>TOP</span></button></li>
+        </ul>
+    </aside>
+    <div id="fullpage">
+        <section class="section fp-auto-height-responsive visual">
+            <h2>팝업</h2>
+            <div class="swiper"> 
+                <ul class="swiper-wrapper"> 
+                    <li class="swiper-slide popup1">
+                        <div class="inner">
+                            <h3>특별한 날을 기념하는<br>
+                                새로운 방법</h3>
+                            <p>기념하고 싶은 날! 서울 곳곳에 나무 한그루 심어보는 건 어떠세요?</p>
+                        </div>
+                    </li>
+                    <li class="swiper-slide popup2">
+                        <div class="inner">
+                            <h3>생명의숲과 나무 할아버지 박상진 교수의<br>
+                                우리가 지켜야 할 고목나무 이야기</h3>
+                            <p>나무마다 이야기가 숨어있어요</p>
+                        </div>
+                    </li>
+                    <li class="swiper-slide popup3">
+                        <div class="inner">
+                            <h3>누구나 일상속에서 건강한 숲을 누리도록<br>
+                                도시 속 나무심기를 위한</h3>
+                            <p>#같이가치 #매달기부 #나무심기 #건강한숲 #건강한일상 #도시속나무</p>
+                        </div>
+                    </li>
+                    <li class="swiper-slide popup4">
+                        <div class="inner">
+                            <h3>생명의숲은 숲을 통해 사회문제를 해결하고,<br>
+                                모두가 누리는 5분 거리의 숲을 만들기</h3>
+                            <p>숲의 공공성을 높여 누구나 숲의 가치를 누리는 건강한 사회를 만들어 가고자 합니다. </p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="paging"></div>
+            </div>
+        </section><!--visual-->
+        <section class="section fp-auto-height-responsive tree">
+            tree
+        </section><!--tree-->
+        <section class="section fp-auto-height-responsive forest">
+            forest
+        </section><!--forest-->
+        <section class="section fp-auto-height-responsive story">
+            story
+        </section><!--story-->
+        <footer class="section fp-auto-height-responsive fp-auto-height">
+            footer
+        </footer>
+    </div>
+</body>
+</html>

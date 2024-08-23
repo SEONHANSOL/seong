@@ -1,7 +1,7 @@
 html, body {
-    font-family: "Paperlogy", "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Helvetica, "Apple SD Gothic Neo", "애플 SD 산돌고딕 Neo", sans-serif;
+    font-family: 'Pretendard', sans-serif;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 15px;
     letter-spacing: 0; /* 자간 */
     line-height: 1.4; /* 배수 - 글자크기에 1.4배 */
     color: #3d3d3d; /* 글자 색상 */
@@ -21,7 +21,7 @@ html, body {
    반응형 */
 @media screen and (max-width:1300px){
     html, body {
-        font-size: 16px;
+        font-size: 15px;
     }
     #wrap {
         min-width: 100%;
@@ -48,13 +48,13 @@ html, body {
 }/* media */
 
 ::selection {
-    background-color: #02CBB9;
-    color: #014D8B;
+    background-color: #D2E1AA;
+    color: #68AC45;
 }
 
 :root {
-    --color-main1 : #014D8B;
-    --color-main2 : #02CBB9;
+    --color-main1 : #68AC45;
+    --color-main2 : #001C51;
     --txt-color-gray : #666;
     --txt-color-white : #fff;
     --txt-color-w80 : rgba(255,255,255,0.8);
