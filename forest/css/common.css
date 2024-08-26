@@ -17,8 +17,14 @@ html, body {
     width: 1260px; 
     margin: 0 auto; /* 가운데정렬 */
 }
-/* 1260px 나의 wrapper의 넓이에 좌우 여백 20px씩 추가한 사이즈부터
-   반응형 */
+
+@media screen and (max-width:1560px){
+    .wrapper{
+    width: auto;
+    margin: 0 150px; /* 좌우 퀵메뉴 만큼 여백 주기 */
+    }
+}
+
 @media screen and (max-width:1300px){
     html, body {
         font-size: 15px;
@@ -26,14 +32,15 @@ html, body {
     #wrap {
         min-width: 100%;
     }
-    .wrapper {
-        width: auto;
-        margin: 0 20px; /* 좌우에 20px */
-    }
+    
 }/* media */
 @media screen and (max-width:1024px){
     html, body {
         font-size: 15px;
+    }
+    .wrapper{
+        width: auto;
+        margin: 0 20px;
     }
 }
 @media screen and (max-width:768px){
@@ -54,24 +61,24 @@ html, body {
 
 :root {
     --color-main1 : #68AC45;
-    --color-main2 : #001C51;
+    --color-main2 : #07307D;
     --txt-color-gray : #666;
     --txt-color-white : #fff;
     --txt-color-w80 : rgba(255,255,255,0.8);
     --txt-color-w60 : rgba(255,255,255,0.6);
-    --tit-txt-size : 55px;
+    --tit-txt-size : 60px;
     --tit-lineheight : 1.1;
     --tit-txt-color : #1d1d1d;
 }
 
 @media screen and (max-width:1300px){
     :root {
-        
+        --tit-txt-size : 40px;
     }
 }
 @media screen and (max-width:1024px){
     :root {
-        
+        --tit-txt-size : 25px;
     }
 }
 @media screen and (max-width:768px){

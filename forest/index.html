@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/fullpage.min.js"></script><!--fullpage js-->
     <link rel="stylesheet" href="css/fullpage.css"><!--fullpage css-->
     <script src="js/swiper-bundle.min.js"></script><!--swiper-->
     <link rel="stylesheet" href="css/swiper-bundle.min.css"><!--swiper-->
+    <script src="js/counter.js"></script> <!-- 숫자를 증가시키는 함수 -->
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <title>생명의숲</title>
@@ -94,13 +96,88 @@
             </div>
         </section><!--visual-->
         <section class="section fp-auto-height-responsive tree">
-            tree
+            <div class="wrapper">
+                <div class="count"><span data-start="0" data-end="89272">89,272</span></div>
+                <h2>2023년 심은 나무</h2>
+                <p>누구나 숲의 가치를 누리는 건강한 사회</p>
+            </div>
         </section><!--tree-->
         <section class="section fp-auto-height-responsive forest">
-            forest
+            <div class="wrapper">
+                <div class="tit">
+                    <h2>Forest for Life</h2>
+                    <p>숲생태계를 건강하게 복원하고 수평적 숲탐방 문화를 확산하기 위해 생활권 인근의<br>
+                        숲길을 대상으로 숲길가꾸기 활동을 펼치고 있습니다. 훼손된 숲길을 복원하고<br>
+                        안내체계를 정비하고 있으며 건강한 숲탐방 문화 캠페인을 진행하고 있습니다.</p>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li class="fosest1"><a href="#n"><span>도시숲</span></a></li>
+                        <li class="fosest2"><a href="#n"><span>학교숲</span></a></li>
+                        <li class="fosest3"><a href="#n"><span>사회복지숲</span></a></li>
+                        <li class="fosest4"><a href="#n"><span>숲환경교육</span></a></li>
+                        <li class="fosest5"><a href="#n"><span>숲길</span></a></li>
+                        <li class="fosest6"><a href="#n"><span>공존숲</span></a></li>
+                    </ul>
+                </div>
+            </div>
         </section><!--forest-->
         <section class="section fp-auto-height-responsive story">
-            story
+            <div class="wrapper">
+                <div class="tit">
+                    <h2>생명의숲 이야기</h2>
+                    <p>1998년 3월 18일, 생명의 숲가꾸기를 통해 건강한 사회를 만들고자 창립한 이야기</p>
+                </div>
+                <div class="list">
+                    <div class="swiper"> 
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>우리의 숲, 함께 가꾸는 이야기 - Chapter1. FOREST CREW 캠페인의 시작</h3>
+                                    <p>숲은 우리에게 많은 것을 줍니다. 깨끗한 공기와 물, 다양한 생물들의 서식지, 그리고 마음의 안식을 제공합니다. 하지만 기후변화와 인간의 활동으로 인해 숲은 점점 위협받고 있습니다. 우리의 숲을 지키고자 하는 이유는 단지 자연을 보호하는 것만이 아니라, 삶의 질을 높이고 지속 가능한 미래를 만들기 위함입니다.</p>
+                                    <div class="photo">
+                                        <span class="cate">캠페인 이야기</span>
+                                        <img src="images/main/story1.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>공익과 사익이 공존할 수 있는 기부 _ 공익연계 마케팅</h3>
+                                    <p>오늘은 2024년 상반기 동안 생명의숲과 함께 공익연계 마케팅(CRM - Cause-Related Marketing)을 한 기업 몇 곳을 이야기 하려 합니다. 공익연계 마케팅은 '기업이 경영활동과 사회적 활동을 연계하여 실시하는 마케팅'입니다.</p>
+                                    <div class="photo">
+                                        <span class="cate">후원 이야기</span>
+                                        <img src="images/main/story2.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>서로배움학교 숲문화쌀롱 1회차 - 숲과 나무의 이야기를 담은 영화 로렉스를 중심으로 -</h3>
+                                    <p>서로배움학교는 생명의숲 활동가 역량강화의 일환으로 진행되는 스터디 그룹 프로그램입니다. ‘일 기반 학습, 일을 통한 성장' 범위 내에서 주최자가 주제를 선정하고, 공감하는 활동가(3~5인)가 참여하여, 모든 구성원이 서로 배움의 주체가 되어 경계없이 생각을 나눕니다. </p>
+                                    <div class="photo">
+                                        <span class="cate">사무처 이야기</span>
+                                        <img src="images/main/story3.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>서울마이트리, 시민과 함께 만드는 도시정원</h3>
+                                    <p>이번 나무심기는 신입 활동가로 설레고도 긴장되는 첫 행사였습니다. 혹시나 잘못 안내하면 어떡하나 이런저런 생각이 많았는데, 걱정이 무색하게 다들 열심히 안내를 듣고 꼼꼼히 심는 모습에 고민은 싹 사라졌습니다. 긴장 할 때만 해도 날이 살짝 흐렸는데, 어느새 기분도 밝아지고 햇살도 듬뿍 들어와있었습니다.</p>
+                                    <div class="photo">
+                                        <span class="cate">도시숲</span>
+                                        <img src="images/main/story4.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="more">
+                    <a href="#n">전체보기</a>
+                </div>
+            </div>
         </section><!--story-->
         <footer class="section fp-auto-height-responsive fp-auto-height">
             footer
