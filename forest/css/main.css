@@ -499,13 +499,58 @@
     font-family: 'sok';
 }
 .story .tit p {
-    margin: 10px 0 55px 0;
+    margin: 0 0 36px 0;
+}
+.story .list ul {
+    margin-top: 19px;
+}
+.story .list ul li {
+    width: 297px;
 }
 .story .list ul li a {
     display: block;
     position: relative;
+    padding-top: 20px;
 }
-.story .list ul li a::before{
+/* 마우스 오버의 경우 */ 
+.story .list ul li:hover::after {
+    position: absolute;
+    right: 7%;
+    bottom: 35px;
+    width: 32px;
+    height: 32px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.53317 23.9998L6.6665 22.1332L19.4665 9.33317H7.99984V6.6665H23.9998V22.6665H21.3332V11.1998L8.53317 23.9998Z' fill='white'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.story .list ul li:hover a {
+    transform: translate(0, -19px);
+}
+.story .list ul li:hover a::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-main1);
+    content: "";
+}
+.story .list ul li:hover a h3 {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    margin: 0 18px 0 17px;
+}
+.story .list ul li:hover a p {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    padding: 0 18px 0 17px;
+}
+
+.story .list ul li a::before {
     /* 선이 그려지는 애니메이션을 줄 예정 - 분리된 개체여야 함 */
     position: absolute;
     left: 0;
@@ -532,13 +577,15 @@
 .story .list ul li a .photo {
     overflow: hidden;
     position: relative;
+    font-size: 0;
+    line-height: 0;
 }
 .story .list ul li a .photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.story .list ul li a .photo span {
+.story .list ul li a .photo .cate {
     position: absolute;
     left: 0;
     top: 0;
@@ -546,16 +593,86 @@
     height: 29px;
     color: #fff;
     padding: 4px 13px;
+    font-size: 15px;
+    line-height: 1.5;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     background-color: rgba(104, 172, 69, 0.8);
     content: "";
 }
-
-
-footer {
-    background-color: #1d1d1d;
-    color: #fff;
-    height: 300px;
+.story .more {
+    text-align: center;
+    margin: 60px 0 100px 0;
 }
+.story .more a {
+    display: inline-block;
+    padding: 5px 40px 4px 18px;
+    border: 1px solid var(--color-main1);
+    border-radius: 10px;
+    color: var(--color-main1);
+    position: relative;
+    transition: 0.5s;
+}
+.story .more a::after {
+    position: absolute;
+    right: 14px;
+    top: 3px;
+    width: 22px;
+    height: 22px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.25 12.75H5.5V11.25H11.25V5.5H12.75V11.25H18.5V12.75H12.75V18.5H11.25V12.75Z' fill='%2368AC45'/%3E%3C/svg%3E%0A");
+    content: "";
+    transition: 0.5s;
+}
+.story .more a:hover {
+    background-color: var(--color-main1);
+    color: #fff;
+}
+.story .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.25 12.75H5.5V11.25H11.25V5.5H12.75V11.25H18.5V12.75H12.75V18.5H11.25V12.75Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+    transform: rotate(360deg);
+    animation-name: story_more;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes story_more {
+    0% { transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@media screen and (max-width:1024px){
+    .story {
+        padding-top: 100px;
+    }
+    .story .tit p {
+        margin: 0 0 20px 0;
+    }
+    .story .list ul li a h3 {
+        font-size: 16px;
+    }
+    .story .list ul li a p {
+        font-size: 13px;
+    }
+    .story .more {
+        margin: 35px 0 70px 0;
+    }
+    .story .more a{
+        font-size: 13px;
+    }
+    .story .more a::after {
+        width: 18px;
+        height: 18px;
+        top: 5px;
+    }
+    .story .list ul li a .photo .cate{
+        font-size: 13px;
+        width: 98px;
+    }
+
+}
+
