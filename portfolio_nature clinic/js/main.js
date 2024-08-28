@@ -1,116 +1,30 @@
 $(document).ready(function(){
+  const swiper = new Swiper('.swiper', { /* 팝업을 감싼는 요소의 class명 */
 
-    $('.visual_popup .popup').slick({
-        autoplay: false, //팝업 자동 실행
-        autoplaySpeed: 5000, //팝업이 머무는 시간
-        speed: 500, //팝업 전환 속도
-        //fade: true,  //페이드 효과 적용
-        dots: true, //하단 페이지 버튼 (true, false)
-        arrows: false,  //다음, 이전팝업 (true, false)
-        //pauseOnHover: true, //마우스호버시 일시정지
-        //infinite: false, //무한반복
-    });
-
-    $('.memu .list .popup').slick({
-        dots: false, //하단 페이지 버튼 (true, false)
-	    arrows: false,  //다음, 이전팝업 (true, false)
-        variableWidth: true,
-        // slidesToShow: 6,
-        swipeToSlide: true, 
-        // centerMode: true,
-        // responsive: [
-        //     {
-        //       breakpoint: 1300, //1300px 이하
-        //       settings: {
-        //         slidesToShow: 5
-        //       }
-        //     },
-        //     {
-        //       breakpoint: 1024,
-        //       settings: {
-        //         slidesToShow: 4
-        //       }
-        //     },
-        //     {
-        //       breakpoint: 768,
-        //       settings: {
-        //         slidesToShow: 3
-        //       }
-        //     },
-        //     {
-        //       breakpoint: 375,
-        //       settings: {
-        //         slidesToShow: 2
-        //       }
-        //     },
-        // ]
-    })
-
-    $('.md .list .popup').slick({
-        slidesToShow: 4,
-        dots: false, //하단 페이지 버튼 (true, false)
-	    arrows: false,  //다음, 이전팝업 (true, false)
-        swipeToSlide: true, //드래그한만큼 슬라이드 움직이기
-        responsive: [
-            {
-              breakpoint: 1300, //1300px 이하
-              settings: {
-                slidesToShow: 4
-              }
-            },
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3
-              }
-            },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 2
-              }
-            },
-            {
-              breakpoint: 375,
-              settings: {
-                slidesToShow: 1
-              }
-            },
-        ]
-    })
-
-    $('.event .list .popup').slick({
-        slidesToShow: 5,
-        dots: false, //하단 페이지 버튼 (true, false)
-	    arrows: false,  //다음, 이전팝업 (true, false)
-        swipeToSlide: true, //드래그한만큼 슬라이드 움직이기
-        centerMode: true, //가운데정렬(가운데가 1번)
-        responsive: [
-            {
-              breakpoint: 1300, //1300px 이하
-              settings: {
-                slidesToShow: 5
-              }
-            },
-            {
-                breakpoint: 1024,
-                settings: {
-                  slidesToShow: 3
-                }
-              },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 2
-              }
-            },
-            {
-              breakpoint: 450,
-              settings: {
-                slidesToShow: 1
-              }
-            },
-        ]
-    })
+    autoplay: {  /* 팝업 자동 실행 */
+      delay: 2500,
+      disableOnInteraction: true,
+    },
+  
+    loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+  
+    pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
+      el: '.swiper-pagination', /* 해당 요소의 class명 */
+      clickable: true,  /* 클릭하면 해당 팝업으로 이동할 것인지 값 */
+      type: 'fraction',  /* type fraction을 주면 paging이 숫자로 표시됨 */
+      renderBullet: function (index, className) {   /* paging에 특정 코드 넣기 */
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+      },
+    },
+    
+  
+    navigation: {  /* 이전, 다음 버튼 */
+      nextEl: '.swiper-button-next',  /* 다음 버튼의 클래스명 */
+      prevEl: '.swiper-button-prev',  
+    },
+  
+  });
+  swiper.autoplay.stop();  /* 일시정지 기능 */
+  swiper.autoplay.start();  /* 재생 기능 */
 
 }) //$(document).ready
