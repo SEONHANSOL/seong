@@ -6,51 +6,60 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <!-- swiper를 돌아가게 하는 파일 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <title>포트폴리오_ 자연닮한의원</title>
 </head>
 <body>
+    <div class="skip_nav">
+        <a href="#skip_contents">본문 바로가기</a>
+        <a href="#skip_menu">대메뉴 바로가기</a>
+    </div>
     <div id="wrap">
-        <header class="">
+        <header class="menu_open">
             <div class="wrapper">
-                <div class="logo"><a href="index.html"><img src="images/main/logo_w.svg" alt="자연닮한의원">자연닮한의원</a></div>
-                <div class="gnb">
-                    <button class="gnb_open"></button>
+                <div class="logo"><a href="index.html">자연닮한의원</a></div>
+                <nav class="gnb" id="skip_menu">
+                    <button class="gnb_open">메뉴열기</button>
                     <div class="gnb_wrap">
                         <ul class="depth1">
-                            <li>
-                                <a href="#n">병원소개</a>
+                            <li class="">
+                                <a href="#n"><span>병원소개</span></a>
                                 <ul class="depth2">
-                                    <li><a href="#n">인사말</a></li>
-                                    <li><a href="#n">진료안내</a></li>
-                                    <li><a href="#n">온라인상담</a></li>
+                                    <li><a href="#n"><span>인사말</span></a></li>
+                                    <li><a href="#n"><span>진료안내</span></a></li>
+                                    <li><a href="#n"><span>온라인상담</span></a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#n">한방치료</a>
+                                <a href="#n"><span>한방치료</span></a>
                                 <ul class="depth2">
-                                    <li><a href="#n">통증 클리닉</a></li>
-                                    <li><a href="#n">부인과 클리닉</a></li>
+                                    <li><a href="#n"><span>통증 클리닉</span></a></li>
+                                    <li><a href="#n"><span>부인과 클리닉</span></a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#n">특수치료</a>
+                                <a href="#n"><span>특수치료</span></a>
                                 <ul class="depth2">
-                                    <li><a href="#n">피부 클리닉</a></li>
-                                    <li><a href="#n">비만 클리닉</a></li>
+                                    <li><a href="#n"><span>피부 클리닉</span></a></li>
+                                    <li><a href="#n"><span>비만 클리닉</span></a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#n">자연닮 이야기</a>
+                                <a href="#n"><span>자연닮 이야기</span></a>
                                 <ul class="depth2">
-                                    <li><a href="#n">건강이야기</a></li>
-                                    <li><a href="#n">영양식단</a></li>
+                                    <li><a href="#n"><span>건강이야기</span></a></li>
+                                    <li><a href="#n"><span>영양식단</span></a></li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
-                    <button class="gnb_close"></button>
+                    <button class="gnb_close">메뉴닫기</button>
+                </nav>
+                <div class="tnb">
+                    <a class="search" href="#n">검색</a>
+                    <a class="true" href="#n">마이페이지</a>
                 </div>
             </div>
         </header>
@@ -86,14 +95,64 @@
                     </ul>
                     <div class="btn_wrap">
                         <div class="paging"></div>
-                        <button class="btn_prev">이전 팝업보기</button>
                         <button class="btn_stop">팝업 일시정지</button>
                         <button class="btn_play">팝업 다시시작</button>
+                        <button class="btn_prev">이전 팝업보기</button>
                         <button class="btn_next">다음 팝업보기</button>
                     </div>
                 </div>
             </section>
-            <section class="story"></section>
+            <section class="story">
+                <div class="wrapper">
+                    <div class="tit">
+                        <span class="tit_txt1">자연닮한의원</span>
+                        <h3 class="tit_txt2">Story</h3>
+                        <h4>"환자와 함께하는 의사가 되어주세요.”</h4>
+                        <p>1997년 저는 젊은 난소암 환자를 매주 가정방문하여 복수를 빼주는 일을 한적이 있습니다.<br>
+                            그 환자는 이미 암이 4기까지 진행되었고,<br>
+                            기대여명이 3개월 정도로 다른 치료를 병행할 수 있는
+                            상태가 아니였으나,<br> 환자도 보호자도 삶에 대한 의지가 강하셨고,<br>
+                            저도 환자에게 도움이 될만한 의학적 자료를 찾아가며 제가 할수 있는 최선을 다했습니다.<br>
+                            모두의 정성으로 환자분은 예상보다 5년이나 더 사셨고, 저에게 마지막까지 큰 가르침을 주셨습니다.<br><br>
+                            
+                            그 환자분은 임종 전 저에게 2가지를 말씀하셨습니다.
+                            "암환자가 가장 힘든게 무엇인지 아세요?<br>
+                            그건 바로 함께 해주는 의사가 없다는 것이예요.
+                            암환자와 함께하는 의사가 되어주세요."<br>
+                            "그동안 받았던 수많은 치료중에 비타민C 치료가 가장 효과적이였던것 같아요.<br>
+                            저같은 암환자를 위해 비타민C 치료를 더 연구해 주세요."<br><br>
+                            
+                            우리 한의원은 바로 그 약속에서부터 시작되었습니다.</p>
+                        <div class="more"><a href="#n">자연닮 인사말 더보기</a></div>
+                    </div>
+                    <div class="list">
+                        <div class="swiper">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <div class="photo"><img src="images/main/story1.png" aria-label="스토리사진"></div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="photo"><img src="images/main/story2.png" aria-label="스토리사진"></div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="photo"><img src="images/main/story3.png" aria-label="스토리사진"></div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="photo"><img src="images/main/story4.png" aria-label="스토리사진"></div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="photo"><img src="images/main/story5.png" aria-label="스토리사진"></div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="photo"><img src="images/main/story6.png" aria-label="스토리사진"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </section>
             <section class="subject"></section>
             <section class="food"></section>
             <section class="location"></section>

@@ -1,115 +1,107 @@
 $(document).ready(function(){
-    /* 
-        현재 pc모드인지 mobile모드인지..    
-        1024 이하는 mobile, 1025 이상은 pc
+    /*
+        header에 마우스를 올리거나,
+        브라우저가 스크롤되면 header에 fixed 클래스가 들어감
+        --> pc/mobile 상관없이 언제나 구현
 
-        header .header_sub .gnb .gnb_wrap ul.depth1 > li
-        pc모드일때 메뉴에 마우스를 오버하면
-        1. header에 menu_over 클래스추가
-        2. 1차 메뉴 li에 over 클래스추가
-
-        브라우저의 스크롤을 조금만 내리면 header에 fixed 클래스 추가
-        다시 맨 꼭데기로 이동하면 fixed 클래스 삭제
-    */
+        header .gnb .gnb_wrap ul.depth1 > li
+        메뉴에 마우스를 올리면 
+        1. header에 menu_over 클래스를 추가
+        2. 마우스를 오버한 li에 on클래스를 추가
+        --> pc에서만 구현
+    */  
     
-    let scrolling 
-    let scroll_top // header 고정 시작 값
-    let window_w
-    let mobile_size = 1024
+    let win_w
     let pc_mobile
+    let scrolling
 
+    function resize_chk(){
+        if(win_w > 1024){
+            let pc_mobile ='pc'
+        }else{
+            let pc_mobile = 'mobile'
+        }
+        console.log(pc_mobile)
+    }
+
+    // 브라우저가 로딩되었을때 단 한번 실행
+    resize_chk()
+
+    $(window).resize(function(){ //브라우저가 리사이즈 할때마다 1번 실행
+        resize_chk()
+    }) // $(window).resize
+
+    $('header').on('mouseenter focusin', function(){
+        $(this).addClass('fixed')
+    })
+    $('header').on('mouseleave', function(){
+        
+        //마우스를 아웃했을때 fixed클래스를 삭제하는건 맨 상단에 있을때만 가능
+        if(scrolling <= 0){ //scroll값이 o과 같거나 작을때
+            $(this).removeClass('fixed')
+        }
+    })
 
     function scroll_chk(){
-        if(pc_mobile == 'pc'){
-            scroll_top = 70
-        }else{
-            scroll_top = 0
-        }
         scrolling = $(window).scrollTop()
-        console.log(scrolling)
-        if(scrolling > scroll_top){
+        if(scrolling > 0){ //스크롤이 조금이라도 되었다면
             $('header').addClass('fixed')
         }else{
             $('header').removeClass('fixed')
         }
+        console.log(scrolling)
     }
-
-    function resize_chk(){
-        window_w = $(window).width()
-        console.log(window_w)
-        if(window_w > mobile_size){ //pc일때
-            pc_mobile = 'pc'
-        }else{ //mobile
-            pc_mobile = 'mo'
-        }
-        console.log(pc_mobile)
-    }
-    resize_chk() //문서가 로딩되었을때 1번 실행
-    $(window).resize(function(){
-        resize_chk()
-    })
-
-    scroll_chk() //로딩되었을때 1번 실행
-    $(window).scroll(function(){ //스크롤할때마다 1번 실행
+    scroll_chk() //브라우저가 로딩되었을때 한번 실행
+    $(window).scroll(function(){ //스크롤 할때마다 한번 실행
         scroll_chk()
     })
 
-
-    $('header .header_sub .gnb .gnb_wrap ul.depth1 > li').on('mouseenter focusin', function(){
+    $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter focusin', function(){
         if(pc_mobile == 'pc'){
-            $('header').addClass('menu_over')
-            $('header .header_sub .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
-            $(this).addClass('over')
+            $('header').addClass('memu_over')
+            $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('on')
+            $(this).addClass('on')
         }
     })
     $('header').on('mouseleave', function(){
-        $('header').removeClass('menu_over')
-        $('header .header_sub .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
+        if(pc_mobile == 'pc'){
+            $('header').removeClass('memu_over')
+            $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('on')
+        }
     })
-    $('header .header_sub .gnb .gnb_wrap ul.depth1 > li:last-child ul.depth2 > li:last-child').on('focusout', function(){
-        $('header').removeClass('menu_over')
-        $('header .header_sub .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
+    $('header .gnb .gnb_wrap ul.depth1 > li:last-child > ul.depth2 > li:last-child > a ').on('focusout', function(){
+        if(pc_mobile == 'pc'){
+            $('header').removeClass('memu_over')
+            $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('on')
+        }
     })
-
 
     /* 
-        모바일 메뉴
-        header .header_sub .gnb .gnb_wrap .depth1 > li > a 를 클릭했을때
-
-        1차 메뉴 a의 href값을 무력화 시킴 (즉, 클릭해도 해당 페이지로 이동되지 않도록)
-        li에 open 클래스를 줘야 함
-        열려있는 메뉴를 클릭하면 닫히고, 닫힌 메뉴를 클릭하면 열리게
-        (동시에 여려개의 메뉴가 열릴 수 있음)
+        모바일 메뉴를 클릭하면
+        1. a 링크값을 삭제해야함 (이동을 못하게 막아야함)
+        2. li에 open 클래스를 추가
+           open없으면 추가
+           open있으면 삭제
+           --> 한번 클릭하면 열리고 두번 클릭하면 닫힘
     */
-
-    $('header .header_sub .gnb .gnb_wrap .depth1 > li >a ').on('click', function(e){
-        if(pc_mobile == 'mo'){ //모바일에서만 작동
+    $("header .gnb .gnb_wrap ul.depth1 > li > a").on("click", function(e){
+        if(pc_mobile == 'mobile'){
             e.preventDefault();		/* a 태그의 href를 작동 시키지 않음 */
             $(this).parent().toggleClass('open')
         }
-    })
-    
-    $('header .header_sub .gnb .gnb_open').on('click', function(){
-        $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
+    });
+    /* 
+        header .gnb .gnb_open
+        메뉴열기를 클릭하면 header에 menu_open 클래스 추가
+        메뉴닫기를 클릭하면 header에 menu_open 삭제
+        header .gnb .gnb_close
+    */
+    $('header .gnb .gnb_open').on('click', function(){
         $('header').addClass('menu_open')
+        $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
     })
-    $('header .header_sub .gnb .gnb_close').on('click', function(){
-        $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
+    $('header .gnb .gnb_close').on('click', function(){
         $('header').removeClass('menu_open')
-    })
-
-
-    $('.quick .open').on('click', function(){
-        $('.quick').addClass('open')
-    })
-    $('.quick .close').on('click', function(){
-        $('.quick').removeClass('open')
-    })
-
-    //top버튼 스크롤 되는 방법
-    $('.quick .top').on('click', function(){ 
-        $('html, body').animate({
-            scrollTop : 0
-        }, 300)
+        $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
     })
 })
