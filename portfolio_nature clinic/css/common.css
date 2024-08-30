@@ -23,6 +23,10 @@ html, body {
     width: 1260px; /* 좌우 양쪽에 20px의 여백을 줌 */
     margin: 0 auto;
 }
+.wrapper2 {
+    width: 1617px; /* 좌우 양쪽에 20px의 여백을 줌 */
+    margin: 0 auto;
+}
 @media screen and (max-width:1300px){ /* 1260px 나의 wrapper의 넓이에 좌우 여백 20px씩 추가한 사이즈로부터 반응형*/
     html, body {
         font-size: 15px;

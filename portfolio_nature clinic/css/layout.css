@@ -28,6 +28,7 @@ header {
     color: #fff;
     height: 100px;
     width: 100%;
+    padding: 0 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 header .logo {
@@ -85,7 +86,7 @@ header .gnb .gnb_wrap ul.depth1 {
     padding-top: 0;
 }
 header .gnb .gnb_wrap ul.depth1 > li {
-    width: 135px;
+    width: 190px;
 }
 header .gnb .gnb_wrap ul.depth1 > li > a {
     display: block; /*li와 사이즈가 동일하게 바뀜*/
