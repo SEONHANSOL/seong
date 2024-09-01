@@ -32,7 +32,7 @@
     font-size: 5.333rem;
     font-weight: 700;
     line-height: 1.1;
-    padding: 50vh 20px 0 20px;
+    padding: 40vh 20px 0 20px;
 }
 .visual ul li p {
     margin-top: 17px;
@@ -41,38 +41,31 @@
 }
 .visual .btn_wrap {
     position: absolute;  /*swiper기준으로 정렬*/
-    right: 15%;
-    bottom: 25%;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, 0);
     z-index: 10;
     color: rgba(255, 255, 255, 0.6);
     display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .visual .btn_wrap .paging {
     width: auto; /* swiper가 준 width:100% 속성 삭제 */
 }
-.visual .btn_wrap .paging span {
-    margin-bottom: 10px;
-}
 .visual .btn_wrap .paging .swiper-pagination-bullet {
     /* 현재 선택되지 않은 블릿*/
-    width: 5px;
-    height: 67px;
+    width: 67px;
+    height: 5px;
     border-radius: 0;
     background-color: rgba(255,255,255,0.2);
     opacity: 1;
     position: relative;
-    display: flex;
-    align-items: start;
-    flex-direction: column;
 }
 .visual .btn_wrap .paging .swiper-pagination-bullet-active::before {
     /* 현재 선택된 블릿 */
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
+    height: 100%;
     background-color: rgba(255,255,255,0.8);
     content: "";
     animation-name: visual_count;
@@ -83,17 +76,17 @@
     animation-timing-function: linear;
 }
 @keyframes visual_count {
-    0% { height: 0;}
-    100% { height: 100%;}
+    0% { width: 0;}
+    100% { width: 100%;}
 }
 .visual .btn_wrap button {
-    width: 15px;
-    height: 15px;
+    width: 25px;
+    height: 25px;
     font-size: 0;
     line-height: 0;
     position: relative;
+    margin-left: 5px;
 }
-
 .visual .btn_wrap button::before {
     position: absolute;
     right: 0;
@@ -105,99 +98,72 @@
     background-size: contain;
     content: "";
 }
-.visual .btn_wrap button.btn_stop::before {
-    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 15V0H15V15H0ZM1.5 13.5H13.5V1.5H1.5V13.5Z' fill='white' fill-opacity='0.6'/%3E%3C/svg%3E%0A");
+.visual .btn_wrap button.btn_prev::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.8825 13.5L17 19.9999L16.0588 21L9 13.5L16.0588 6L17 7.00007L10.8825 13.5Z' fill='white' fill-opacity='0.6'/%3E%3Ccircle cx='13' cy='13' r='12.5' stroke='white' stroke-opacity='0.6'/%3E%3C/svg%3E%0A");
 }
-.visual .btn_wrap button.btn_play::before {
-    background-image: url("data:image/svg+xml,%3Csvg width='13' height='17' viewBox='0 0 13 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 16.5566V0L13 8.27831L0 16.5566ZM1.59436 13.6194L10.0261 8.27831L1.59436 2.93721V13.6194Z' fill='white' fill-opacity='0.5'/%3E%3Cpath d='M1.58186 13.6194V13.6421L1.60105 13.63L10.0328 8.28887L10.0495 8.27831L10.0328 8.26775L1.60105 2.92665L1.58186 2.91449V2.93721V13.6194ZM0.0125 16.5338V0.0227792L12.9767 8.27831L0.0125 16.5338Z' stroke='white' stroke-opacity='0.5' stroke-width='0.025'/%3E%3C/svg%3E%0A");
+.visual .btn_wrap button.btn_stop::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 18L8 18L8 8L18 8L18 18ZM17 17L17 9L9 9L9 17L17 17Z' fill='white' fill-opacity='0.6'/%3E%3Ccircle cx='13' cy='13' r='12.5' stroke='white' stroke-opacity='0.6'/%3E%3C/svg%3E%0A");
 }
 .visual .btn_wrap button.btn_play {
-    display: none; /* 현재 play중이라 일시정지버튼만 나옴 */
+    display: none;
 }
+.visual .btn_wrap button.btn_play::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='27' height='27' viewBox='0 0 27 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='13' cy='13' r='12.5' stroke='white' stroke-opacity='0.6'/%3E%3Cpath d='M10.125 19.3413V7.65869L19.298 13.5L10.125 19.3413ZM11.25 17.2687L17.1996 13.5L11.25 9.73122V17.2687Z' fill='white' fill-opacity='0.6'/%3E%3C/svg%3E%0A");
+}
+.visual .btn_wrap button.btn_next::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.1175 13.5L10 7.00007L10.9412 6L18 13.5L10.9412 21L10 19.9999L16.1175 13.5Z' fill='white' fill-opacity='0.6'/%3E%3Ccircle cx='13' cy='13' r='12.5' transform='rotate(-180 13 13)' stroke='white' stroke-opacity='0.6'/%3E%3C/svg%3E%0A");
+}
+
+
 @media screen and (max-width:1024px){ 
     .visual ul li h3 {
-        padding: 50vh 20px 0 20px;
+        padding: 40vh 20px 0 20px;
         line-height: 1.2;
+        font-size: 4.333rem;
     }
     .visual ul li p {
         margin-top: 10px;
-    }
-}
-@media screen and (max-width:768px){ 
-    .visual ul li h3 {
-        font-size: 2.667rem;
-        line-height: 1.3;
-    }
-    .visual ul li p {
-        margin-top: 5px;
+        font-size: 1.2rem;
     }
     .visual .btn_wrap {
-        position: absolute;  /*swiper기준으로 정렬*/
-        left: 50%;
-        transform: translate(-50%, 0); /* 정렬이 되는 기준 swiper의 넓이의 왼쪽 50%부터 (left:50%) 정렬
-                                        btn_wrap 넓이의 절반을 왼쪽으로 이동 (transform) 
-                                        그럼 가운데 정렬이 됨 */
-        bottom: 8%;
-        z-index: 10;
-        color: #fff;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
+        display: block;
+        text-align: center;
     }
     .visual .btn_wrap .paging {
-        width: auto; /* swiper가 준 width:100% 속성 삭제 */
-        display: flex;
+        margin: 20px 0 10px 0;
+        width: 400px;
     }
-    .visual .btn_wrap .paging span {
-        margin-right: 5px;
+}
+@media screen and (max-width:640px){
+    .visual ul li {
+        height: 400px;
+        min-height: auto;
+    }
+    .visual ul li h3 {
+        font-size: 2.154rem;
+        padding: 128px 20px 0 20px;
+    }
+    .visual ul li p {
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+    .visual .btn_wrap button.btn_prev {
+        display: none;
+    }
+    .visual .btn_wrap button.btn_next {
+        display: none;
     }
     .visual .btn_wrap .paging .swiper-pagination-bullet {
         /* 현재 선택되지 않은 블릿*/
         width: 50px;
         height: 3px;
-        position: relative;
-        display: flex;
     }
-    .visual .btn_wrap .paging .swiper-pagination-bullet-active::before {
-        /* 현재 선택된 블릿 */
-        left: 0;
-        top: 0;
-        width: 0;
-        height: 100%;
-    }
-    @keyframes visual_count {
-        0% { width: 0;}
-        100% { width: 100%;}
-    }
-    .visual .btn_wrap button {
-        width: 15px;
-        height: 15px;
-        font-size: 0;
-        line-height: 0;
-        position: relative;
-    }
-    
-    .visual .btn_wrap button::before {
-        position: absolute;
-        right: -6px;
-        top: -3px;
-        width: 100%;
-        height: 100%;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        content: "";
-    }
-}
-@media screen and (max-width:640px){
-    .visual ul li h3 {
-        font-size: 1.867rem;
+    .visual .btn_wrap .paging {
+        padding: 30px 0 10px 0;
+        width: 240px;
     }
 
 }
-
-
 .story {
     padding: 0 20px;
     margin: 178px 0 200px 0;
@@ -262,6 +228,9 @@
     background-color: var(--color-main1);
     border-radius: 50px;
 }
+.story .more:hover {
+    background-color: #3E3E3F;
+}
 .story .more a {
     width: 100%;
     height: 100%;
@@ -291,7 +260,15 @@
         margin: 30px 0 0 0;
     }
 }
+@media screen and (max-width:1024px){
+    .story {
+        margin: 120px 0 120px 0;
+    }
+}
 @media screen and (max-width:640px){
+    .story {
+        margin: 100px 0 100px 0;
+    }
     .story .tit span.tit_txt1 {
         font-size: 1.231rem;
     }
@@ -304,12 +281,17 @@
         background-color: var(--color-main1);
         content: "";
     }
-    .story .tit h3.tit_txt2 {
+    .story .tit .tit_txt2 {
         font-size: 3.077rem;
     }
     .story .tit h4 {
         font-size: 1.308rem;
         margin: 20px 0 10px 0;
+    }
+    .story .list .photo img {
+        object-fit: contain;
+        width: 247px;
+        height: 100%;
     }
     .story .more {
         width: 168px;
@@ -370,6 +352,7 @@
     display: flex;
     justify-content: space-between;
     padding-top: 66px;
+    position: relative; /* more 정렬 기준 */
 }
 .subject .list ul li {
     width: 239px;
@@ -437,11 +420,14 @@
     display: block;
 }
 .subject .more {
+    position: absolute;
+    right: 12px;
+    bottom: 81px;
     width: 177px;
     color: #fff;
     background-color: var(--color-main1);
+    border: 1px solid #C7A88B;
     border-radius: 50px;
-    margin: 0 0 0 1081px;
 }
 .subject .more a {
     width: 100%;
@@ -449,14 +435,60 @@
     display: block;
     padding: 12px 39px;
 }
+.subject .more:hover {
+    color: #C7A88B;
+    background-color: #3E3E3F;
+    border: 1px solid #C7A88B;
+}
 @media screen and (max-width:1024px){
     .subject .list ul {
         display: block;
-        padding-top: 66px;
+        padding-top: 36px;
+        padding-bottom: 1px;
     }
-
+    .subject .list ul li {
+        width: auto;
+    }
+    .subject .list ul li a {
+        height: 222px;
+        padding: 12px 47px;
+    }
+    .subject .list ul li:nth-child(2),
+    .subject .list ul li:nth-child(3),
+    .subject .list ul li:nth-child(4)  {
+        display: none;
+    }
+    .subject .list ul li.active {
+        width: auto;
+    }
 }
-
+@media screen and (max-width:640px){
+    .subject .tit span {
+        font-size: 1.231rem;
+        padding-top: 72px;
+    }
+    .subject .tit span::before {
+        width: 100px;
+        left: 73px;
+        top: 82px;
+    }
+    .subject .tit h3 {
+        font-size: 3.077rem;
+    }
+    .subject .list ul h3::before {
+        right: 46px;
+        bottom: 32px;
+    }
+    .subject .list ul li.active p {
+        display: none;
+    }
+    .subject .list .line span {
+        top: -25px;
+    }
+    .subject .list ul li.active a {
+        padding: 29px 45px;
+    }
+}
 .food {
     margin: 178px;
 }

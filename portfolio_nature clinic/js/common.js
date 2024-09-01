@@ -78,13 +78,13 @@ $(document).ready(function(){
 
     /* 
         모바일 메뉴를 클릭하면
-        1. a 링크값을 삭제해야함 (이동을 못하게 막아야함)
+        1. a 링크값을 삭제
         2. li에 open 클래스를 추가
            open없으면 추가
            open있으면 삭제
            --> 한번 클릭하면 열리고 두번 클릭하면 닫힘
     */
-    $("header .gnb .gnb_wrap ul.depth1 > li > a").on("click", function(e){
+    $('header .gnb .gnb_wrap ul.depth1 > li > a').on("click", function(e){
         if(pc_mobile == 'mobile'){
             e.preventDefault();		/* a 태그의 href를 작동 시키지 않음 */
             $(this).parent().toggleClass('open')
