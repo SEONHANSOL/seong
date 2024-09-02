@@ -268,7 +268,7 @@
 }
 @media screen and (max-width:640px){
     .story {
-        margin: 100px 0 100px 0;
+        margin: 80px 0 80px 0;
     }
     .story .wrapper2 {
         width: auto;
@@ -323,14 +323,14 @@
     font-family: 'Eulyoo1945';
     font-size: 1.667rem;
     color: var(--color-main1);
-    padding-top: 123px;
+    padding-top: 64px;
     display: block;
     position: relative;
 }
 .subject .tit strong::before {
     position: absolute;
     left: 115px;
-    top: 138px;
+    top: 79px;
     width: 150px;
     height: 1px;
     background-color: var(--color-main1);
@@ -470,14 +470,14 @@
     }
 }
 @media screen and (max-width:640px){
-    .subject .tit span {
+    .subject .tit strong {
         font-size: 1.231rem;
-        padding-top: 72px;
+        padding-top: 49px;
     }
     .subject .tit strong::before {
         width: 100px;
-        left: 96px;
-        top: 136px;
+        left: 78px;
+        top: 58px;
     }
     .subject .tit h3 {
         font-size: 3.077rem;
@@ -494,6 +494,9 @@
     }
     .subject .list ul li.active a {
         padding: 29px 45px;
+    }
+    .subject .list ul { 
+        padding-top: 15px;
     }
     .subject .list ul li {
         width: 239px;
