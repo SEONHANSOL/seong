@@ -176,13 +176,13 @@
 .story .tit {
     width: 50%;
 }
-.story .tit span {
+.story .tit strong {
     font-family: 'Eulyoo1945';
     color: var(--color-main1);
     font-size: 1.667rem;
     position: relative;
 }
-.story .tit span::before{
+.story .tit strong::before{
     position: absolute;
     right: -159px;
     top: 14px;
@@ -191,16 +191,16 @@
     background-color: var(--color-main1);
     content: "";
 }
-.story .tit h3 {
+.story .tit h2 {
     font-family: 'Eulyoo1945';
     font-weight: 700;
     font-size: 5rem;
     color: var(--color-main2);
 }
-.story .tit h4 {
+.story .tit h3 {
     font-family: 'Eulyoo1945';
     font-weight: 700;
-    font-size: 25px;
+    font-size: 1.667rem;
     margin: 36px 0 14px 0;
 }
 .story .tit p {
@@ -269,10 +269,10 @@
     .story {
         margin: 100px 0 100px 0;
     }
-    .story .tit span {
+    .story .tit strong {
         font-size: 1.231rem;
     }
-    .story .tit span::before{
+    .story .tit strong::before{
         position: absolute;
         right: -108px;
         top: 10px;
@@ -281,15 +281,15 @@
         background-color: var(--color-main1);
         content: "";
     }
-    .story .tit h3 {
+    .story .tit h2 {
         font-size: 3.077rem;
     }
-    .story .tit h4 {
+    .story .tit h3 {
         font-size: 1.308rem;
         margin: 20px 0 10px 0;
     }
     .story .tit p {
-        font-size: 13px;
+        font-size: 1rem;
     }
     .story .list .photo img {
         object-fit: contain;
@@ -315,7 +315,7 @@
     position: relative;
     color: #fff;
 }
-.subject .tit span {
+.subject .tit strong {
     font-family: 'Eulyoo1945';
     font-size: 1.667rem;
     color: var(--color-main1);
@@ -323,7 +323,7 @@
     display: block;
     position: relative;
 }
-.subject .tit span::before {
+.subject .tit strong::before {
     position: absolute;
     left: 115px;
     top: 138px;
@@ -470,7 +470,7 @@
         font-size: 1.231rem;
         padding-top: 72px;
     }
-    .subject .tit span::before {
+    .subject .tit strong::before {
         width: 100px;
         left: 73px;
         top: 82px;
@@ -517,13 +517,13 @@
     width: 50%;
     padding-right: 50px;
 }
-.food .tit span {
+.food .tit strong {
     font-family: 'Eulyoo1945';
     color: var(--color-main1);
     font-size: 1.667rem;
     position: relative;
 }
-.food .tit span::before{
+.food .tit strong::before{
     position: absolute;
     right: -159px;
     top: 14px;
@@ -532,7 +532,7 @@
     background-color: var(--color-main1);
     content: "";
 }
-.food .tit h3 {
+.food .tit h2 {
     font-family: 'Eulyoo1945';
     font-weight: 700;
     font-size: 5rem;
@@ -540,10 +540,10 @@
     color: var(--color-main2);
     margin-top: 15px;
 }
-.food .tit h4 {
+.food .tit h3 {
     font-family: 'Eulyoo1945';
     font-weight: 700;
-    font-size: 25px;
+    font-size: 1.667rem;
     margin: 36px 0 35px 0;
 }
 .food .tit p {
@@ -590,19 +590,19 @@
         width: 100%;
         padding-right: 50px;
     }
-    .food .tit span {
+    .food .tit strong {
         font-size: 1.231rem;
     }
-    .food .tit span::before{
+    .food .tit strong::before{
         right: -105px;
         top: 10px;
         width: 100px;
     }
-    .food .tit h3 {
+    .food .tit h2 {
         font-size: 3.077rem;
         margin-top: 10px;
     }
-    .food .tit h4 {
+    .food .tit h3 {
         font-size: 1.308rem;
         margin: 418px 0 30px 0;
     }
@@ -642,13 +642,13 @@
     text-align: center;
     padding: 67px 0 0 0;
 }
-.location .loca_box .tit span {
+.location .loca_box .tit strong {
     font-size: 1.667rem;
     font-family: 'Eulyoo1945';
     color: var(--color-main1);
     position: relative;
 }
-.location .loca_box .tit span::before {
+.location .loca_box .tit strong::before {
     position: absolute;
     left: -165px;
     top: 12px;
@@ -657,7 +657,7 @@
     background-color: var(--color-main1);
     content: "";
 }
-.location .loca_box .tit span::after {
+.location .loca_box .tit strong::after {
     position: absolute;
     right: -165px;
     top: 12px;
@@ -666,7 +666,7 @@
     background-color: var(--color-main1);
     content: "";
 }
-.location .loca_box .tit > h3 {
+.location .loca_box .tit > h2 {
     font-family: 'Eulyoo1945';
     font-weight: 700;
     font-size: 5rem;
@@ -694,6 +694,7 @@
 .location .map .map_add {
     padding: 7px 30px 0 10%;
     margin: 5px 0 0 0;
+    color: rgba(255, 255, 255, 0.8);
 }
 .location .map .map_add span {
     margin-bottom: 10px;
@@ -735,8 +736,8 @@
 }
 .location .more {
     width: 177px;
-    color: var(--color-main1);
-    border: 1px solid #C7A88B;
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 50px;
     display: inline-block;
     margin-top: 30px;
