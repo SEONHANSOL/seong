@@ -288,6 +288,9 @@
         font-size: 1.308rem;
         margin: 20px 0 10px 0;
     }
+    .story .tit p {
+        font-size: 13px;
+    }
     .story .list .photo img {
         object-fit: contain;
         width: 247px;
