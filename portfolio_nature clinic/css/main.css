@@ -243,12 +243,12 @@
         display: block
     }
     .story .tit {
-        width: 100%;
+        width: auto;
         padding:0;
         padding-bottom: 30px;
     }
     .story .list {
-        width: 100%;
+        width: auto;
         height: 100%;
         padding-right: 0;
     }
