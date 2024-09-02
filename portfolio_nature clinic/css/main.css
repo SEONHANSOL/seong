@@ -205,6 +205,7 @@
 }
 .story .tit p {
     line-height: 1.5;
+    font-size: 1rem;
 }
 .story .list {
     width: 50%;
@@ -268,6 +269,9 @@
 @media screen and (max-width:640px){
     .story {
         margin: 100px 0 100px 0;
+    }
+    .story .wrapper2 {
+        width: auto;
     }
     .story .tit strong {
         font-size: 1.231rem;
@@ -696,16 +700,13 @@
     margin: 5px 0 0 0;
     color: rgba(255, 255, 255, 0.8);
 }
-.location .map .map_add span {
-    margin-bottom: 10px;
-}
-.location .map .map_add > h3 {
-    font-size: 1.667rem;
+.location .map .map_add > h2 {
+    font-size: 1.333rem;
     font-family: 'Eulyoo1945';
     margin: 0 15px 5px 0;
 }
 .location .map .map_add > p {
-    font-size: 1.333rem;
+    font-size: 1.067rem;
     font-family: 'Eulyoo1945';
 }
 .location .txt_box {
@@ -716,7 +717,7 @@
     font-size: 3.333rem;
     margin-top: 85px;
 }
-.location .txt_box .txt_top h3 {
+.location .txt_box .txt_top h2 {
     margin-top: 70px;
 }
 .location .txt_box .txt_litt {
@@ -785,7 +786,7 @@
     .location .map .map_add span {
         margin-bottom: 10px;
     }
-    .location .map .map_add > h3 {
+    .location .map .map_add > h2 {
         font-size: 1.231rem;
         margin: 10px 15px 5px 0;
     }
@@ -801,7 +802,7 @@
         font-size: 1.538rem;
         margin-top: 50px;
     }
-    .location .txt_box .txt_top h3 {
+    .location .txt_box .txt_top h2 {
         margin-top: 40px;
         margin-bottom: 10px;
     }
@@ -838,20 +839,20 @@
     .location .map .map_box {
         height: 546px;
     }
-    .location .loca_box .tit span {
+    .location .loca_box .tit strong {
         font-size: 1.231rem;
     }
-    .location .loca_box .tit span::before {
+    .location .loca_box .tit strong::before {
         left: -110px;
         top: 8px;
         width: 100px;
     }
-    .location .loca_box .tit span::after {
+    .location .loca_box .tit strong::after {
         right: -110px;
         top: 8px;
         width: 100px;
     }
-    .location .loca_box .tit > h3 {
+    .location .loca_box .tit > h2 {
         font-size: 3.077rem;
     }
 }
