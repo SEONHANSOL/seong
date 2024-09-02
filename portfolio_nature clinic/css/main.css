@@ -309,11 +309,7 @@
 
 .subject {
     background: #3E3E3F;
-    padding: 0 20px;
-}
-.wrapper {
-    position: relative;
-    margin: 0 auto;
+    padding: 0 0 89px 0;
 }
 .subject .tit {
     position: relative;
@@ -336,7 +332,7 @@
     background-color: var(--color-main1);
     content: "";
 }
-.subject .tit h3 {
+.subject .tit h2 {
     font-size: 5rem;
     font-family: 'Eulyoo1945';
 }
@@ -346,6 +342,7 @@
 }
 .subject .list {
     position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 .subject .list .line span {
     position: absolute;
@@ -362,18 +359,35 @@
     position: relative; /* more 정렬 기준 */
 }
 .subject .list ul li {
-    width: 239px;
+    width: 19%;
     background-color: var(--color-main2);
     border: 1px solid #ECDCCC;
     border-radius: 50px 0 50px 0;
-    margin: 0 12px 167px 12px;
     position: relative;
+}
+.subject .list ul li::before {
+    position: absolute;
+    left: 0;
+    top: -73px;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='5' fill='white' fill-opacity='0.2'/%3E%3C/svg%3E%0A");
+    width: 10px;
+    height: 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
 }
 /* li중에서 active 클래스를 갖고 있는 li */
 .subject .list ul li.active {
-    width: 468px;
+    width: 37%;
     background-color: #ECDCCC;
     color: #3E3E3F;
+}
+.subject .list ul li.active::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='5' fill='white' fill-opacity='0.2'/%3E%3Ccircle cx='10' cy='10' r='9.5' stroke='white' stroke-opacity='0.2'/%3E%3C/svg%3E%0A");
+    width: 20px;
+    height: 20px;
+    top: -77px;
 }
 .subject .list ul h3::before {
     position: absolute;
@@ -427,27 +441,28 @@
     display: block;
 }
 .subject .more {
-    position: absolute;
-    right: 12px;
-    bottom: 81px;
+    text-align: right;
+    margin-top: 39px;
+}
+.subject .more a {
     width: 177px;
+    height: 39px;
+    display: inline-block;
+    padding: 11px 39px;
     color: #fff;
     background-color: var(--color-main1);
     border: 1px solid #C7A88B;
     border-radius: 50px;
 }
-.subject .more a {
-    width: 100%;
-    height: 39px;
-    display: block;
-    padding: 12px 39px;
-}
-.subject .more:hover {
+.subject .more a:hover {
     color: #C7A88B;
     background-color: #3E3E3F;
     border: 1px solid #C7A88B;
 }
 @media screen and (max-width:1024px){
+    .subject .tit p {
+        margin-bottom: 40px;
+    }
     .subject .list ul {
         display: block;
         padding-top: 36px;
@@ -455,6 +470,9 @@
     }
     .subject .list ul li {
         width: auto;
+    }
+    .subject .list ul li::before {
+        display: none;
     }
     .subject .list ul li a {
         height: 222px;
@@ -470,6 +488,10 @@
     }
 }
 @media screen and (max-width:640px){
+    .subject {
+        background: #3E3E3F;
+        padding: 0 0 40px 0;
+    }
     .subject .tit strong {
         font-size: 1.231rem;
         padding-top: 49px;
@@ -479,7 +501,7 @@
         left: 78px;
         top: 58px;
     }
-    .subject .tit h3 {
+    .subject .tit h2 {
         font-size: 3.077rem;
     }
     .subject .list ul h3::before {
@@ -499,12 +521,15 @@
         padding-top: 15px;
     }
     .subject .list ul li {
-        width: 239px;
-        background-color: var(--color-main2);
-        border: 1px solid #ECDCCC;
-        border-radius: 50px 0 50px 0;
-        margin: 0 12px 149px 12px;
-        position: relative;
+        margin: 17px 0px 26px 0px;
+    }
+    .subject .more {
+        margin-top: 0;
+    }
+    .subject .more a{
+        padding: 8px 40px;
+        width: 168px;
+        height: 33px;
     }
 }
 .food {
@@ -578,11 +603,15 @@
     padding-left: 50px;
 }
 .food .photo {
-    width: 618px;
     height: 753px;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
 }
 .food img {
-    height: 753px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 @media screen and (max-width:640px){
     .food {
@@ -611,7 +640,7 @@
     }
     .food .tit h3 {
         font-size: 1.308rem;
-        margin: 418px 0 30px 0;
+        margin: 385px 0 30px 0;
     }
     .food .tit p {
         line-height: 1.5;
@@ -772,7 +801,7 @@
         text-align: center;
     }
     .location .map .map_box {
-        width: 100%;
+        width: auto;
         height: 600px;
         border-radius: 0 100px 0 0;
     }
