@@ -491,6 +491,14 @@
     .subject .list ul li.active a {
         padding: 29px 45px;
     }
+    .subject .list ul li {
+        width: 239px;
+        background-color: var(--color-main2);
+        border: 1px solid #ECDCCC;
+        border-radius: 50px 0 50px 0;
+        margin: 0 12px 149px 12px;
+        position: relative;
+    }
 }
 .food {
     padding: 178px 0;
