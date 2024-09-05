@@ -1,0 +1,25 @@
+@import url(layout.css);
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+
+.visual h2 {
+    display: none;
+}
+.visual .swiper li {
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh; 
+    object-fit:cover;
+}
+.visual .swiper li.bg1 {
+    background-image: url(../images/main/visual_bg1.png);
+}
+.visual .swiper li.bg2 {
+    background-image: url(../images/main/visual_bg2.png);
+}
+.visual .swiper li.bg3 {
+    background-image: url(../images/main/visual_bg3.png);
+}
