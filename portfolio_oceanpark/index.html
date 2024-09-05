@@ -13,10 +13,15 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <div class="skip_nav">
+        <a href="#skip_contents">본문 바로가기</a>
+        <a href="#skip_menu">대메뉴 바로가기</a>
+    </div>
     <div id="wrap">
-        <header class="menu_over fiexd">
+        <header class=" ">
             <h1 class="logo"><a href="index.html">해양낚시공원</a></h1>
-            <nav class="gnb">
+            <nav class="gnb" id="skip_menu">
+                <button class="gnb_open">메뉴열기</button>
                 <div class="gnb_wrap">
                     <ul class="depth1">
                         <li>
@@ -67,7 +72,6 @@
                         </li>
                     </ul>
                 </div>
-                <button class="gnb_open">메뉴열기</button>
                 <button class="gnb_close">메뉴닫기</button>
             </nav>
             <div class="tnb">
