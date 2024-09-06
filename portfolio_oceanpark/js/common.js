@@ -104,23 +104,6 @@ $(document).ready(function(){
             $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
         })
 
-        
-
-        $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter focusin', function(){
-            if(pc_mobile == 'pc'){
-                $('header').addClass('menu_over')
-                $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
-                $(this).addClass('over')
-            }
-        })
-        $('header').on('mouseleave', function(){
-            $('header').removeClass('menu_over')
-            $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
-        })
-        $('header .gnb .gnb_wrap ul.depth1 > li:last-child ul.depth2 > li:last-child').on('focusout', function(){
-            $('header').removeClass('menu_over')
-            $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
-        })
 
         
 })
