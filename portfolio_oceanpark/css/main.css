@@ -80,7 +80,7 @@
 }
 .visual .btn_wrap button {
     font-size: 0;
-    list-style: 0;
+    line-height: 0;
     width: 33px;
     height: 33px;
     position: relative;
@@ -235,7 +235,7 @@
         margin: 50px 0 16px 0;
     }
     .park .tit p {
-        font-size: 1;
+        font-size: 1rem;
     }
 }
 
