@@ -276,13 +276,13 @@
     height: 100%;
     
 }
-.experi .list ul li h2 {
+.experi .list ul li h3 {
     font-size: 1.667rem;
     font-family: 'gowun';
     font-weight: 700;
     padding: 31px 31px 0 31px;
 }
-.experi .list ul li:hover h2 {
+.experi .list ul li:hover h3 {
     
 }
 .experi .list ul li p {
@@ -390,7 +390,7 @@
         width: auto;
         height: auto;
     }
-    .experi .list ul li h2 {
+    .experi .list ul li h3 {
         font-size: 1.154rem;
         font-family: 'gowun';
         font-weight: 700;
