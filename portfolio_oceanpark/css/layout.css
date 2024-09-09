@@ -286,7 +286,7 @@ header.fixed .tnb a::before {
         display: block;
         width: 80%;
         font-size: 15px;
-        line-height: 3;
+        line-height: 2;
         color: #fff;
     }
     header .gnb .gnb_wrap ul.depth2 > li > a:hover {
