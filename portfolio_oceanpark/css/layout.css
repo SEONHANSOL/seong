@@ -365,5 +365,7 @@ header.fixed .tnb a::before {
     
 }
 @media screen and (max-width:640px){ 
-
+    header {
+        padding: 0 20px;
+    }
 }
