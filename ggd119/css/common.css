@@ -1,0 +1,93 @@
+
+/* 폰트를 여러개를 선언한다는건 첫번째 폰트를 1순위로 적용됨.
+    만약 지원이 안되면 2순위 폰트를 적용해야함
+    영문만 지원하는 폰트를 1순위로 쓰고 2순위로 한글이 지원되는 서체를 선언
+    영문, 숫자, 특수문자는 영문 폰트가 적용되고 나머지는 한글 폰트가 적용됨 */
+html, body {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #3d3d3d;
+    letter-spacing: 0em; /* 자간 */
+    line-height: 1.2; /* 행간:배수로들어감 */
+    word-break: keep-all; /* 단어별로 줄바꿈*/
+    word-wrap: break-word; /* 만약 단어가 엄청 길면 강제로 줄 바꿈 실행해줌. */
+} /*기본 상속 스타일 줬음*/
+
+#wrap { /*홈페이지 전~체를 감싸는 요소 - 가로스크롤바가 생겼을때 배경이 짤리는 현상을 막아줌*/
+    min-width: 1260px;
+    overflow: hidden;
+}
+/*홈페이지 넓이를 제한하고, 가운데로 정렬하는 요소*/
+.wrapper {
+    width: 1260px; /* 좌우 양쪽에 20px의 여백을 줌 */
+    margin: 0 auto;
+}
+.wrapper2 {
+    width: 1617px; /* 좌우 양쪽에 20px의 여백을 줌 */
+    margin: 0 auto;
+}
+@media screen and (max-width:1300px){ /* 1260px 나의 wrapper의 넓이에 좌우 여백 20px씩 추가한 사이즈로부터 반응형*/
+    html, body {
+        font-size: 15px;
+    }
+    #wrap {
+        min-width: 100%;
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px; /* 좌우에 20px */
+    }
+} /*media*/
+@media screen and (max-width:1024px){ /* 테블릿사이즈*/
+    html, body {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:640px){ /* 모바일 반응형 시작 */
+    html, body {
+        font-size: 13px;
+    }
+} /* media*/
+
+::selection {
+    background-color: #3E3E3F;
+    color: #C7A88B;
+}
+
+:root {
+    --color-main1 : #C7A88B;
+    --color-main2 : #3E3E3F;
+}
+@media screen and (max-width:1300px){ 
+    :root {
+        --txt-size-tit : 3.667rem;
+    }
+}
+@media screen and (max-width:1024px){ 
+    :root {
+        --txt-size-tit : 3.333rem;
+    }
+}
+@media screen and (max-width:768px){ 
+    :root {
+        --txt-size-tit : 3.077rem;
+    }
+}
+
+
+/*
+    기본이 16px일때   
+    80px - 5rem
+    40px - 2.50rem
+    25px - 1.56rem
+    20px - 1.25rem
+    16px - 1rem
+*/
+
+/* 클릭하는 요소 a button - focus가 되었을때 스타일 변경 */
+/* a:focus,
+button:focus {
+    outline: 2px dashed #3d3d3d;
+} */
