@@ -151,9 +151,10 @@ header.menu_over::before {
         display: flex;
         font-size: 13px;
         margin-top: 25px;
-        padding-right: 20px;
+        
     }
     header .tnb span {
+        width: 100%;
         margin-right: 10px;
         color: var(--color-main2);
         background-color: #fff;
@@ -175,14 +176,13 @@ header.menu_over::before {
         font-size: 18px;
     }
     header .gnb .gnb_wrap ul.depth1 > li {
-        width: 146px;
+        width: 132px;
     }
 }
 
 @media screen and (max-width:1024px) { /* 1024이하*/
     header {
         height: 50px;
-        border-bottom: 0;
     }
     header.fixed {
         position: fixed;
@@ -200,7 +200,7 @@ header.menu_over::before {
         margin-left: 0;
     }
     header .logo a::before {
-        top: 25px;
+        top: 11px;
     }
     header .gnb .gnb_open {
         position: absolute;
@@ -254,7 +254,7 @@ header.menu_over::before {
     header .gnb .gnb_wrap ul.depth1 > li a:hover {
         color: var(--color-main2);
     }
-    header .gnb .gnb_wrap ul.depth1 > li a span::before {
+    header .gnb .gnb_wrap ul.depth1 > li a::before {
         position: absolute;
         right: 19px;
         top: 13px;
@@ -276,7 +276,7 @@ header.menu_over::before {
     header .gnb .gnb_wrap .open ul.depth2 {
         display: block;
     }
-    header .gnb .gnb_wrap .open ul.depth1 > li a span::before {
+    header .gnb .gnb_wrap .open ul.depth1 > li a::before {
         position: absolute;
         right: 9px;
         top: 13px;
@@ -293,10 +293,19 @@ header.menu_over::before {
         width: 100%;
         font-size: 15px;
         line-height: 2.5;
-        color: #3d3d3d;
+        background-color: var(--color-main2);
+        color: #fff;
+        padding: 0 10px;
+    }
+    header .gnb .gnb_wrap ul.depth2 > li > a:hover {
+        color: #fff;
+        
     }
     header .gnb .gnb_wrap ul.depth2 > li > a::before {
         display: none;
+    }
+    header .gnb .gnb_wrap ul.depth2 > li > a:hover span {
+        border-bottom: 1px solid #fff;
     }
     header .gnb .gnb_close {
         display: none;
@@ -322,18 +331,20 @@ header.menu_over::before {
         content: "";
     }
     header .tnb {
+        display: none;
+    }
+    header.menu_open .tnb {
         display: flex;
         position: absolute;
         left: 0;
-        top: 69px;
+        top: 74px;
         width: 100%;
         height: 27px;
         z-index: 5;
     }
-    header .tnb span {
-        display: none;
-        margin-right: 20px;
-        margin-left: 20px;
+    header.menu_open .tnb span {
+        margin-right: 5px;
+        margin-left: 7px;
         color: #fff;
         background-color: var(--color-main2);
         border: 1px solid var(--color-main2);
@@ -341,13 +352,13 @@ header.menu_over::before {
         padding: 5px 14px;
         text-align: center;
     }
-    header .tnb span:hover {
+    header.menu_open .tnb span:hover {
         font-weight: 700;
     }
-    header .tnb span.login {
+    header.menu_open .tnb span.login {
         width: 50%;
     }
-    header .tnb span.size {
+    header.menu_open .tnb span.size {
         background-color: #606060;
         border: 1px solid #606060;
         width: 50%;
@@ -362,9 +373,6 @@ header.menu_over::before {
         display: block;
     }
     header.menu_open .gnb .gnb_close {
-        display: block;
-    }
-    header.menu_open .tnb {
         display: block;
     }
 }
