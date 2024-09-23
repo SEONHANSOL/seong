@@ -5,11 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <title>고양소방서</title>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <div class="skip_nav">
+        <a href="#skip_contents">본문 바로가기</a>
+        <a href="#skip_menu">대메뉴 바로가기</a>
+    </div>
     <div id="wrap">
-        
+        <header class="">
+            <h1 class="logo"><a href="index.html">고양소방서</a></h1>
+            <nav class="gnb">
+                <button class="gnb_open"></button>
+                <div class="gnb_wrap">
+                    <ul class="depth1">
+                        <li class="">
+                            <a href="#n"><span>소방민원</span></a>
+                            <ul class="depth2">
+                                <li class=""><a href="#n"><span>안전터</span></a></li>
+                                <li><a href="#n"><span>민원안내</span></a></li>
+                                <li><a href="#n"><span>민원상담</span></a></li>
+                                <li><a href="#n"><span>화재피해주민 지원안내</span></a></li>
+                                <li><a href="#n"><span>소방관련업체 정보</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#n"><span>소통마당</span></a>
+                            <ul class="depth2">
+                                <li><a href="#n"><span>칭찬해요</span></a></li>
+                                <li><a href="#n"><span>신고해요</span></a></li>
+                                <li><a href="#n"><span>도민참여</span></a></li>
+                                <li><a href="#n"><span>시험정보</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#n"><span>알림마당</span></a>
+                            <ul class="depth2">
+                                <li><a href="#n"><span>고시/공고</span></a></li>
+                                <li><a href="#n"><span>최신소식</span></a></li>
+                                <li><a href="#n"><span>소방안전뉴스</span></a></li>
+                                <li><a href="#n"><span>보도자료</span></a></li>
+                                <li><a href="#n"><span>119재난관리 상황</span></a></li>
+                                <li><a href="#n"><span>업무추진비 공개</span></a></li>
+                                <li><a href="#n"><span>화재안전조사 공개</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#n"><span>자료마당</span></a>
+                            <ul class="depth2">
+                                <li><a href="#n"><span>소방활동 통계</span></a></li>
+                                <li><a href="#n"><span>소방활동 소개</span></a></li>
+                                <li><a href="#n"><span>소방활동 사진</span></a></li>
+                                <li><a href="#n"><span>재난행동요령</span></a></li>
+                                <li><a href="#n"><span>재난안전교육</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#n"><span>교육신청</span></a>
+                            <ul class="depth2">
+                                <li><a href="#n"><span>안전체험관 교육신청</span></a></li>
+                                <li><a href="#n"><span>열린소방서 견학신청</span></a></li>
+                                <li><a href="#n"><span>소소심 교육신청</span></a></li>
+                                <li><a href="#n"><span>피난훈련 신청</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#n"><span>소방서소개</span></a>
+                            <ul class="depth2">
+                                <li><a href="#n"><span>인사말</span></a></li>
+                                <li><a href="#n"><span>연혁</span></a></li>
+                                <li><a href="#n"><span>조직도 및 직원현황</span></a></li>
+                                <li><a href="#n"><span>소방 추모관</span></a></li>
+                                <li><a href="#n"><span>찿아오시는 길</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <button class="gnb_close"></button>
+            </nav>
+            <div class="tnb">
+                <span class="login"><a href="#n">로그인</a></span>
+                <span class="size"><a href="#n">회원가입</a></span>
+            </div>
+        </header>
+        <main class="container" id="#skip_contents">
+            <div class="main_popup">
+                <div class="wrapper">
+                    <div class="main_inner">
+                        <div class="popup">
+                            <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                                <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                                    <li class="swiper-slide pop1">
+                                        <a href="#n">소방서팝업</a>
+                                    </li>
+                                    <li class="swiper-slide pop2">
+                                        <a href="#n">소방차 길터주기 팝업</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="box_footer">
+                                <div class="more"><a href="#n">전체보기</a></div>
+                                <div class="btn_wrap">
+                                    <div class="paging"></div>
+                                    <button class="btn_prev">이전버튼</button>
+                                    <button class="btn_play">재생버튼</button>
+                                    <button class="btn_stop">일시정지</button>
+                                    <button class="btn_next">다음버튼</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="greeting">
+                            <div class="inner_box">
+                                <div class="top_box">
+                                    <div class="photo">
+                                        <a href="#n">서장인사말 배너</a>
+                                    </div>
+                                </div>
+                                <div class="bottom_box">
+                                    <ul>
+                                        <li><a href="#n"><span>열린서장실</span></a></li>
+                                        <li><a href="#n"><span>서장인사말</span></a></li>
+                                        <li><a href="#n"><span>서장일정</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="service"></section>
+            <section class="tag"></section>
+            <section class="news_ppzone"></section>
+            <section class="safety"></section>
+            <section class="citizen"></section>
+            <section class="media"></section>
+            <section class="sns"></section>
+        </main>
+        <footer></footer>
+        <div class="top_btn"></div>
     </div>
 </body>
 </html>

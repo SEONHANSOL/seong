@@ -54,7 +54,8 @@ html, body {
 }
 
 :root {
-    --color-main1 : #DC6921;
+    --color-main1 : #1d1d1d;
+    --color-main2 : #DC6921;
 }
 @media screen and (max-width:1300px){ 
     :root {

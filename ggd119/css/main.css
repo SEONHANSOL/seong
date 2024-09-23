@@ -4,3 +4,283 @@
 @import url(common.css);
 
 
+.container .main_inner {
+    display: flex;
+}
+.container .main_inner .popup {
+    width: 50%;
+    height: 400px;
+    margin-top: 110px;
+    position: relative;
+    
+}
+.container .main_inner .popup .swiper {
+    border-radius: 15px;
+}
+.container .main_inner .popup li {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    width: 618px;
+    height: 400px;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    
+}
+.container .main_inner .popup li.pop1 {
+    object-fit: cover;
+    background-image: url(../images/main/popup1.png);
+}
+.container .main_inner .popup li.pop2 {
+    object-fit: cover;
+    background-image: url(../images/main/popup2.png);
+}
+.container .main_inner .popup .box_footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+    background-color: rgba(27, 27, 27, 0.7);
+    color: rgba(255, 255, 255, 0.8);
+    z-index: 60;
+    content: "";
+    border-radius: 0 0 15px 15px;
+
+    display: flex;
+    justify-content: space-between
+}
+.container .main_inner .popup .box_footer .more {
+    padding: 8px 20px;
+    display: inline-block;
+}
+.container .main_inner .popup .box_footer .btn_wrap {
+    display: flex;
+    padding: 8px 20px;
+}
+.container .main_inner .popup .box_footer .btn_wrap .paging {
+    width: 40px;
+}
+.container .main_inner .popup button.btn_play {
+    display: none;
+}
+.container .main_inner .popup button.btn_play,
+.container .main_inner .popup button.btn_stop {
+    position: relative;
+    width: 21px;
+    height: 21px;
+    font-size: 0;
+    line-height: 0;
+}
+.container .main_inner .popup button.btn_play::before {
+    position: absolute;
+    right: 0;
+    top: -2px;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.5 18.0961V5.90405L18.0768 12.0001L8.5 18.0961ZM10 15.3501L15.2693 12.0001L10 8.65005V15.3501Z' fill='white' fill-opacity='0.6'/%3E%3C/svg%3E%0A");
+}
+.container .main_inner .popup button.btn_stop::before {
+    position: absolute;
+    right: 0;
+    top: -2px;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.25 15.75V5.25H15V15.75H11.25ZM5 15.75V5.25H8.75V15.75H5ZM12.0833 14.875H14.1667V6.125H12.0833V14.875ZM5.83333 14.875H7.91667V6.125H5.83333V14.875Z' fill='white' fill-opacity='0.6'/%3E%3C/svg%3E%0A");
+}
+.container .main_inner .popup button.btn_prev,
+.container .main_inner .popup button.btn_next {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    font-size: 0;
+    line-height: 0;
+}
+.container .main_inner .popup button.btn_prev::before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.6628 1.79475L11.3718 2.50375L5.87566 7.99991L11.3718 13.4961L10.6628 14.2051L4.45766 7.99991L10.6628 1.79475Z' fill='white' fill-opacity='0.6'/%3E%3C/svg%3E%0A");
+}
+.container .main_inner .popup button.btn_next::before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.33717 14.2053L4.62817 13.4963L10.1243 8.00009L4.62817 2.50392L5.33717 1.79492L11.5423 8.00009L5.33717 14.2053Z' fill='white' fill-opacity='0.6'/%3E%3C/svg%3E%0A");
+}
+.main_popup .greeting {
+    width: 50%;
+    margin-top: 110px;
+    margin-left: 24px;
+}
+.main_popup .greeting .top_box {
+    width: 100%;
+    height: 335px;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 7px 3px #EAEAEA ;
+    border-radius: 15px;
+}
+.main_popup .greeting .top_box .photo {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    font-size: 0;
+    line-height: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    background-image: url(../images/main/greeting1.png);
+    border-radius: 15px;
+}
+.main_popup .greeting .bottom_box {
+    width: 100%;
+    height: 55px;
+}
+.main_popup .greeting .bottom_box > ul {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-main2);
+    border-radius: 15px;
+    padding: 0 10px;
+}
+.main_popup .greeting .bottom_box > ul > li {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    padding: 16px 0;
+    text-align: center;
+    position: relative;
+    width: 33.3%;
+}
+.main_popup .greeting .bottom_box > ul > li > a {
+    display: block;
+}
+.main_popup .greeting .bottom_box li span {
+    position: relative;
+}
+.main_popup .greeting .bottom_box li::before {
+    position: absolute;
+    left: -2px;
+    bottom: 17px;
+    width: 1px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    content: "";
+}
+.main_popup .greeting .bottom_box li:first-child:before {
+    display: none;
+}
+@media screen and (max-width:1300px){
+    .main_popup .greeting .bottom_box > ul > li {
+        font-size: 18px;
+        padding: 16px 0;
+    }
+    .main_popup .greeting .bottom_box > ul > li > a {
+        display: block;
+    }
+}
+@media screen and (max-width:1024px){
+    .container .main_inner {
+        display: block;
+    }
+    .container .main_inner .popup {
+        width: 100%;
+        height: 100%;
+        margin-top: 90px;
+    }
+    .container .main_inner .popup li {
+        height: 536px;
+    }
+    .main_popup .greeting {
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 0;
+    }
+    .main_popup .greeting .top_box {
+        width: 100%;
+        height: 510px;
+    }
+    .main_popup .greeting .bottom_box > ul {
+        padding: 0;
+    }
+    .main_popup .greeting .bottom_box > ul > li {
+        padding: 16px 42px;
+    }
+}
+@media screen and (max-width:640px){
+    .container .main_inner .popup li {
+        height: 335px;
+    }
+    .main_popup .greeting .bottom_box > ul > li {
+        font-size: 13px;
+        font-weight: 700;
+        color: #fff;
+        padding: 9px 0;
+    }
+    .main_popup .greeting .bottom_box li::before {
+        bottom: 7px;
+    }
+    .main_popup .greeting .top_box {
+        width: 100%;
+        height: 510px;
+    }
+    .main_popup .greeting .top_box {
+        height: 289px;
+    }
+}
+@media screen and (max-width:455px){
+    .container .main_inner .popup {
+        margin-top: 70px;
+    }
+    .container .main_inner .popup li {
+        height: 250px;
+    }
+    .container .main_inner .popup .box_footer {
+        height: 22px;
+    }
+    .container .main_inner .popup .box_footer .more {
+        padding: 3px 20px;
+    }
+    .container .main_inner .popup .box_footer .more a {
+        font-size: 12px;
+    }
+    .container .main_inner .popup .box_footer .btn_wrap {
+        padding: 3px 20px;
+    }
+    .main_popup .greeting {
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+    .main_popup .greeting .top_box {
+        height: 173px;
+        margin-bottom: 6px;
+    }
+    .main_popup .greeting .bottom_box > ul {
+        border-radius: 10px;
+    }
+}
