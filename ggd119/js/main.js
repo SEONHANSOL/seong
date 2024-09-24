@@ -148,4 +148,75 @@ $(document).ready(function(){
     $('.container .main_inner .popup button.btn_stop').show() //보이기
   })
 
+    /*
+    1. 탭버튼을 클릭하면 active 클래스 추가 (클릭한 li에만)
+        .news_ppzone .tab_area .tab_btn ul li
+    2. 클릭한 li에만 aria-selected="true" 나머지는 모두 false
+    3. 클릭한 li에서 aria-controls값을 가져와서
+        하단 콘텐츠 중에서 같은 이름의 id를 갖은 요소에만 active클래스 추가
+        .news_ppzone .tab_area .tab_cnt div[role="tabpanel"]
+    
+        find라는 명령으로 id가 aria-controls값과 같은 요소를 찾아야함..
+        find는 하위요소를 검색하는 기능..
+        선택자가 tabpanel을 직접 선택하는게 아니라 그 부모 요소를 선택해서
+        하위 요소를 검색하게 해야함..
+*/
+
+    let tab_btn = $('.news_ppzone .tab_area .tab_btn ul li')
+    let tab_name
+    let tab_cnt = $('.news_ppzone .tab_area .tab_cnt div[role="tabpanel"]')
+    let tab_cnt_parent = $('.news_ppzone .tab_area .tab_cnt')
+
+    tab_btn.on('click', function(){
+        tab_btn.removeClass('active')
+        $(this).addClass('active')
+        tab_btn.attr('aria-selected', 'false')
+        $(this).attr('aria-selected', 'true')
+        tab_name = $(this).attr('aria-controls')
+        tab_name = '#' + tab_name //id선택자를 추가로 삽입
+        console.log(tab_name)
+        tab_cnt.removeClass('active')
+        tab_cnt_parent.find(tab_name).addClass('active')
+    })
+
+
+    const ppzone_swiper = new Swiper('.ppzone .swiper', { /* 팝업을 감싼는 요소의 class명 */
+
+        autoplay: {  /* 팝업 자동 실행 */
+            delay: 5000,
+            disableOnInteraction: true,
+        },
+
+        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+
+        pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
+            el: '.ppzone .paging', /* 해당 요소의 class명 */
+            clickable: true,  /* 클릭하면 해당 팝업으로 이동할 것인지 값 */
+            type: 'fraction',
+            renderBullet: function (index, className) {   /* paging에 특정 코드 넣기 */
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            },
+        },
+        
+
+        navigation: {  /* 이전, 다음 버튼 */
+            nextEl: '.ppzone .btn_next',  /* 다음 버튼의 클래스명 */
+            prevEl: '.ppzone .btn_prev',  
+        },
+
+    });
+    ppzone_swiper.autoplay.stop();  /* 일시정지 기능 */
+    ppzone_swiper.autoplay.start();  /* 재생 기능 */
+
+    $('.news_ppzone .ppzone button.btn_stop').on('click', function(){
+        ppzone_swiper.autoplay.stop();
+        $(this).hide() //숨김
+        $('.news_ppzone .ppzone button.btn_play').show() //보이기
+    })
+    $('.news_ppzone .ppzone button.btn_play').on('click', function(){
+        ppzone_swiper.autoplay.start();
+        $(this).hide() //숨김
+        $('.news_ppzone .ppzone button.btn_stop').show() //보이기
+    })
+
 })
