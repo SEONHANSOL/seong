@@ -104,4 +104,22 @@ $(document).ready(function(){
         $('header').removeClass('menu_open')
         $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
     })
+
+
+    $('.top_btn .top').on('click', function(){ 
+        $('html, body').animate({ 
+            scrollTop : 0
+        }, 300)
+    })
+
+
+    $('footer .family .family_open').on('click', function(){
+        $('footer .family').addClass('open')
+        $('footer .family ul').slideDown()
+      })
+    $('footer .family .family_close').on('click', function(){
+        $('footer .family').removeClass('open')
+        $('footer .family ul').slideUp()
+    })
 })
+
