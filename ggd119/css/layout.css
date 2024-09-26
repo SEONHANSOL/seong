@@ -469,6 +469,7 @@ footer .family button::after {
     content: "";
 }
 footer .family ul {
+    display: none;
     position: absolute;
     width: 100%;
     left: 0;
