@@ -121,5 +121,6 @@ $(document).ready(function(){
         $('footer .family').removeClass('open')
         $('footer .family ul').slideUp()
     })
+    
 })
 

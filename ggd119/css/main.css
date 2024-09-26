@@ -1402,7 +1402,7 @@
 }
 @media screen and (max-width:640px) { 
     .media {
-        margin-bottom: 60px;
+        margin-bottom: 37px;
     }
     .media .media_box {
         display: block;
@@ -1549,6 +1549,9 @@
 
 }
 @media screen and (max-width:640px) { 
+    .sns {
+        margin-bottom: 0px;
+    }
     .sns .sns_box .tit {
         margin-bottom: 12px;
     }
@@ -1570,7 +1573,7 @@
 }
 @media screen and (max-width:400px) { 
     .sns .wrapper {
-        padding-bottom: 20px;
+        padding-bottom: 43px;
     }
     .sns .sns_box .sns_list ul li a {
         display: block;
