@@ -1,0 +1,65 @@
+html, body {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0; /* 자간 */
+    line-height: 1.4; /* 배수 - 글자크기에 1.4배 */
+    color: #3d3d3d; /* 글자 색상 */
+    word-break: keep-all; /* 단어별로 줄바꿈 */
+    word-wrap: break-word; /* 만약 단어가 엄청 길면 강제로 줄바꿈 실행 */
+}
+#wrap {
+    min-width: 1560px;
+    overflow: hidden;
+}
+/* 홈페이지의 넓이를 제한하고 가운데정렬 */
+.wrapper {
+    width: 1560px; 
+    margin: 0 auto; /* 가운데정렬 */
+}
+
+@media screen and (max-width:1560px){
+    .wrapper{
+    width: auto;
+    margin: 0 61px; /* 좌우 퀵메뉴 만큼 여백 주기 */
+    }
+}
+
+@media screen and (max-width:1300px){
+    html, body {
+        font-size: 15px;
+    }
+    #wrap {
+        min-width: 100%;
+    }
+    
+}/* media */
+@media screen and (max-width:1024px){
+    html, body {
+        font-size: 15px;
+    }
+    .wrapper{
+        width: auto;
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width:768px){
+    html, body {
+        font-size: 14px;
+    }
+}/* media */
+@media screen and (max-width:500px){
+    html, body {
+        font-size: 13px;
+    }
+}/* media */
+
+::selection {
+    background-color: rgba(255,255,255,0);
+    color: #1d1d1d;
+}
+
+:root {
+    --color-main1 : #801C21;
+    --color-main2 : #E8CFA7;
+}

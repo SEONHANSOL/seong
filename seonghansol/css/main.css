@@ -1,0 +1,245 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+@import url(layout.css);
+
+.fp_nav {
+    position: fixed;
+    left: 1%;
+    top: 50%;
+    transform: translateY(-50%); /* 위아래 가운데*/
+    z-index: 99;
+}
+.fp_nav ul li a {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+}
+.fp_nav ul li a::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #E8CFA7;
+    content: "";
+}
+.fp_nav ul li.active a,
+.fp_nav ul li a:hover {
+    /* background-color: #E8CFA7; */
+}
+.fp_nav ul li.active a::before,
+.fp_nav ul li a:hover:before {
+    /* background-color: #E8CFA7; */
+}
+
+.who {
+    background-image: url(../images/main/page02_bg.png);
+    color: #801C21;
+}
+.who h3{
+    font-family: 'Eul';
+    font-size: 25px;
+    font-weight: 700;
+}
+.who .left {
+    position: relative;
+}
+.who .left .bottom {
+    margin-left: 20px;
+}
+.who .left .bottom h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    position: relative;
+}
+.who .left .bottom .tit .strong {
+    font-weight: 700;
+}
+.who .left .bottom h2::before {
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    width: 40px;
+    height: 4px;
+    background-color: #801C21;
+    content: "";
+}
+.who .left .bottom p {
+    line-height: 1.2;
+    font-size: 20px;
+    margin-top: 37px;
+}
+.who .wrapper {
+    display: flex;
+}
+.who .right {
+}
+.who .right h3 {
+    margin-bottom: 31px;
+    position: relative;
+}
+.who .right h3::before {
+    position: absolute;
+    left: 0;
+    bottom: -19px;
+    width: 372px;
+    height: 1px;
+    background-color: #cccccc;
+    content: "";
+}
+.who .right ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    width: 350px;
+}
+.who .right ul li.skill {
+    padding: 1px 0;
+}
+.who .right ul li strong {
+    font-size: 20px;
+}
+.who .right ul li span {
+    font-size: 18px;
+    color: #CCCCCC;
+    font-weight: 300;
+    padding-left: 30px;
+}
+.who .right .top {
+    display: flex;
+    justify-content:  space-between;
+    margin: 150px 0 134px 170px;
+}
+.who .right .top .Profile {
+    margin-right: 123px;
+}
+.who .right .bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 170px;
+    
+}
+.who .right .top .cer {
+    margin-right: 123px;
+}
+
+.projects {
+    background-image: url(../images/main/page03_bg.png);
+}
+.projects .top {
+    display: flex;
+    justify-content: space-between;
+}
+.projects .top .left h2 {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-main2);
+    margin-bottom: 260px;
+    position: relative;
+}
+.projects .top .left h2::before {
+    position: absolute;
+    left: 22px;
+    top: -128px;
+    width: 339px;
+    height: 431px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='349' height='297' viewBox='0 0 349 297' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M221.592 90.2583C267.872 127.672 304.447 168.096 326.174 203.193C337.038 220.743 344.175 236.938 346.969 250.741C349.764 264.548 348.201 275.886 341.781 283.827C335.361 291.769 324.602 295.673 310.516 295.833C296.434 295.993 279.103 292.408 259.666 285.462C220.796 271.572 173.606 244.279 127.325 206.865C81.0446 169.452 44.4698 129.028 22.7431 93.9308C11.8784 76.3802 4.74184 60.1858 1.94784 46.3828C-0.846978 32.5757 0.715695 21.2377 7.13578 13.2961C13.5559 5.35448 24.3148 1.4508 38.401 1.29055C52.483 1.13034 69.8133 4.71524 89.2508 11.6613C128.121 25.5517 175.311 52.8446 221.592 90.2583Z' stroke='%23E8CFA7' stroke-opacity='0.5'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.projects .top .right {
+    text-align: right;
+}
+.projects .top .right strong {
+    color: rgba(232, 207, 167, 0.5);
+    font-size: 20px;
+    
+}
+.projects .bottom {
+    text-align: right;
+}
+.projects .bottom ul li {
+    margin: 17px 0;
+    
+}
+.projects .bottom ul li a {
+    transition: 0.5s;
+}
+.projects .bottom ul li a::before {
+    position: absolute;
+    left: 0;
+    bottom: -14px;
+    background-color: rgba(232, 207, 167, 0.5);
+    width: 415px;
+    height: 1px;
+    content: "";
+}
+.projects .bottom ul li:last-child a:before {
+    width: 388px;
+}
+.projects .bottom ul li a {
+    position: relative;
+    display: inline-block;
+}
+.projects .bottom ul li:hover a{
+    transform: translate(-10px, 0);
+}
+.projects .bottom strong {
+    color: var(--color-main2);
+    font-size: 30px;
+    font-family: 'Eul';
+    
+}
+.projects .bottom span {
+    font-size: 20px;
+    color: rgba(232, 207, 167, 0.6);
+    font-weight: 300;
+    text-align: right;
+    margin-left: 20px;
+}
+.thankyou {
+    background-image: url(../images/main/page03_bg.png);
+}
+.thankyou .top {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 700;
+    color: var(--color-main2);
+    margin-top: 184px;
+}
+.thankyou .top h2 {
+    position: relative;
+}
+.thankyou .top h2::before {
+    position: absolute;
+    left: 618px;
+    top: -156px;
+    width: 339px;
+    height: 431px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='349' height='297' viewBox='0 0 349 297' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M221.592 90.2583C267.872 127.672 304.447 168.096 326.174 203.193C337.038 220.743 344.175 236.938 346.969 250.741C349.764 264.548 348.201 275.886 341.781 283.827C335.361 291.769 324.602 295.673 310.516 295.833C296.434 295.993 279.103 292.408 259.666 285.462C220.796 271.572 173.606 244.279 127.325 206.865C81.0446 169.452 44.4698 129.028 22.7431 93.9308C11.8784 76.3802 4.74184 60.1858 1.94784 46.3828C-0.846978 32.5757 0.715695 21.2377 7.13578 13.2961C13.5559 5.35448 24.3148 1.4508 38.401 1.29055C52.483 1.13034 69.8133 4.71524 89.2508 11.6613C128.121 25.5517 175.311 52.8446 221.592 90.2583Z' stroke='%23E8CFA7' stroke-opacity='0.5'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.thankyou .bottom {
+    text-align: right;
+    color: var(--color-main2);
+    font-size: 20px;
+    
+    padding-top: 250px;
+}
+.thankyou .bottom strong {
+    font-weight: 300;
+}
+.thankyou .bottom p {
+    font-weight: 300;
+}
+.thankyou .bottom p.number {
+    padding-top: 30px;
+}
