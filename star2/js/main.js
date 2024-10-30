@@ -21,6 +21,7 @@ $(document).ready(function(){
 
 
     let idx = 1
+    let obj_left = 0
 
     setInterval(function(){
         if(idx < 3){
@@ -28,9 +29,11 @@ $(document).ready(function(){
         }else{
             idx = 1
         }
-        console.log(idx)
-
-        $('.popup ul li').removeClass('active')
-        $('.popup ul li').eq(idx - 1).addClass('active')
+        obj_left = -(idx-1)*1200
+        console.log(obj_left)
+        
+        $('.popup ul').animate({
+            left: obj_left
+        }, 500)
     }, 3000)
 })
