@@ -9,8 +9,8 @@ a {
     color: inherit;
 }
 body {
-    font-family: '맑은고딕', 'malgun gothic', '돋움', 'dotum';
     font-size: 15px;
+    font-family: '맑은고딕';
     color: #333333;
     background-color: #ffffff;
 }
@@ -33,23 +33,23 @@ header .gnb .depth1 {
     display: flex;
 }
 header .gnb .depth1 > li {
-    text-align: center;
     width: 170px;
+    text-align: center;
     position: relative;
 }
 header .gnb .depth1 > li > a {
+    display: block;
     line-height: 100px;
     font-size: 20px;
     font-weight: 700;
-    display: block;
 }
 header .gnb .depth1 > li:hover > a {
     color: #0066ed;
 }
-header .gnb .depth1 > li.over .depth2 {
+header .gnb .depth1 > li.over > .depth2 {
     display: block;
 }
-header .gnb .depth2 {  
+header .gnb .depth2 {
     position: absolute;
     left: 0;
     top: 100px;
@@ -58,64 +58,65 @@ header .gnb .depth2 {
 }
 header .gnb .depth2 > li > a {
     display: block;
-    line-height: 40px;
     background-color: #0066ed;
     color: #ffffff;
+    padding: 10px 0;
 }
-header .gnb .depth2 > li:hover > a {
-    background-color: #30A3F3;
+header .gnb .depth2 > li > a:hover {
+    background-color: #30a3f3;
 }
 .popup {
     height: 300px;
     overflow: hidden;
 }
 .container {
-    display: flex;
-    justify-content: space-between;
     height: 200px;
     padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
 }
-.news {
+.new {
     width: 400px;
     position: relative;
 }
-.news .tab {
+.new .tab {
     display: flex;
 }
-.news .tab button {
-    background-color: #ededed;
+.new .tab button {
     border: 0;
-    font-size: 18px;
+    background-color: #ededed;
     padding: 5px 10px;
+    font-size: 18px;
     cursor: pointer;
 }
-.news .tab li.active button {
+.new .tab li.active button {
     background-color: #0066ed;
     color: #ffffff;
-}.news .tab > li.active .detail {
-    display: block;
 }
-.news .detail {
-    display: none;
+.new li.active .detail {
+    display: block;
     position: absolute;
     left: 0;
     top: 50px;
     width: 100%;
 }
-.news .detail ul li a {
+.new .detail {
+    display: none;
+}
+.new .notice .detail ul li a {
     display: flex;
     justify-content: space-between;
-    padding: 6px 0;
+    padding: 5px 0;
 }
-.news .detail ul li a:hover {
+.new .notice .detail ul li a:hover {
     color: #0066ed;
     text-decoration: underline;
 }
-.news .gallery ul {
+.new .gall ul {
     display: flex;
     justify-content: space-around;
 }
-.news .gallery ul li a:hover {
+.new .gall ul li a:hover {
     opacity: 0.5;
 }
 .banner {
@@ -126,29 +127,14 @@ header .gnb .depth2 > li:hover > a {
     width: 380px;
 }
 .layer_popup {
-    display: none;
     position: absolute;
     left: calc(50% - 250px);
-    top: 200px;
+    top: 300px;
     width: 500px;
+    padding: 30px 50px;
     z-index: 200;
-    background-color: #30A3F3;
+    background-color: #30a3f3;
     color: #ffffff;
-    padding: 20px 40px;
-}
-.layer_popup h2 {
-    font-size: 23px;
-}
-.layer_popup p {
-    font-size: 16px;
-    margin: 20px 0;
-}
-.layer_popup button {
-    border: 0;
-    background-color: #ffffff;
-    font-size: 16px;
-    padding: 5px 10px;
-    cursor: pointer;
 }
 footer {
     height: 100px;
