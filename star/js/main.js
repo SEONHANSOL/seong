@@ -19,10 +19,10 @@ $(document).ready(function(){
         $('.layer_popup').hide()
     })
 
-
     let idx = 1
 
     setInterval(function(){
+
         if(idx < 3){
             idx++
         }else{
@@ -30,7 +30,9 @@ $(document).ready(function(){
         }
         console.log(idx)
 
-        $('.popup ul li').removeClass('active')
-        $('.popup ul li').eq(idx - 1).addClass('active')
-    }, 3000)
+        $('.popup ul li ').removeClass('active')
+        $('.popup ul li ').eq(idx - 1).addClass('active')
+    }, 1000)
+
+
 })
