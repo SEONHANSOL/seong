@@ -65,6 +65,7 @@ header .gnb .depth2 > li > a:hover {
 .popup {
     height: 300px;
     background-color: #ededed;
+    overflow: hidden;
 }
 .container {
     height: 200px;
@@ -74,6 +75,55 @@ header .gnb .depth2 > li > a:hover {
 }
 .news {
     width: 400px;
+    position: relative;
+}
+.news .tab {
+    display: flex;
+}
+.news .tab > li > button {
+    border: 0;
+    background-color: #ededed;
+    font-size: 18px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.news .tab > li.active > button {
+    background-color: #0066ed;
+    color: #fff;
+}
+.news .tab > li.active .detail {
+    display: block;
+}
+.news .detail{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+}
+.news .notice ul li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+}
+.news .notice ul li a:hover {
+    color: #0066ed;
+    text-decoration: underline;
+}
+.news .tab > .gall {
+    display: flex;
+    justify-content: space-around;
+}
+.news .gall ul {
+    display: flex;
+    justify-content: space-around;
+}
+.news .gall ul li a {
+    display: block;
+
+}
+.news .gall ul li a:hover {
+    opacity: 0.5;
 }
 .banner {
     width: 380px;
@@ -81,6 +131,29 @@ header .gnb .depth2 > li > a:hover {
 }
 .link {
     width: 380px;
+}
+.layer_popup {
+    position: absolute;
+    left: calc(50% - 250px);
+    top: 300px;
+    width: 500px;
+    background-color: #30a3f3;
+    color: #fff;
+    padding: 40px 50px;
+}
+.layer_popup h2 {
+    font-size: 22px;
+}
+.layer_popup p {
+    padding: 20px 0;
+    font-size: 16px;
+}
+.layer_popup button {
+    border: 0;
+    background-color: #fff;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
 }
 footer {
     height: 100px;
