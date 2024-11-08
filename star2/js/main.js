@@ -24,6 +24,7 @@ $(document).ready(function(){
     let obj_left = 0
 
     setInterval(function(){
+
         if(idx < 3){
             idx++
         }else{
@@ -31,9 +32,10 @@ $(document).ready(function(){
         }
         obj_left = -(idx-1)*1200
         console.log(obj_left)
-        
+
         $('.popup ul').animate({
             left: obj_left
         }, 500)
-    }, 3000)
+    }, 1000)
+    
 })

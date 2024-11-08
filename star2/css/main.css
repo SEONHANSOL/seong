@@ -66,8 +66,8 @@ header .gnb .depth2 > li:hover > a {
 }
 .popup {
     height: 300px;
-    position: relative;
     overflow: hidden;
+    position: relative;
 }
 .popup ul {
     width: 3600px;
