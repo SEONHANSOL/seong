@@ -24,21 +24,28 @@ header {
     position: relative;
     z-index: 100;
 }
+header h1 {
+    padding: 10px 0;
+}
 header h1 img{
     width: 200px;
 }
 header .gnb .depth1 > li {
     border: 1px solid #666;
+    border-bottom: none;
     width: 200px;
     text-align: center;
     position: relative;
+}
+header .gnb .depth1 > li:last-child {
+    border: 1px solid #666;
 }
 header .gnb .depth1 > li > a {
     display: block;
     font-size: 20px;
     line-height: 30px;
-    padding: 10px 0;
-    transition: 0.5s;
+    padding: 6px 0;
+    transition: 0.3s;
 }
 header .gnb .depth1 > li:hover > a {
     background-color: #e17b20;
@@ -56,12 +63,17 @@ header .gnb .depth2 {
 }
 header .gnb .depth2 > li {
     border: 1px solid #666;
+    border-bottom: none;
+    background-color: #ffffff;
+}
+header .gnb .depth2 > li:last-child {
+    border: 1px solid #666;
 }
 header .gnb .depth2 > li > a {
     display: block;
     font-size: 16px;
-    padding: 10px 0;
-    transition: 0.5s;
+    padding: 6px 0;
+    transition: 0.3s;
 }
 header .gnb .depth2 > li > a:hover {
     background-color: #e12044;
@@ -73,7 +85,23 @@ header .gnb .depth2 > li > a:hover {
 }
 .inner_box .popup {
     height: 350px;
-    background-color: #ededed;
+    padding-top: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.inner_box .popup ul li {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-top: 10px;
+    z-index: 1;
+    transition: 0.5s;
+    opacity: 0.5;
+}
+.inner_box .popup ul li.active {
+    z-index: 2;
+    opacity: 1;
 }
 .container {
     height: 200px;
@@ -81,18 +109,83 @@ header .gnb .depth2 > li > a:hover {
     display: flex;
     justify-content: space-between;
 }
-.nocice {
+.notice {
     width: 300px;
+}
+.notice h2 {
+    background-color: #e17b20;
+    color: #ffffff;
+    text-align: center;
+    width: 100px;
+    font-size: 20px;
+    padding: 3px 0;
+}
+.notice ul {
+    padding-top: 10px;
+}
+.notice ul li a {
+    display: flex;
+    justify-content:space-between;
+    font-size: 16px;
+    padding: 5px 0;
+}
+.notice ul li a:hover {
+    color: #e17b20;
+    text-decoration: underline;
 }
 .gall {
     width: 240px;
-    background-color: #ededed;
+}
+.gall h2 {
+    background-color: #e17b20;
+    color: #ffffff;
+    text-align: center;
+    width: 100px;
+    font-size: 20px;
+    padding: 3px 0;
+}
+.gall ul {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
 }
 .link {
     width: 240px;
+}
+.layer_popup {
+    position: absolute;
+    left: calc(55% - 250px);
+    top: 300px;
+    width: 500px;
+    padding: 40px 50px;
+    z-index: 200;
+    background-color: #e17b20;
+    color: #ffffff;
+}
+.layer_popup h2 {
+    font-size: 23px;
+}
+.layer_popup p {
+    padding: 10px 0;
+    font-size: 18px;
+}
+.layer_popup button {
+    border: 0;
+    background-color: #ededed;
+    font-size: 16px;
+    padding: 3px 8px;
+    cursor: pointer;
 }
 footer {
     height: 100px;
     padding-top: 20px;
     background-color: #ededed;
+    display: flex;
+    justify-content: space-around;
+}
+footer .f_logo img{
+    width: 150px;
+}
+footer .copy {
+    color: #666;
 }
