@@ -26,6 +26,9 @@ header {
 header h1 {
     padding-top: 20px;
 }
+header .gnb {
+    z-index: 150;
+}
 header .gnb .depth1 > li {
     width:200px;
     text-align: center;
@@ -53,10 +56,9 @@ header .gnb .depth2 {
     left: 200px;
     top: 0;
     width: 100%;
-}
-header .gnb .depth2 > li {
     background-color: #ec4242;
     color: #ffffff;
+    z-index: 150;
 }
 header .gnb .depth2 > li > a {
     display: block;
