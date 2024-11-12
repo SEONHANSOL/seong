@@ -19,4 +19,22 @@ $(document).ready(function(){
     $('.layer_popup button').on('click', function(){
         $('.layer_popup').hide()
     })
+
+    let idx = 1
+    let obj_top = 0
+
+    setInterval(function(){
+        if(idx < 3){
+            idx++
+        }else{
+            idx = 1
+        }
+        obj_top = -(idx-1)*305
+        
+        console.log(obj_top)
+
+        $('.popup ul').animate({
+            top: obj_top
+        }, 500)
+    }, 1000)
 })

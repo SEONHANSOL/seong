@@ -70,8 +70,14 @@ header .gnb .depth2 > li > a:hover {
 }
 .popup {
     height: 300px;
-    background-color: #ededed;
     overflow: hidden;
+    position: relative;
+}
+.popup ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 900px;
 }
 .container {
     height: 200px;
