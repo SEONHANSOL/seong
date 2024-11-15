@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    background-color: #fff;
+    color: #333;
+    font-size: 15px;
+    font-family: 'malgun gothic', '맑은고딕';
+}
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+}
+header {
+    width: 200px;
+}
+header h1 {
+    padding-top: 20px;
+}
+header .gnb {
+    padding: 10px 0 0 25px
+}
+header .gnb .depth1 > li {
+    width: 150px;
+    text-align: center;
+    border: 1px solid #333;
+    border-bottom: 0;
+    background-color: #a8d39c;
+}
+header .gnb .depth1 > li:last-child {
+    border-bottom: 1px solid #333;
+}
+header .gnb .depth1 > li > a {
+    font-size: 20px;
+    line-height: 40px;
+}
+header .gnb .depth2 {
+    display: none;
+}
+.inner_box {
+    width: 800px;
+    padding-top: 10px;
+}
+.popup {
+    height: 350px;
+    background-color: #333;
+}
+.container {
+    height: 200px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.news {
+    width: 380px;
+}
+.gall {
+    width: 380px;
+    background-color: #333;
+}
+.link {
+    width: 200px;
+}
+footer {
+    height: 100px;
+    margin-top: 20px;
+}
