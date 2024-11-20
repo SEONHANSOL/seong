@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    background-color: #fff;
+    color: #333;
+    font-size: 15px;
+    font-family: 'malgun gothic';
+}
+.wrapper {
+    width: 100%;
+}
+.flex_box {
+    display: flex;
+}
+header {
+    width: 200px;
+}
+.inner_box {
+    width: 1000px;
+}
+.popup {
+    width: 1000px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.popup ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3000px;
+    display: flex;
+}
+.banner {
+    width: 1000px;
+    height: 200px;
+    margin-top: 20px;
+    background-color: #333;
+    text-align: center;
+    padding-top: 10px;
+}
+.news {
+    height: 250px;
+    margin-top: 20px;
+    position: relative;
+    width: 1000px;
+    
+}
+.news .detail {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: 100%;
+    background-color: #ededed;
+}
+.news .detail ul li a {
+    margin: 0 0 0 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.news .detail ul li span {
+    margin-right: 60px;
+}
+.news .tab {
+    display: flex;
+}
+.news .tab button {
+    cursor: pointer;
+    border: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+.news .tab li.active button {
+    background-color: #ededed;
+    color: #333;
+}
+.news .tab li.active .detail {
+    display: block;
+}
+.news .gall ul {
+    display: flex;
+}
+.news .gall ul li {
+    margin-right: 30px;
+    padding: 10px 0;
+}
+.link {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 300px;
+    z-index: 50;
+}
+.link ul {
+    
+}
+footer {
+    width: 1200px;
+    height: 100px;
+    margin-top: 20px;
+    background-color: aquamarine;
+}
