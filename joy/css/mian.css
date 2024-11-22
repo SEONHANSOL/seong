@@ -13,102 +13,46 @@ body{
     color: #333;
     font-size: 15px;
     font-family: 'malgun gothic';
-}
-.wrapper {
     width: 100%;
-}
-.flex_box {
-    display: flex;
 }
 header {
-    width: 200px;
+    height: 100px;
+    background-color: #954788;
 }
-.inner_box {
-    width: 1000px;
+.inner {
+    height: 100px;
+    width: 1340px;
+    margin: auto;
+    background-color: #247288;
 }
 .popup {
-    width: 1000px;
-    height: 300px;
+    height: 350px;
+    background-color: antiquewhite;
+}
+.container {
+    width: 1340px;
+    margin: auto;
     position: relative;
-    overflow: hidden;
-}
-.popup ul {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 3000px;
-    display: flex;
-}
-.banner {
-    width: 1000px;
-    height: 200px;
-    margin-top: 20px;
-    background-color: #333;
-    text-align: center;
-    padding-top: 10px;
-}
-.news {
-    height: 250px;
-    margin-top: 20px;
-    position: relative;
-    width: 1000px;
-    
-}
-.news .detail {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 35px;
-    width: 100%;
-    background-color: #ededed;
-}
-.news .detail ul li a {
-    margin: 0 0 0 10px;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-}
-.news .detail ul li span {
-    margin-right: 60px;
-}
-.news .tab {
-    display: flex;
-}
-.news .tab button {
-    cursor: pointer;
-    border: 0;
-    background-color: #333;
-    color: #fff;
-    padding: 5px 10px;
-    font-size: 18px;
-}
-.news .tab li.active button {
-    background-color: #ededed;
-    color: #333;
-}
-.news .tab li.active .detail {
-    display: block;
-}
-.news .gall ul {
-    display: flex;
-}
-.news .gall ul li {
-    margin-right: 30px;
-    padding: 10px 0;
 }
 .link {
+    height: 100px;
+    background-color: aquamarine;
     position: absolute;
-    right: 0;
-    top: 0;
-    width: 300px;
-    z-index: 50;
+    left: 0;
+    top: -100px;
+    width: 100%;
 }
-.link ul {
-    
+.banner {
+    height: 200px;
+    background-color: #957834;
+}
+.news {
+    height: 300px;
+    background-color: #837838;
 }
 footer {
-    width: 1200px;
-    height: 100px;
-    margin-top: 20px;
-    background-color: aquamarine;
+    width: 1340px;
+    margin: auto;
+    height: 120px;
+    background-color: #333;
 }

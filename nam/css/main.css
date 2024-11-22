@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+body{
+    font-size: 15px;
+    font-family: '맑은고딕';
+    background-color: #fff;
+    color: #333;
+    width: 100%;
+}
+header {
+    height: 100px;
+    
+}
+header h1 {
+    padding-top: 25px;
+}
+.inner {
+    height: 100px;
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.inner .gnb .depth1 {
+    display: flex;
+}
+.inner .gnb .depth1 > li {
+    width: 150px;
+    position: relative;
+    text-align: center;
+}
+.inner .gnb .depth1 > li > a {
+    display: block;
+    font-size: 20px;
+    line-height: 100px;
+}
+.inner .gnb .depth1 > li:hover > a {
+    color: #874388;
+    font-weight: 700;
+}
+.inner .gnb .depth2 {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    background-color: #427189;
+}
+.inner .gnb .depth2 >li > a {
+    display: block;
+    font-size: 16px;
+    line-height: 40px;
+    color: #fff;
+}
+.inner .gnb .depth2 >li > a:hover {
+    background-color: aquamarine;
+}
+.inner .gnb .depth1.over .depth2 {
+    display: block;
+    height: 120px;
+}
+.popup {
+    width: 1000px;
+    margin: auto;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+.popup ul li {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.popup ul li.active {
+    z-index: 2;
+}
+.container {
+    width: 1000px;
+    margin: auto;
+    height: 200px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.new {
+    width: 400px;
+
+}
+.gall {
+    width: 380px;
+    background-color: #427189;
+}
+.link {
+    width: 380px;
+}
+footer {
+    width: 1000px;
+    margin: auto;
+    height: 100px;
+    margin-top: 20px;
+    background-color: #333;
+}

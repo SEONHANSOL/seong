@@ -27,28 +27,18 @@ header {
 header h1 {
     padding-top: 10px;
 }
-header .gnb .depth1 {
+/* header .gnb .depth1 {
     margin-left: 20px;
     margin-top: 10px;
-}
-header .gnb .depth1 > li {
-    text-align: center;
-    width: 150px;
-    background-color: #fff;
-    border: 1px solid #333;
-    border-bottom: none;
-    position: relative;
-}
-header .gnb .depth1 > li:last-child {
-    border-bottom: 1px solid #333;
-}
+} */
 header .gnb .depth1 > li > a {
     display: block;
-    font-size: 18px;
-    line-height: 40px;
+    background-color: #77bc82;
+    color: #fff;
+    padding: 10px 20px;
 }
 header .gnb .depth1 > li:hover > a {
-    background-color: #b3e5bd;
+    background-color: #666;
 }
 header .gnb .depth2 {
     display: none;
@@ -57,22 +47,12 @@ header .gnb .depth2 {
     top: 37px;
     width: 100%;
 }
-header .gnb .depth2 > li  {
-    padding: 3px 0;   
-}
-header .gnb .depth2 > li > a {
-    display: block;
-    line-height: 40px;
-}
-header .gnb .depth2 > li > a:hover {
-    background-color: #77bc82;
-    color: #fff;
-}
 header .gnb .depth1 > li.over .depth2 {
     display: block;
 }
+
 header .gnb .depth1 > li.over {
-    height: 215px;
+    height: 150px;
 }
 .inner_box {
     width: 800px;
