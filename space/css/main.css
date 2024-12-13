@@ -3,3 +3,27 @@
 @import url(fonts.css);
 @import url(common.css);
 
+
+.section {
+    text-align: center;
+    font-size: 50px;
+}
+.visual {
+    background-color: antiquewhite;
+}
+.history {
+    background-color: darkolivegreen;
+}
+.research {
+    background-color: darkcyan;
+}
+.contest {
+    background-color: darkgoldenrod;
+}
+.news {
+    background-color: forestgreen;
+}
+footer {
+    background-color: brown;
+    height: 300px;
+}
