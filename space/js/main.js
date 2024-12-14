@@ -24,4 +24,13 @@ $(document).ready(function(){
 
 		responsiveWidth: 1024 /* fullpage를 적용시키지 않을 모바일 사이즈 */
 	});
+
+	
+	$('header .gnb .gnb_wrap .depth1 > li').on('mouseenter focusin', function(){
+		$('header .gnb .gnb_wrap .depth1 > li').removeClass('over')
+		$(this).addClass('over')
+	})
+	$('header .gnb .gnb_wrap .depth1 > li').on('mouseleave', function(){
+		$('header .gnb .gnb_wrap .depth1 > li').removeClass('over')
+	})
 })
