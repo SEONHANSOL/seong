@@ -3,7 +3,9 @@
 @import url(fonts.css);
 @import url(common.css);
 
-
+#fp-nav {
+    left: 4%;
+}
 .section {
     text-align: center;
     font-size: 50px;
