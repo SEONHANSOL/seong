@@ -3,9 +3,59 @@
 @import url(fonts.css);
 @import url(common.css);
 
-#fp-nav {
-    left: 4%;
+body #fp-nav {
+    left: 2% !important;
 }
+body #fp-nav ul li {
+    position: relative;
+    width: 2px;
+    height: 21px;
+    margin: 0;
+}
+body #fp-nav ul .fp-tooltip {
+    display: none;
+}
+body #fp-nav ul li a {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+    width: 2px;
+    height: 21px;
+    margin: 0;
+    border-radius: 0;
+}
+#fp-nav ul li a::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 21px;
+    background-color: rgba(255,255,255,0.5);
+    border: 0;
+    content: "";
+}
+body #fp-nav ul li a.active::before {
+    background-color: #000811;
+}
+body #fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span {
+    height: auto;
+    width: auto;
+    margin: 0;
+    border-radius: 0;
+}
+body #fp-nav ul li a span, .fp-slidesNav ul li a span {
+    border-radius: 0;
+    position: relative;
+    height: auto;
+    width: auto;
+    border: 0;
+    background: transparent;
+    left: 0;
+    top:0;
+    margin: 0;
+}
+
 .section {
     text-align: center;
     font-size: 50px;
