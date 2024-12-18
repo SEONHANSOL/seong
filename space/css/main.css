@@ -137,6 +137,7 @@ body #fp-nav ul li a span, .fp-slidesNav ul li a span {
     content: "";
 }
 
+
 .visual .btn_wrap button {
     left: 0;
     top: 0;
@@ -152,6 +153,7 @@ body #fp-nav ul li a span, .fp-slidesNav ul li a span {
     display: none;
 }
 .swiper-button-prev::before {
+    padding-left: 20px;
     position: absolute;
     left: 0;
     top: -45px;
@@ -168,6 +170,7 @@ body #fp-nav ul li a span, .fp-slidesNav ul li a span {
     display: none;
 }
 .swiper-button-next::before {
+    padding-left: 20px;
     position: absolute;
     left: 55px;
     top: -45px;
@@ -225,7 +228,7 @@ body #fp-nav ul li a span, .fp-slidesNav ul li a span {
     background-color: #000811;
     content: "";
     animation-name: visual_count;
-    animation-duration: 2.5s;
+    animation-duration: 5s;
     animation-iteration-count: 1; /* 1번만 실행 */
     animation-fill-mode: forwards; 
     /* 애니메이션 종류 후 마지막 상태 유지, 애니메이션 반복 횟수가 제한되었을때 */
@@ -234,6 +237,118 @@ body #fp-nav ul li a span, .fp-slidesNav ul li a span {
 @keyframes visual_count {
     0% { width: 0;}
     100% { width: 100%;}
+}
+@media screen and (max-width:1350px){
+    .visual .swiper .swiper-slide .inner {
+        padding-top: 250px;
+        padding-left: 50px;
+    }
+    .visual .swiper .swiper-slide .inner h3 {
+        font-size: 3.333rem;
+    }
+    .visual .swiper .swiper-slide .inner p {
+        line-height: 1.5;
+        font-weight: 400;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        font-size: 1.133rem;
+    }
+    .visual .swiper .swiper-slide .inner a {
+        width: 160px;
+        height: 32px;
+        padding: 7px 0 0 26px;
+        font-size: 1rem;
+    }
+    .visual .swiper .swiper-slide .inner a span {
+        position: relative;
+        width: 30px;
+        height: 30px;
+    }
+    .visual .swiper .swiper-slide .inner a span::before {
+        right: -49px;
+        top: -7px;
+        width: 30px;
+        height: 30px;
+    }
+    .visual .btn_wrap button {
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+    .swiper-button-next:after, .swiper-button-prev:after {
+        display: none;
+    }
+    .swiper-button-prev {
+        position: relative;
+        display: none;
+    }
+    .swiper-button-prev::before {
+        padding-left: 20px;
+        position: absolute;
+        left: 6px;
+        top: -40px;
+        width: 40px;
+        height: 40px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='47' height='47' viewBox='0 0 47 47' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='23.5' cy='23.5' r='22.5' stroke='white' stroke-opacity='0.4' stroke-width='2'/%3E%3Cpath d='M26.3333 32.8463L17.4871 24.0001L26.3333 15.1538L27.5129 16.3334L19.8462 24.0001L27.5129 31.6667L26.3333 32.8463Z' fill='white' fill-opacity='0.4'/%3E%3C/svg%3E%0A");
+        content: "";
+    }
+    .swiper-button-next {
+        position: relative;
+        display: none;
+    }
+    .swiper-button-next::before {
+        padding-left: 20px;
+        position: absolute;
+        left: 55px;
+        top: -40px;
+        width: 40px;
+        height: 40px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='47' height='47' viewBox='0 0 47 47' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='23.5' cy='23.5' r='22.5' stroke='white' stroke-opacity='0.4' stroke-width='2'/%3E%3Cpath d='M22.1796 15L31.0259 23.8463L22.1796 32.6925L21 31.5129L28.6667 23.8463L21 16.1796L22.1796 15Z' fill='white' fill-opacity='0.4'/%3E%3C/svg%3E%0A");
+        content: "";
+    }
+    .swiper-button-next, .swiper-button-prev {
+        position: absolute;
+        top: 50%;
+        /* width: calc(var(--swiper-navigation-size) / 44* 27); */
+        height: var(--swiper-navigation-size);
+        margin-top: calc(0px -(var(--swiper-navigation-size) / 2));
+        z-index: 10;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255,255,255,0.5);
+    }
+    .visual .btn_wrap {
+        position: absolute;  /*swiper기준으로 정렬*/
+        left: 688px;
+        bottom: 25%;
+    }
+    .visual .btn_wrap .paging .swiper-pagination-bullet-active::before {
+        /* 현재 선택된 블릿 */
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50px;
+    }
+    .visual .btn_wrap .paging .swiper-pagination-bullet {
+        /* 현재 선택되지 않은 블릿*/
+        width: 130px;
+    }
+}
+@media screen and (max-width:1024px){
+    
+}
+@media screen and (max-width:640px){
+    
 }
 .history {
     background-color: darkolivegreen;

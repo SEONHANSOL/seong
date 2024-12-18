@@ -27,7 +27,7 @@ html, body {
     }
     .wrapper {
         width: auto;
-        margin: 0 40px; /* 좌우에 20px */
+        margin: 0 20px; /* 좌우에 20px */
     }
 } /*media*/
 @media screen and (max-width:1024px){ /* 테블릿사이즈*/
@@ -72,9 +72,11 @@ html, body {
 /*
     기본이 16px일때
     80px - 5.333rem
+    50px - 3.333rem
     40px - 2.667rem
     25px - 1.667rem
     20px - 1.333rem
+    17px - 1.133rem
     15px - 1rem
 */
 
