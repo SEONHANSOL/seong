@@ -89,17 +89,151 @@ body #fp-nav ul li a span, .fp-slidesNav ul li a span {
     background-image: url(../images/main/visual07.png);
 }
 .visual .swiper .swiper-slide .inner {
-    padding-top: 18%;
+    padding-top: 300px;
 }
-.visual .swiper .swiper-slide h3 {
+.visual .swiper .swiper-slide .inner h3 {
     font-size: 5.3333rem;
     font-family: 'sco';
     font-weight: 700;
 }
-.visual .swiper .swiper-slide p {
+.visual .swiper .swiper-slide .inner p {
     line-height: 1.5;
     font-weight: 400;
     margin-bottom: 20px;
+    font-size: 1.333rem;
+}
+.visual .swiper .swiper-slide .inner a {
+    color: rgba(255,255,255,0.6);
+    width: 208px;
+    height: 49px;
+    border: 1px solid rgba(255,255,255,0.6);
+    padding: 10px 0 0 35px;
+    border-radius: 50px;
+    font-size: 1.333rem;
+    display: block;
+}
+.visual .swiper .swiper-slide .inner a:hover {
+    background-color: rgba(255,255,255,0.5);
+    color: rgba(0,0,0,0.7);
+}
+.visual .swiper .swiper-slide .inner a:hover > span::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24.455 30.545L23.2658 29.3975L31.8621 20.8013H5V19.1346H31.8942L23.3075 10.5384L24.455 9.39087L35.0321 19.968L24.455 30.545Z' fill='black' fill-opacity='0.7'/%3E%3C/svg%3E%0A");
+}
+.visual .swiper .swiper-slide .inner a span {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+.visual .swiper .swiper-slide .inner a span::before {
+    position: absolute;
+    right: -63px;
+    top: -8px;
+    width: 40px;
+    height: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24.455 30.545L23.2658 29.3975L31.8621 20.8013H5V19.1346H31.8942L23.3075 10.5384L24.455 9.39087L35.0321 19.968L24.455 30.545Z' fill='white' fill-opacity='0.7'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+
+.visual .btn_wrap button {
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+    display: none;
+}
+.swiper-button-prev {
+    position: relative;
+    display: none;
+}
+.swiper-button-prev::before {
+    position: absolute;
+    left: 0;
+    top: -45px;
+    width: 47px;
+    height: 47px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='47' height='47' viewBox='0 0 47 47' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='23.5' cy='23.5' r='22.5' stroke='white' stroke-opacity='0.4' stroke-width='2'/%3E%3Cpath d='M26.3333 32.8463L17.4871 24.0001L26.3333 15.1538L27.5129 16.3334L19.8462 24.0001L27.5129 31.6667L26.3333 32.8463Z' fill='white' fill-opacity='0.4'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.swiper-button-next {
+    position: relative;
+    display: none;
+}
+.swiper-button-next::before {
+    position: absolute;
+    left: 55px;
+    top: -45px;
+    width: 47px;
+    height: 47px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='47' height='47' viewBox='0 0 47 47' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='23.5' cy='23.5' r='22.5' stroke='white' stroke-opacity='0.4' stroke-width='2'/%3E%3Cpath d='M22.1796 15L31.0259 23.8463L22.1796 32.6925L21 31.5129L28.6667 23.8463L21 16.1796L22.1796 15Z' fill='white' fill-opacity='0.4'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    /* width: calc(var(--swiper-navigation-size) / 44* 27); */
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px -(var(--swiper-navigation-size) / 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.5);
+}
+.visual .btn_wrap {
+    position: absolute;  /*swiper기준으로 정렬*/
+    left: 50%;
+    bottom: 20%;
+    width: 1260px;
+    transform: translate(-50%, 0);
+    z-index: 10;
+    color: rgba(255, 255, 255, 0.6);
+    display: flex;
+}
+.visual .btn_wrap .paging {
+    width: 1260px; /* swiper가 준 width:100% 속성 삭제 */
+}
+.visual .btn_wrap .paging .swiper-pagination-bullet {
+    /* 현재 선택되지 않은 블릿*/
+    width: 150px;
+    height: 2px;
+    border-radius: 0;
+    background-color: rgba(255,255,255,0.7);
+    opacity: 1;
+    margin: 0;
+    position: relative;
+}
+.visual .btn_wrap .paging .swiper-pagination-bullet-active::before {
+    /* 현재 선택된 블릿 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    background-color: #000811;
+    content: "";
+    animation-name: visual_count;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1; /* 1번만 실행 */
+    animation-fill-mode: forwards; 
+    /* 애니메이션 종류 후 마지막 상태 유지, 애니메이션 반복 횟수가 제한되었을때 */
+    animation-timing-function: linear;
+}
+@keyframes visual_count {
+    0% { width: 0;}
+    100% { width: 100%;}
 }
 .history {
     background-color: darkolivegreen;

@@ -18,7 +18,7 @@ html, body {
     width: 1260px; /* 좌우 양쪽에 20px의 여백을 줌 */
     margin: 0 auto;
 }
-@media screen and (max-width:1300px){ /* 1260px 나의 wrapper의 넓이에 좌우 여백 20px씩 추가한 사이즈로부터 반응형*/
+@media screen and (max-width:1350px){ /* 1260px 나의 wrapper의 넓이에 좌우 여백 20px씩 추가한 사이즈로부터 반응형*/
     html, body {
         font-size: 15px;
     }
@@ -27,7 +27,7 @@ html, body {
     }
     .wrapper {
         width: auto;
-        margin: 0 20px; /* 좌우에 20px */
+        margin: 0 40px; /* 좌우에 20px */
     }
 } /*media*/
 @media screen and (max-width:1024px){ /* 테블릿사이즈*/
