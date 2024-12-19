@@ -574,6 +574,15 @@ body #fp-nav ul li a span, .fp-slidesNav ul li a span {
         /* 현재 선택되지 않은 블릿*/
         width: 80px;
     }
+@media screen and (max-width:400px){
+    .visual .btn_wrap .paging .swiper-pagination-bullet-active::before {
+        width: 20px;
+    }
+    .visual .btn_wrap .paging .swiper-pagination-bullet {
+        /* 현재 선택되지 않은 블릿*/
+        width: 50px;
+    }
+}
 }
 .history {
     background-color: darkolivegreen;
