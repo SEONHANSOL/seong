@@ -40,6 +40,9 @@ html, body {
     html, body {
         font-size: 13px;
     }
+    .wrapper {
+        margin: 0 auto;
+    }
 } /* media*/
 
 ::selection {

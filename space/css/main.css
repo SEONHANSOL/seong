@@ -561,7 +561,7 @@ body #fp-nav ul li a span, .fp-slidesNav ul li a span {
         color: rgba(255,255,255,0.5);
     }
     .visual .btn_wrap .paging {
-        width: 640px; /* swiper가 준 width:100% 속성 삭제 */
+        width: auto; /* swiper가 준 width:100% 속성 삭제 */
     }
     .visual .btn_wrap .paging .swiper-pagination-bullet-active::before {
         /* 현재 선택된 블릿 */
