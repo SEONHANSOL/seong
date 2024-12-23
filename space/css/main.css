@@ -228,7 +228,7 @@ body #fp-nav ul li a span, .fp-slidesNav ul li a span {
     background-color: #000811;
     content: "";
     animation-name: visual_count;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-iteration-count: 1; /* 1번만 실행 */
     animation-fill-mode: forwards; 
     /* 애니메이션 종류 후 마지막 상태 유지, 애니메이션 반복 횟수가 제한되었을때 */

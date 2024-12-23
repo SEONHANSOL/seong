@@ -54,67 +54,7 @@ header .logo a::before {
     background-image: url("data:image/svg+xml,%3Csvg width='80' height='85' viewBox='0 0 80 85' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_33_80)'%3E%3Cpath d='M60.4392 40.7112C58.8304 37.562 55.7725 31.1762 55.7725 24.642C55.7725 15.2971 63.7139 11.8779 66.2165 10.6L66.0606 0.00378418C60.5799 3.26707 51.9197 9.19652 51.7257 22.668C51.6002 31.2028 56.1528 37.9233 59.4503 43.2062H61.8426C61.3216 42.3467 60.8424 41.5137 60.4392 40.7188V40.7112Z' fill='%23E81E25'/%3E%3Cpath d='M59.8003 43.9137C61.4091 47.0629 64.467 53.4488 64.467 59.9829C64.467 69.3278 56.5294 72.747 54.0229 74.025L54.1789 84.6211C59.6595 81.3578 68.3198 75.4284 68.5138 61.9569C68.6393 53.4221 64.0867 46.7016 60.7891 41.4187H58.3968C58.9179 42.2783 59.3971 43.1112 59.8003 43.9061V43.9137Z' fill='%230072BC'/%3E%3Cpath d='M64.0108 42.3124C64.0108 44.5031 62.2346 46.2831 60.0401 46.2831C57.8455 46.2831 56.0693 44.5031 56.0693 42.3124C56.0693 40.1217 57.8493 38.3417 60.0401 38.3417C62.2308 38.3417 64.0108 40.1217 64.0108 42.3124Z' fill='white'/%3E%3Cpath d='M80 25.4331H72.1765V59.5493H80V25.4331Z' fill='white'/%3E%3Cpath d='M45.416 29.7537C43.9745 25.144 37.775 25.0071 37.775 25.0071C31.4805 25.0527 29.8146 29.6928 29.8146 29.6928L22.6795 52.1175L15.7231 42.4037L27.9129 25.3836H18.8685L10.0979 37.9499C10.0979 37.9499 9.64534 38.8399 8.50052 38.4938C8.50052 38.4938 7.51925 38.1553 7.50404 37.1893L7.49263 25.3798H0V59.5873H7.48883L7.50024 47.6105C7.51925 46.6444 8.49672 46.3059 8.49672 46.3059C9.64153 45.9636 10.0941 46.8536 10.0941 46.8536L18.9826 59.5911H28.0308L28.008 59.5569H28.1487L36.4286 33.538C36.7405 32.6214 37.775 32.5948 37.775 32.5948C38.9693 32.6138 39.1328 33.5989 39.1328 33.5989L47.2378 59.5873H55.1222L45.416 29.7461V29.7537Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_33_80'%3E%3Crect width='80' height='84.6287' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
     content: "";
 }
-header .gnb button {
-    display: none;
-}
-header .gnb .gnb_wrap .depth1 {
-    display: flex;
-}
-header .gnb .gnb_wrap .depth1 > li {
-    width: 170px;
-    text-align: center;
-    position: relative;
-    transition: 0.5s;
-}
-header .gnb .gnb_wrap .depth1 > li:hover {
-    text-decoration: underline;
-}
-header .gnb .gnb_wrap .depth1 > li > a {
-    display: block;
-    line-height: 100px;
-    font-family: 'sco';
-    font-size: 20px;
-}
-header .gnb .gnb_wrap .depth2 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    display: none;
-    padding-top: 100px;
-}
-header .gnb .gnb_wrap .depth2 > li > a {
-    display: block;
-    line-height: 35px;
-    background-color: rgba(255,255,255,0.4);
-    transition: 0.2s;
-}
-header .gnb .gnb_wrap .depth2 > li > a:hover {
-    background-color: #000811;
-}
-header .gnb .gnb_wrap .depth1 > li.over .depth2 {
-    display: block;
-}
-header .tnb .search {
-    display: block;
-    width: 40px;
-    height: 40px;
-    font-size: 0;
-    line-height: 0;
-    position: relative;
-}
-header .tnb .search::before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M32.6667 35L22.1667 24.5C21.3333 25.1667 20.375 25.6944 19.2917 26.0833C18.2083 26.4722 17.0556 26.6667 15.8333 26.6667C12.8056 26.6667 10.2431 25.6181 8.14583 23.5208C6.04861 21.4236 5 18.8611 5 15.8333C5 12.8056 6.04861 10.2431 8.14583 8.14583C10.2431 6.04861 12.8056 5 15.8333 5C18.8611 5 21.4236 6.04861 23.5208 8.14583C25.6181 10.2431 26.6667 12.8056 26.6667 15.8333C26.6667 17.0556 26.4722 18.2083 26.0833 19.2917C25.6944 20.375 25.1667 21.3333 24.5 22.1667L35 32.6667L32.6667 35ZM15.8333 23.3333C17.9167 23.3333 19.6875 22.6042 21.1458 21.1458C22.6042 19.6875 23.3333 17.9167 23.3333 15.8333C23.3333 13.75 22.6042 11.9792 21.1458 10.5208C19.6875 9.0625 17.9167 8.33333 15.8333 8.33333C13.75 8.33333 11.9792 9.0625 10.5208 10.5208C9.0625 11.9792 8.33333 13.75 8.33333 15.8333C8.33333 17.9167 9.0625 19.6875 10.5208 21.1458C11.9792 22.6042 13.75 23.3333 15.8333 23.3333Z' fill='white'/%3E%3C/svg%3E%0A");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    content: "";
-}
+
 
 @media screen and (min-width:1025px){ 
 
@@ -234,6 +174,47 @@ header .tnb .search::before {
     header .logo a::before {
         background-image: url("data:image/svg+xml,%3Csvg width='40' height='43' viewBox='0 0 40 43' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_41_177)'%3E%3Cpath d='M30.2197 20.3557C29.4152 18.7811 27.8863 15.5881 27.8863 12.3211C27.8863 7.64862 31.857 5.93901 33.1083 5.30004L33.0303 0.00195312C30.29 1.6336 25.9599 4.59832 25.8629 11.3341C25.8001 15.6015 28.0765 18.9617 29.7252 21.6032H30.9214C30.6609 21.1734 30.4212 20.7569 30.2197 20.3595V20.3557Z' fill='%23E81E25'/%3E%3Cpath d='M29.9002 21.9569C30.7046 23.5314 32.2335 26.7244 32.2335 29.9915C32.2335 34.6639 28.2647 36.3735 27.0115 37.0125L27.0895 42.3106C29.8298 40.6789 34.1599 37.7142 34.2569 30.9784C34.3197 26.7111 32.0434 23.3508 30.3946 20.7094H29.1984C29.459 21.1391 29.6986 21.5556 29.9002 21.9531V21.9569Z' fill='%230072BC'/%3E%3Cpath d='M32.0053 21.1563C32.0053 22.2516 31.1172 23.1416 30.02 23.1416C28.9227 23.1416 28.0346 22.2516 28.0346 21.1563C28.0346 20.0609 28.9246 19.1709 30.02 19.1709C31.1153 19.1709 32.0053 20.0609 32.0053 21.1563Z' fill='white'/%3E%3Cpath d='M40 12.7166H36.0883V29.7746H40V12.7166Z' fill='white'/%3E%3Cpath d='M22.708 14.8768C21.9873 12.572 18.8875 12.5035 18.8875 12.5035C15.7402 12.5264 14.9073 14.8464 14.9073 14.8464L11.3397 26.0587L7.86156 21.2018L13.9565 12.6918H9.43425L5.04897 18.975C5.04897 18.975 4.82267 19.42 4.25026 19.2469C4.25026 19.2469 3.75963 19.0777 3.75202 18.5946L3.74632 12.6899H0V29.7936H3.74441L3.75012 23.8052C3.75963 23.3222 4.24836 23.153 4.24836 23.153C4.82077 22.9818 5.04707 23.4268 5.04707 23.4268L9.4913 29.7955H14.0154L14.004 29.7784H14.0744L18.2143 16.769C18.3703 16.3107 18.8875 16.2974 18.8875 16.2974C19.4846 16.3069 19.5664 16.7994 19.5664 16.7994L23.6189 29.7936H27.5611L22.708 14.873V14.8768Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_41_177'%3E%3Crect width='40' height='42.3143' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
     }
+    header .gnb .gnb_wrap {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #000811;
+    }
+    header .gnb .gnb_wrap .depth1 {
+        margin-top: 52px;
+        height: calc(100% - 52px);
+        overflow-y: auto;
+    }
+    header .gnb .gnb_wrap .depth1 > li {
+        width: auto;
+    }
+    header .gnb .gnb_wrap .depth1 > li > a {
+        display: block;
+        padding: 0 20px;
+        white-space: nowrap; /*메뉴 한줄로 구현*/
+        line-height: 2.5;
+        font-weight: 700;
+        font-size: 1.154rem;
+        position: relative;
+    }
+    header .gnb .gnb_wrap .depth1 > li > a::before {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 34px;
+        height: 34px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 18.8306L23.5167 12.314L24.5193 13.3166L17 20.8359L9.48069 13.3166L10.4833 12.314L17 18.8306Z' fill='white'/%3E%3C/svg%3E%0A");
+        content: "";
+    }
+    header .gnb .gnb_wrap .depth2 {
+        padding-top: 0;
+    }
     header .gnb .gnb_close {
         display: none;
     }
@@ -259,14 +240,21 @@ header .tnb .search::before {
         background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z' fill='white'/%3E%3C/svg%3E%0A");
         content: "";
     }
-    header .gnb .gnb_wrap {
-        display: none;
-    }
+    
     header .tnb {
         display: none;
     }
-
     header .gnb button {
+        display: block;
+    }
+    /*메뉴가 열렸을때*/
+    header.menu_open .gnb .gnb_wrap {
+        display: block;
+    }
+    header.menu_open .gnb .gnb_open {
+        display: none;
+    }
+    header.menu_open .gnb .gnb_close {
         display: block;
     }
 }
